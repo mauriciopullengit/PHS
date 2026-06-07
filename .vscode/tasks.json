@@ -1,0 +1,69 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Playwright: Install Browsers",
+      "type": "shell",
+      "command": "npx playwright install",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Start MCP server",
+      "type": "shell",
+      "command": "npm run playwright:mcp",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Run tests",
+      "type": "shell",
+      "command": "npm run playwright:test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Codegen",
+      "type": "shell",
+      "command": "npm run playwright:codegen",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Open URL",
+      "type": "shell",
+      "command": "npm run playwright:open",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Screenshot Example",
+      "type": "shell",
+      "command": "npm run playwright:screenshot https://example.com example-playwright-task.png -- --browser=chromium",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
