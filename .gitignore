@@ -1,0 +1,9 @@
+node_modules/
+playwright-mcp/
+.claude/
+example-playwright-test.png
+test-results/
+.env
+*.local
+.vscode/*local*.json
+.DS_Store
