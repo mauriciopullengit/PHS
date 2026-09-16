@@ -1,0 +1,540 @@
+
+[2m2026-07-17T00:40:21.590340[0m [[32m[1minfo     [0m] [1mLog file created at: C:\Users\mauri\.cognee\logs\2026-07-16_21-40-20.log[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mlog_file[0m=[35mC:\Users\mauri\.cognee\logs\2026-07-16_21-40-20.log[0m
+
+[2m2026-07-17T00:40:21.591357[0m [[33m[1mwarning  [0m] [1mCognee 1.0 changes: New API — remember/recall/forget/improve (V1 add/cognify/search still work). Session memory enabled by default (CACHING=false to disable). Multi-user access control on by default (ENABLE_BACKEND_ACCESS_CONTROL=false to disable). Agents (@cognee.agent) auto-verified on registration. See https://docs.cognee.ai/[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-07-17T00:40:21.592350[0m [[32m[1minfo     [0m] [1mLogging initialized           [0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mcognee_version[0m=[35m1.3.0[0m [36mdatabase_path[0m=[35mC:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases[0m [36mos_info[0m=[35m'Windows 11 (10.0.26200)'[0m [36mpython_version[0m=[35m3.12.10[0m [36mstructlog_version[0m=[35m25.5.0[0m
+
+[2m2026-07-17T00:40:21.593355[0m [[32m[1minfo     [0m] [1mDatabase storage: C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-07-17T00:40:26.674152[0m [[32m[1minfo     [0m] [1mauth posture: authentication=disabled, multi_tenant=disabled (inherited from ENABLE_BACKEND_ACCESS_CONTROL)[0m [[0m[1m[34mget_authenticated_user[0m][0m
+[reset] aviso: IO exception: Could not set lock on file : C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases\cognee_graph_ladybug (Error: 33)
+See the docs: https://docs.ladybugdb.com/concurrency for more information.
+
+======================================================================
+INGESTAO — 8 notas de manobrabilidade
+======================================================================
+  + circulo-de-evolucao.md
+  + condicoes-prova-manobrabilidade.md
+  + criterios-manobrabilidade-imo.md
+  + curva-de-giro-hidrodinamica.md
+  + manobra-espiral-pullout.md
+  + metodos-predicao-manobrabilidade.md
+  + teste-parada-atras.md
+  + teste-zig-zag.md
+
+[2m2026-07-17T00:41:04.986959[0m [[32m[1minfo     [0m] [1mSkipping LLM/embedding connection tests (COGNEE_SKIP_CONNECTION_TEST is set).[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-07-17T00:41:11.709232[0m [[31m[1merror    [0m] [1mException                     [0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mexception_message[0m=[35m'IO exception: Could not set lock on file : C:\\Users\\mauri\\Projetos\\cognee-pilot\\.venv\\Lib\\site-packages\\cognee\\.cognee_system\\databases\\cognee_graph_ladybug (Error: 33)\nSee the docs: https://docs.ladybugdb.com/concurrency for more information.'[0m [36mexception_type[0m=[35mRuntimeError[0m [36mtraceback[0m=[35mTrue[0m
+[31m\u250c\u2500[0m[31m\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500[0m[31m\u2500\u2510[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\pilot.py:65 in <module>                [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m62 [0m[2m\u2502   \u2502   [0m[96mprint[0m([33mf[0m[33m"[0m[33m\n[0m[33m[tempo: [0m[33m{[0mdt[33m:[0m[33m.1f[0m[33m}[0m[33ms][0m[33m"[0m)                                 [31m\u2502[0m
+[31m\u2502[0m   [2m63 [0m                                                                       [31m\u2502[0m
+[31m\u2502[0m   [2m64 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                             [31m\u2502[0m
+[31m\u2502[0m [31m> [0m65 [2m\u2502   [0m[1;4masyncio.run(main())[0m                                                [31m\u2502[0m
+[31m\u2502[0m   [2m66 [0m                                                                       [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners. [31m\u2502[0m
+[31m\u2502[0m py:195 in run                                                               [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m192 [0m[2m\u2502   \u2502   \u2502   [0m[33m"[0m[33masyncio.run() cannot be called from a running event loop[0m [31m\u2502[0m
+[31m\u2502[0m   [2m193 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m194 [0m[2m\u2502   [0m[94mwith[0m Runner(debug=debug, loop_factory=loop_factory) [94mas[0m runner:    [31m\u2502[0m
+[31m\u2502[0m [31m> [0m195 [2m\u2502   \u2502   [0m[94mreturn[0m [1;4mrunner.run(main)[0m                                       [31m\u2502[0m
+[31m\u2502[0m   [2m196 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m197 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m198 [0m[94mdef[0m[90m [0m[92m_cancel_all_tasks[0m(loop):                                          [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners. [31m\u2502[0m
+[31m\u2502[0m py:118 in run                                                               [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m115 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m116 [0m[2m\u2502   \u2502   [0m[96mself[0m._interrupt_count = [94m0[0m                                     [31m\u2502[0m
+[31m\u2502[0m   [2m117 [0m[2m\u2502   \u2502   [0m[94mtry[0m:                                                          [31m\u2502[0m
+[31m\u2502[0m [31m> [0m118 [2m\u2502   \u2502   \u2502   [0m[94mreturn[0m [96mself[0m._loop.run_until_complete(task)                [31m\u2502[0m
+[31m\u2502[0m   [2m119 [0m[2m\u2502   \u2502   [0m[94mexcept[0m exceptions.CancelledError:                             [31m\u2502[0m
+[31m\u2502[0m   [2m120 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m [96mself[0m._interrupt_count > [94m0[0m:                             [31m\u2502[0m
+[31m\u2502[0m   [2m121 [0m[2m\u2502   \u2502   \u2502   \u2502   [0muncancel = [96mgetattr[0m(task, [33m"[0m[33muncancel[0m[33m"[0m, [94mNone[0m)            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_eve [31m\u2502[0m
+[31m\u2502[0m nts.py:691 in run_until_complete                                            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 688 [0m[2m\u2502   \u2502   [0m[94mif[0m [95mnot[0m future.done():                                        [31m\u2502[0m
+[31m\u2502[0m   [2m 689 [0m[2m\u2502   \u2502   \u2502   [0m[94mraise[0m [96mRuntimeError[0m([33m'[0m[33mEvent loop stopped before Future com[0m [31m\u2502[0m
+[31m\u2502[0m   [2m 690 [0m[2m\u2502   \u2502   [0m                                                             [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 691 [2m\u2502   \u2502   [0m[94mreturn[0m [1;4mfuture.result()[0m                                       [31m\u2502[0m
+[31m\u2502[0m   [2m 692 [0m[2m\u2502   [0m                                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m 693 [0m[2m\u2502   [0m[94mdef[0m[90m [0m[92mstop[0m([96mself[0m):                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m 694 [0m[2;90m\u2502   \u2502   [0m[33m"""Stop running the event loop.[0m                              [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\pilot.py:43 in main                    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m40 [0m[2m\u2502   [0msep([33mf[0m[33m"[0m[33mINGESTAO — [0m[33m{[0m[96mlen[0m(arquivos)[33m}[0m[33m notas de manobrabilidade[0m[33m"[0m)        [31m\u2502[0m
+[31m\u2502[0m   [2m41 [0m[2m\u2502   [0m[94mfor[0m a [95min[0m arquivos: [96mprint[0m([33m"[0m[33m  +[0m[33m"[0m, os.path.basename(a))               [31m\u2502[0m
+[31m\u2502[0m   [2m42 [0m[2m\u2502   [0mt0 = time.time()                                                   [31m\u2502[0m
+[31m\u2502[0m [31m> [0m43 [2m\u2502   [0m[1;4;94mawait[0m[1;4m cognee.add(arquivos)[0m                                         [31m\u2502[0m
+[31m\u2502[0m   [2m44 [0m[2m\u2502   [0m[96mprint[0m([33mf[0m[33m"[0m[33m[add] concluido em [0m[33m{[0mtime.time()-t0[33m:[0m[33m.1f[0m[33m}[0m[33ms[0m[33m"[0m)                 [31m\u2502[0m
+[31m\u2502[0m   [2m45 [0m[2m\u2502   [0m                                                                   [31m\u2502[0m
+[31m\u2502[0m   [2m46 [0m[2m\u2502   [0m[2m# 3) construcao do grafo (entity extraction via mistral local — pa[0m [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\api\v1\ [31m\u2502[0m
+[31m\u2502[0m add\add.py:258 in add                                                       [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m255 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m256 [0m[2m\u2502   [0mpipeline_executor_func = get_pipeline_executor(run_in_background= [31m\u2502[0m
+[31m\u2502[0m   [2m257 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m [31m> [0m258 [2m\u2502   [0mresult = [1;4;94mawait[0m[1;4m pipeline_executor_func([0m                            [31m\u2502[0m
+[31m\u2502[0m   [2m259 [0m[2m\u2502   \u2502   [0m[1;4mpipeline=run_pipeline,[0m                                        [31m\u2502[0m
+[31m\u2502[0m   [2m260 [0m[2m\u2502   \u2502   [0m[1;4mtasks=tasks,[0m                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m261 [0m[2m\u2502   \u2502   [0m[1;4mdatasets=[authorized_dataset.id],[0m                             [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\layers\pipeline_execution_mode.py:44 in run_pipeline_blocking    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 41 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m 42 [0m[2m\u2502   [0mtotal_run_info: Dict[[96mstr[0m, Any] = {}                               [31m\u2502[0m
+[31m\u2502[0m   [2m 43 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 44 [2m\u2502   [0m[94masync[0m [94mfor[0m run_info [95min[0m [1;4magen[0m:                                       [31m\u2502[0m
+[31m\u2502[0m   [2m 45 [0m[2m\u2502   \u2502   [0mdataset_id = [96mgetattr[0m(run_info, [33m"[0m[33mdataset_id[0m[33m"[0m, [94mNone[0m)            [31m\u2502[0m
+[31m\u2502[0m   [2m 46 [0m[2m\u2502   \u2502   [0m[94mif[0m dataset_id:                                                [31m\u2502[0m
+[31m\u2502[0m   [2m 47 [0m[2m\u2502   \u2502   \u2502   [0mtotal_run_info[dataset_id] = run_info                     [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\operations\pipeline.py:106 in run_pipeline                       [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m103 [0m[2m\u2502   [0m[2m# TODO: If multiple datasets are provided, we currently run them [0m [31m\u2502[0m
+[31m\u2502[0m       [2mavoid overwhelming the system with too many concurrent pipeline runs.[0m [31m\u2502[0m
+[31m\u2502[0m   [2m104 [0m[2m\u2502   [0m[2m#       In the future, we could consider adding concurrency here [0m [31m\u2502[0m
+[31m\u2502[0m       [2mresource management and limits.[0m                                       [31m\u2502[0m
+[31m\u2502[0m   [2m105 [0m[2m\u2502   [0m[94mfor[0m dataset [95min[0m authorized_datasets:                               [31m\u2502[0m
+[31m\u2502[0m [31m> [0m106 [2m\u2502   \u2502   [0m[94masync[0m [94mfor[0m run_info [95min[0m [1;4mrun_pipeline_per_dataset([0m               [31m\u2502[0m
+[31m\u2502[0m   [2m107 [0m[2m\u2502   \u2502   \u2502   [0m[1;4mdataset=dataset,[0m                                          [31m\u2502[0m
+[31m\u2502[0m   [2m108 [0m[2m\u2502   \u2502   \u2502   [0m[1;4muser=user,[0m                                                [31m\u2502[0m
+[31m\u2502[0m   [2m109 [0m[2m\u2502   \u2502   \u2502   [0m[1;4mtasks=tasks,[0m                                              [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\operations\pipeline.py:184 in run_pipeline_per_dataset           [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m181 [0m[2m\u2502   [0m[2m# External run: serialize on the per-dataset lock, marking the da[0m [31m\u2502[0m
+[31m\u2502[0m   [2m182 [0m[2m\u2502   [0m[2m# any nested run on it takes the re-entrant path above.[0m           [31m\u2502[0m
+[31m\u2502[0m   [2m183 [0m[2m\u2502   [0m[94masync[0m [94mwith[0m [94mawait[0m _get_dataset_lock(dataset.id):                   [31m\u2502[0m
+[31m\u2502[0m [31m> [0m184 [2m\u2502   \u2502   [0m[94masync[0m [94mfor[0m run_info [95min[0m [1;4m_drive_marking_held(dataset.id, _run_bo[0m [31m\u2502[0m
+[31m\u2502[0m   [2m185 [0m[2m\u2502   \u2502   \u2502   [0m[94myield[0m run_info                                            [31m\u2502[0m
+[31m\u2502[0m   [2m186 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\operations\pipeline.py:74 in _drive_marking_held                 [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 71 [0m[2m\u2502   [0m[94mwhile[0m [94mTrue[0m:                                                       [31m\u2502[0m
+[31m\u2502[0m   [2m 72 [0m[2m\u2502   \u2502   [0mtoken = _held_datasets.set(marked)                            [31m\u2502[0m
+[31m\u2502[0m   [2m 73 [0m[2m\u2502   \u2502   [0m[94mtry[0m:                                                          [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 74 [2m\u2502   \u2502   \u2502   [0mitem = [94mawait[0m source.[92m__anext__[0m()                           [31m\u2502[0m
+[31m\u2502[0m   [2m 75 [0m[2m\u2502   \u2502   [0m[94mexcept[0m [96mStopAsyncIteration[0m:                                    [31m\u2502[0m
+[31m\u2502[0m   [2m 76 [0m[2m\u2502   \u2502   \u2502   [0m[94mreturn[0m                                                    [31m\u2502[0m
+[31m\u2502[0m   [2m 77 [0m[2m\u2502   \u2502   [0m[94mfinally[0m:                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\operations\pipeline.py:168 in _run_body                          [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m165 [0m[2m\u2502   \u2502   \u2502   [0mdata_cache=data_cache,                                    [31m\u2502[0m
+[31m\u2502[0m   [2m166 [0m[2m\u2502   \u2502   [0m)                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m167 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m [31m> [0m168 [2m\u2502   \u2502   [0m[94masync[0m [94mfor[0m pipeline_run_info [95min[0m [1;4mpipeline_run[0m:                  [31m\u2502[0m
+[31m\u2502[0m   [2m169 [0m[2m\u2502   \u2502   \u2502   [0m[94myield[0m pipeline_run_info                                   [31m\u2502[0m
+[31m\u2502[0m   [2m170 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m171 [0m[2m\u2502   [0m[94mif[0m dataset.id [95min[0m _held_datasets.get():                            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\operations\run_tasks.py:49 in wrapper                            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 46 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94masync[0m [94mfor[0m run_info [95min[0m new_gen(*args, **kwargs):       [31m\u2502[0m
+[31m\u2502[0m   [2m 47 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94myield[0m run_info                                    [31m\u2502[0m
+[31m\u2502[0m   [2m 48 [0m[2m\u2502   \u2502   \u2502   [0m[94melse[0m:                                                     [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 49 [2m\u2502   \u2502   \u2502   \u2502   [0m[94masync[0m [94mfor[0m run_info [95min[0m [1;4moriginal_gen(*args, **kwargs)[0m:  [31m\u2502[0m
+[31m\u2502[0m   [2m 50 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94myield[0m run_info                                    [31m\u2502[0m
+[31m\u2502[0m   [2m 51 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m 52 [0m[2m\u2502   \u2502   [0m[94mreturn[0m wrapper                                                [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\operations\run_tasks.py:219 in run_tasks                         [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m216 [0m[2m\u2502   \u2502   \u2502   [0m                                                          [31m\u2502[0m
+[31m\u2502[0m   [2m217 [0m[2m\u2502   \u2502   \u2502   [0m[2m# In case of error during incremental loading of data jus[0m [31m\u2502[0m
+[31m\u2502[0m       [2mthe pipeline Errored, don't raise error[0m                               [31m\u2502[0m
+[31m\u2502[0m   [2m218 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m [95mnot[0m [96misinstance[0m(error, PipelineRunFailedError):         [31m\u2502[0m
+[31m\u2502[0m [31m> [0m219 [2m\u2502   \u2502   \u2502   \u2502   [0m[1;4;94mraise[0m[1;4m error[0m                                           [31m\u2502[0m
+[31m\u2502[0m   [2m220 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\operations\run_tasks.py:168 in run_tasks                         [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m165 [0m[2m\u2502   \u2502   \u2502   [0m[2m# PipelineRunErrored), not raised after the run has alrea[0m [31m\u2502[0m
+[31m\u2502[0m   [2m166 [0m[2m\u2502   \u2502   \u2502   [0m[2m# reported as completed — which would both roll back alre[0m [31m\u2502[0m
+[31m\u2502[0m   [2m167 [0m[2m\u2502   \u2502   \u2502   [0m[2m# data and emit two contradictory terminal events for one[0m [31m\u2502[0m
+[31m\u2502[0m [31m> [0m168 [2m\u2502   \u2502   \u2502   [0mgraph_engine = [94mawait[0m get_graph_engine()                   [31m\u2502[0m
+[31m\u2502[0m   [2m169 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m [96mhasattr[0m(graph_engine, [33m"[0m[33mpush_to_s3[0m[33m"[0m):                   [31m\u2502[0m
+[31m\u2502[0m   [2m170 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mawait[0m graph_engine.push_to_s3()                       [31m\u2502[0m
+[31m\u2502[0m   [2m171 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\graph\get_graph_engine.py:198 in get_graph_engine         [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m195 [0m[2;90m\u2502   [0m[33m"""Factory function to get the appropriate graph client based on [0m [31m\u2502[0m
+[31m\u2502[0m   [2m196 [0m[2m\u2502   [0mconfig = get_graph_context_config()                               [31m\u2502[0m
+[31m\u2502[0m   [2m197 [0m[2m\u2502   [0mhandle = _GraphEngineHandle(config)                               [31m\u2502[0m
+[31m\u2502[0m [31m> [0m198 [2m\u2502   [0m[1;4;94mawait[0m[1;4m handle._ensure_initialized()[0m                                [31m\u2502[0m
+[31m\u2502[0m   [2m199 [0m[2m\u2502   [0m[94mreturn[0m handle                                                     [31m\u2502[0m
+[31m\u2502[0m   [2m200 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m201 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\graph\get_graph_engine.py:177 in _ensure_initialized      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m174 [0m[2m\u2502   \u2502   [0m[94mreturn[0m engine                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m175 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m176 [0m[2m\u2502   [0m[94masync[0m [94mdef[0m[90m [0m[92m_ensure_initialized[0m([96mself[0m):                              [31m\u2502[0m
+[31m\u2502[0m [31m> [0m177 [2m\u2502   \u2502   [0mengine = [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._aengine()[0m                                [31m\u2502[0m
+[31m\u2502[0m   [2m178 [0m[2m\u2502   \u2502   [0mengine_id = [96mid[0m(engine)                                        [31m\u2502[0m
+[31m\u2502[0m   [2m179 [0m[2m\u2502   \u2502   [0m[94mif[0m engine_id != [96mself[0m._last_initialized_id [95mand[0m [96mhasattr[0m(engine, [31m\u2502[0m
+[31m\u2502[0m   [2m180 [0m[2m\u2502   \u2502   \u2502   [0m[94mawait[0m engine.initialize()                                 [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\graph\get_graph_engine.py:172 in _aengine                 [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m169 [0m[2m\u2502   \u2502   [0m[94mif[0m pinned [95mis[0m [95mnot[0m [94mNone[0m:                                        [31m\u2502[0m
+[31m\u2502[0m   [2m170 [0m[2m\u2502   \u2502   \u2502   [0m[96mself[0m._release_stale_pin(pinned)                           [31m\u2502[0m
+[31m\u2502[0m   [2m171 [0m[2m\u2502   \u2502   \u2502   [0mpinned = [94mNone[0m                                             [31m\u2502[0m
+[31m\u2502[0m [31m> [0m172 [2m\u2502   \u2502   [0mengine = [1;4;94mawait[0m[1;4m acreate_graph_engine(**[0m[1;4;96mself[0m[1;4m._config)[0m           [31m\u2502[0m
+[31m\u2502[0m   [2m173 [0m[2m\u2502   \u2502   [0m[96mobject[0m.[92m__setattr__[0m([96mself[0m, [33m"[0m[33m_pinned[0m[33m"[0m, engine)                   [31m\u2502[0m
+[31m\u2502[0m   [2m174 [0m[2m\u2502   \u2502   [0m[94mreturn[0m engine                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m175 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\graph\get_graph_engine.py:282 in acreate_graph_engine     [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m279 [0m[2m\u2502   [0m[2m# if os.environ.get("USE_UNIFIED_PROVIDER", "") == "pghybrid":[0m    [31m\u2502[0m
+[31m\u2502[0m   [2m280 [0m[2m\u2502   [0m[2m#     return _make_pghybrid_adapter()[0m                             [31m\u2502[0m
+[31m\u2502[0m   [2m281 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m [31m> [0m282 [2m\u2502   [0m[94mreturn[0m [1;4;94mawait[0m[1;4m _create_graph_engine.acall(*_resolve_graph_engine_ar[0m [31m\u2502[0m
+[31m\u2502[0m   [2m283 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m284 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m285 [0m[94mdef[0m[90m [0m[92mevict_graph_engine[0m(**kwargs) -> [96mbool[0m:                             [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\utils\closing_lru_cache.py:856 in acall                   [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m853 [0m[2;33m\u2502   \u2502   \u2502   [0m[33mkey before constructing. Pass exactly the args the sync `[0m [31m\u2502[0m
+[31m\u2502[0m   [2m854 [0m[2;33m\u2502   \u2502   \u2502   [0m[33mwould use so the cache key matches.[0m                       [31m\u2502[0m
+[31m\u2502[0m   [2m855 [0m[2;33m\u2502   \u2502   \u2502   [0m[33m"""[0m                                                       [31m\u2502[0m
+[31m\u2502[0m [31m> [0m856 [2m\u2502   \u2502   \u2502   [0m[94mreturn[0m [1;4;94mawait[0m[1;4m cache.aget_or_create(_key(args, kwargs), [0m[1;4;94mlam[0m [31m\u2502[0m
+[31m\u2502[0m       [1;4m**kwargs))[0m                                                            [31m\u2502[0m
+[31m\u2502[0m   [2m857 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m858 [0m[2m\u2502   \u2502   [0m[94mdef[0m[90m [0m[92mcache_evict[0m(*args, **kwargs) -> [96mbool[0m:                     [31m\u2502[0m
+[31m\u2502[0m   [2m859 [0m[2;90m\u2502   \u2502   \u2502   [0m[33m"""Evict a single entry whose key matches the given args.[0m [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\utils\closing_lru_cache.py:754 in aget_or_create          [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m751 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mkey, pending_close, [33m"[0m[33mproceeding to create a new value[0m [31m\u2502[0m
+[31m\u2502[0m   [2m752 [0m[2m\u2502   \u2502   \u2502   [0m)                                                         [31m\u2502[0m
+[31m\u2502[0m   [2m753 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m [31m> [0m754 [2m\u2502   \u2502   [0m[94mreturn[0m [1;4;96mself[0m[1;4m.get_or_create(key, factory)[0m                       [31m\u2502[0m
+[31m\u2502[0m   [2m755 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m756 [0m[2m\u2502   [0m[94mdef[0m[90m [0m[92mcache_clear[0m([96mself[0m):                                            [31m\u2502[0m
+[31m\u2502[0m   [2m757 [0m[2;90m\u2502   \u2502   [0m[33m"""Close and remove all cached entries."""[0m                    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\utils\closing_lru_cache.py:679 in get_or_create           [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m676 [0m[2m\u2502   \u2502   \u2502   [0m[2m# ``aget_or_create``; this residual sync-on-loop window k[0m [31m\u2502[0m
+[31m\u2502[0m   [2m677 [0m[2m\u2502   \u2502   \u2502   [0m[2m# worker open-retry as its backstop.[0m                      [31m\u2502[0m
+[31m\u2502[0m   [2m678 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m [31m> [0m679 [2m\u2502   \u2502   [0mvalue = [1;4mfactory()[0m                                             [31m\u2502[0m
+[31m\u2502[0m   [2m680 [0m[2m\u2502   \u2502   [0mentry = [96mself[0m._make_entry(key, value)                          [31m\u2502[0m
+[31m\u2502[0m   [2m681 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m682 [0m[2m\u2502   \u2502   [0m[2m# Decide outcome under the lock; defer ``_track_close`` until[0m [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\utils\closing_lru_cache.py:856 in <lambda>                [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m853 [0m[2;33m\u2502   \u2502   \u2502   [0m[33mkey before constructing. Pass exactly the args the sync `[0m [31m\u2502[0m
+[31m\u2502[0m   [2m854 [0m[2;33m\u2502   \u2502   \u2502   [0m[33mwould use so the cache key matches.[0m                       [31m\u2502[0m
+[31m\u2502[0m   [2m855 [0m[2;33m\u2502   \u2502   \u2502   [0m[33m"""[0m                                                       [31m\u2502[0m
+[31m\u2502[0m [31m> [0m856 [2m\u2502   \u2502   \u2502   [0m[94mreturn[0m [94mawait[0m cache.aget_or_create(_key(args, kwargs), [94mlam[0m [31m\u2502[0m
+[31m\u2502[0m       [1;4m**kwargs)[0m)                                                            [31m\u2502[0m
+[31m\u2502[0m   [2m857 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m858 [0m[2m\u2502   \u2502   [0m[94mdef[0m[90m [0m[92mcache_evict[0m(*args, **kwargs) -> [96mbool[0m:                     [31m\u2502[0m
+[31m\u2502[0m   [2m859 [0m[2;90m\u2502   \u2502   \u2502   [0m[33m"""Evict a single entry whose key matches the given args.[0m [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\graph\get_graph_engine.py:515 in _create_graph_engine     [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m512 [0m[2m\u2502   \u2502   [0m[94mfrom[0m[90m [0m[4;96m.[0m[4;96mladybug[0m[4;96m.[0m[4;96madapter[0m[90m [0m[94mimport[0m LadybugAdapter                   [31m\u2502[0m
+[31m\u2502[0m   [2m513 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m514 [0m[2m\u2502   \u2502   [0m[94mif[0m graph_database_subprocess_enabled:                         [31m\u2502[0m
+[31m\u2502[0m [31m> [0m515 [2m\u2502   \u2502   \u2502   [0m[94mreturn[0m [1;4mLadybugAdapter.create_subprocess([0m                  [31m\u2502[0m
+[31m\u2502[0m   [2m516 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[1;4mdb_path=graph_file_path,[0m                              [31m\u2502[0m
+[31m\u2502[0m   [2m517 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[1;4mkuzu_num_threads=kuzu_num_threads,[0m                    [31m\u2502[0m
+[31m\u2502[0m   [2m518 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[1;4mkuzu_buffer_pool_size=kuzu_buffer_pool_size,[0m          [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\graph\ladybug\adapter.py:214 in create_subprocess         [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 211 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0msession=session,                                 [31m\u2502[0m
+[31m\u2502[0m   [2m 212 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m)                                                    [31m\u2502[0m
+[31m\u2502[0m   [2m 213 [0m[2m\u2502   \u2502   \u2502   [0m                                                         [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 214 [2m\u2502   \u2502   \u2502   [0mdb = RemoteKuzuDatabase(                                 [31m\u2502[0m
+[31m\u2502[0m   [2m 215 [0m[2m\u2502   \u2502   \u2502   \u2502   [0msession,                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 216 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mdb_path=db_path,                                     [31m\u2502[0m
+[31m\u2502[0m   [2m 217 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mbuffer_pool_size=kuzu_buffer_pool_size,              [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\graph\kuzu\subprocess\proxy.py:133 in __init__            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m130 [0m[2m\u2502   \u2502   [0m[2m# after ``close()`` would replay the OPEN step and silently[0m   [31m\u2502[0m
+[31m\u2502[0m   [2m131 [0m[2m\u2502   \u2502   [0m[2m# resurrect a handle the user already closed.[0m                 [31m\u2502[0m
+[31m\u2502[0m   [2m132 [0m[2m\u2502   \u2502   [0m[96mself[0m._replay_steps: [96mlist[0m[ReplayStep] = []                     [31m\u2502[0m
+[31m\u2502[0m [31m> [0m133 [2m\u2502   \u2502   [0m[1;4;96mself[0m[1;4m._open()[0m                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m134 [0m[2m\u2502   \u2502   [0m[96mself[0m._register_replay()                                       [31m\u2502[0m
+[31m\u2502[0m   [2m135 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m136 [0m[2m\u2502   [0m[1;95m@property[0m                                                         [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\databases\graph\kuzu\subprocess\proxy.py:143 in _open               [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m140 [0m[2m\u2502   \u2502   [0m[94mreturn[0m [96mself[0m._handle_id                                        [31m\u2502[0m
+[31m\u2502[0m   [2m141 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m142 [0m[2m\u2502   [0m[94mdef[0m[90m [0m[92m_open[0m([96mself[0m) -> [94mNone[0m:                                          [31m\u2502[0m
+[31m\u2502[0m [31m> [0m143 [2m\u2502   \u2502   [0mresp = [1;4;96mself[0m[1;4m._session.call(Request(op=OP_OPEN_DATABASE, [0m       [31m\u2502[0m
+[31m\u2502[0m       [1;4mkwargs=[0m[1;4;96mself[0m[1;4m._open_kwargs))[0m                                            [31m\u2502[0m
+[31m\u2502[0m   [2m144 [0m[2m\u2502   \u2502   [0m[96mself[0m._handle_id = resp.new_handle_id                          [31m\u2502[0m
+[31m\u2502[0m   [2m145 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m146 [0m[2m\u2502   [0m[94mdef[0m[90m [0m[92m_apply_new_db_handle[0m([96mself[0m, new_hid: [96mint[0m) -> Optional[[96mint[0m]:    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_work [31m\u2502[0m
+[31m\u2502[0m ers\harness.py:1096 in call                                                 [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1093 [0m[2m\u2502   \u2502   [0mattempts_left = [96mself[0m._max_retries                            [31m\u2502[0m
+[31m\u2502[0m   [2m1094 [0m[2m\u2502   \u2502   [0m[94mwhile[0m [94mTrue[0m:                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m1095 [0m[2m\u2502   \u2502   \u2502   [0m[94mtry[0m:                                                     [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1096 [2m\u2502   \u2502   \u2502   \u2502   [0m[94mreturn[0m [96mself[0m._issue(req, timeout)                     [31m\u2502[0m
+[31m\u2502[0m   [2m1097 [0m[2m\u2502   \u2502   \u2502   [0m[94mexcept[0m [96mTimeoutError[0m:                                     [31m\u2502[0m
+[31m\u2502[0m   [2m1098 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mif[0m attempts_left <= [94m0[0m [95mor[0m [95mnot[0m [96mself[0m._can_respawn():    [31m\u2502[0m
+[31m\u2502[0m   [2m1099 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mraise[0m                                            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_work [31m\u2502[0m
+[31m\u2502[0m ers\harness.py:1014 in _issue                                               [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1011 [0m[2m\u2502   \u2502   \u2502   [0m[2m# leave the counter pointing at a wedged-worker state an[0m [31m\u2502[0m
+[31m\u2502[0m   [2m1012 [0m[2m\u2502   \u2502   \u2502   [0m[2m# trigger a spurious respawn on the next per-call timeou[0m [31m\u2502[0m
+[31m\u2502[0m   [2m1013 [0m[2m\u2502   \u2502   \u2502   [0m[96mself[0m._reset_timeout_counter()                            [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1014 [2m\u2502   \u2502   \u2502   [0m[94mreturn[0m [96mself[0m._handle_response(resp)                       [31m\u2502[0m
+[31m\u2502[0m   [2m1015 [0m[2m\u2502   \u2502   [0m[94mfinally[0m:                                                     [31m\u2502[0m
+[31m\u2502[0m   [2m1016 [0m[2m\u2502   \u2502   \u2502   [0m[94mwith[0m [1;4;96mself[0m[1;4m._pending_lock[0m:                                 [31m\u2502[0m
+[31m\u2502[0m   [2m1017 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[96mself[0m._pending.pop(rid, [94mNone[0m)                         [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_work [31m\u2502[0m
+[31m\u2502[0m ers\harness.py:1185 in _handle_response                                     [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1182 [0m[2m\u2502   \u2502   \u2502   [0m[2m# exception, just without the remote traceback.[0m          [31m\u2502[0m
+[31m\u2502[0m   [2m1183 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m resp.error [95mand[0m [96mhasattr[0m(resp.exception, [33m"[0m[33madd_note[0m[33m"[0m):   [31m\u2502[0m
+[31m\u2502[0m   [2m1184 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mresp.exception.add_note([33mf[0m[33m"[0m[33mRemote subprocess tracebac[0m [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1185 [2m\u2502   \u2502   \u2502   [0m[1;4;94mraise[0m[1;4m resp.exception[0m                                     [31m\u2502[0m
+[31m\u2502[0m   [2m1186 [0m[2m\u2502   \u2502   [0m[94mif[0m resp.error:                                               [31m\u2502[0m
+[31m\u2502[0m   [2m1187 [0m[2m\u2502   \u2502   \u2502   [0m[94mraise[0m [96mRuntimeError[0m(resp.error)                           [31m\u2502[0m
+[31m\u2502[0m   [2m1188 [0m[2m\u2502   \u2502   [0m[94mreturn[0m resp                                                  [31m\u2502[0m
+[31m\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518[0m
+[1;91mRuntimeError: [0mIO exception: Could not set lock on file : 
+C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_sys
+tem\databases\cognee_graph_ladybug [1m([0mError: [1;36m33[0m[1m)[0m
+See the docs: [4;94mhttps://docs.ladybugdb.com/concurrency[0m for more information.
+[1;32m[NOTE] [0mRemote subprocess traceback:
+Traceback [1m([0mmost recent call last[1m)[0m:
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers[0m
+[32m\kuzu_worker.py"[0m, line [1;36m75[0m, in _open_database
+    db = [1;35mladybug.Database[0m[1m([0m**req.kwargs[1m)[0m
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.[0m
+[32mpy"[0m, line [1;36m136[0m, in __init__
+    [1;35mself.init_database[0m[1m([0m[1m)[0m
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.[0m
+[32mpy"[0m, line [1;36m221[0m, in init_database
+    self._database = [1;35mself.init_pybind_database[0m[1m([0m[1m)[0m
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.[0m
+[32mpy"[0m, line [1;36m260[0m, in init_pybind_database
+    self._pybind_database = [1;35mpybind_module.Database[0m[1m([0m**kwargs[1m)[0m
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: IO exception: Could not set lock on file : 
+C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_sys
+tem\databases\cognee_graph_ladybug [1m([0mError: [1;36m33[0m[1m)[0m
+See the docs: [4;94mhttps://docs.ladybugdb.com/concurrency[0m for more information.
+
+During handling of the above exception, another exception occurred:
+
+Traceback [1m([0mmost recent call last[1m)[0m:
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers[0m
+[32m\harness.py"[0m, line [1;36m507[0m, in serve
+    result = [1;35mhandler[0m[1m([0mregistry, msg[1m)[0m
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers[0m
+[32m\kuzu_worker.py"[0m, line [1;36m84[0m, in _open_database
+    db = [1;35m_retry_open_locked[0m[1m([0mladybug, req.kwargs, e[1m)[0m
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers[0m
+[32m\kuzu_worker.py"[0m, line [1;36m68[0m, in _retry_open_locked
+    raise last_exc
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers[0m
+[32m\kuzu_worker.py"[0m, line [1;36m63[0m, in _retry_open_locked
+    return [1;35mladybug.Database[0m[1m([0m**kwargs[1m)[0m
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.[0m
+[32mpy"[0m, line [1;36m136[0m, in __init__
+    [1;35mself.init_database[0m[1m([0m[1m)[0m
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.[0m
+[32mpy"[0m, line [1;36m221[0m, in init_database
+    self._database = [1;35mself.init_pybind_database[0m[1m([0m[1m)[0m
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File 
+[32m"C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.[0m
+[32mpy"[0m, line [1;36m260[0m, in init_pybind_database
+    self._pybind_database = [1;35mpybind_module.Database[0m[1m([0m**kwargs[1m)[0m
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: IO exception: Could not set lock on file : 
+C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_sys
+tem\databases\cognee_graph_ladybug [1m([0mError: [1;36m33[0m[1m)[0m
+See the docs: [4;94mhttps://docs.ladybugdb.com/concurrency[0m for more information.
+
+
+Traceback (most recent call last):
+  File "C:\Users\mauri\Projetos\cognee-pilot\pilot.py", line 65, in <module>
+    asyncio.run(main())
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\pilot.py", line 43, in main
+    await cognee.add(arquivos)
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\api\v1\add\add.py", line 258, in add
+    result = await pipeline_executor_func(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\layers\pipeline_execution_mode.py", line 44, in run_pipeline_blocking
+    async for run_info in agen:
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\operations\pipeline.py", line 106, in run_pipeline
+    async for run_info in run_pipeline_per_dataset(
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\operations\pipeline.py", line 184, in run_pipeline_per_dataset
+    async for run_info in _drive_marking_held(dataset.id, _run_body()):
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\operations\pipeline.py", line 74, in _drive_marking_held
+    item = await source.__anext__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\operations\pipeline.py", line 168, in _run_body
+    async for pipeline_run_info in pipeline_run:
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\operations\run_tasks.py", line 49, in wrapper
+    async for run_info in original_gen(*args, **kwargs):
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\operations\run_tasks.py", line 219, in run_tasks
+    raise error
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\operations\run_tasks.py", line 168, in run_tasks
+    graph_engine = await get_graph_engine()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\graph\get_graph_engine.py", line 198, in get_graph_engine
+    await handle._ensure_initialized()
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\graph\get_graph_engine.py", line 177, in _ensure_initialized
+    engine = await self._aengine()
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\graph\get_graph_engine.py", line 172, in _aengine
+    engine = await acreate_graph_engine(**self._config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\graph\get_graph_engine.py", line 282, in acreate_graph_engine
+    return await _create_graph_engine.acall(*_resolve_graph_engine_args(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\utils\closing_lru_cache.py", line 856, in acall
+    return await cache.aget_or_create(_key(args, kwargs), lambda: fn(*args, **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\utils\closing_lru_cache.py", line 754, in aget_or_create
+    return self.get_or_create(key, factory)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\utils\closing_lru_cache.py", line 679, in get_or_create
+    value = factory()
+            ^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\utils\closing_lru_cache.py", line 856, in <lambda>
+    return await cache.aget_or_create(_key(args, kwargs), lambda: fn(*args, **kwargs))
+                                                                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\graph\get_graph_engine.py", line 515, in _create_graph_engine
+    return LadybugAdapter.create_subprocess(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\graph\ladybug\adapter.py", line 214, in create_subprocess
+    db = RemoteKuzuDatabase(
+         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\graph\kuzu\subprocess\proxy.py", line 133, in __init__
+    self._open()
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\databases\graph\kuzu\subprocess\proxy.py", line 143, in _open
+    resp = self._session.call(Request(op=OP_OPEN_DATABASE, kwargs=self._open_kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers\harness.py", line 1096, in call
+    return self._issue(req, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers\harness.py", line 1014, in _issue
+    return self._handle_response(resp)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers\harness.py", line 1185, in _handle_response
+    raise resp.exception
+RuntimeError: IO exception: Could not set lock on file : C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases\cognee_graph_ladybug (Error: 33)
+See the docs: https://docs.ladybugdb.com/concurrency for more information.
+Remote subprocess traceback:
+Traceback (most recent call last):
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers\kuzu_worker.py", line 75, in _open_database
+    db = ladybug.Database(**req.kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.py", line 136, in __init__
+    self.init_database()
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.py", line 221, in init_database
+    self._database = self.init_pybind_database()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.py", line 260, in init_pybind_database
+    self._pybind_database = pybind_module.Database(**kwargs)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: IO exception: Could not set lock on file : C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases\cognee_graph_ladybug (Error: 33)
+See the docs: https://docs.ladybugdb.com/concurrency for more information.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers\harness.py", line 507, in serve
+    result = handler(registry, msg)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers\kuzu_worker.py", line 84, in _open_database
+    db = _retry_open_locked(ladybug, req.kwargs, e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers\kuzu_worker.py", line 68, in _retry_open_locked
+    raise last_exc
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee_db_workers\kuzu_worker.py", line 63, in _retry_open_locked
+    return ladybug.Database(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.py", line 136, in __init__
+    self.init_database()
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.py", line 221, in init_database
+    self._database = self.init_pybind_database()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\ladybug\database.py", line 260, in init_pybind_database
+    self._pybind_database = pybind_module.Database(**kwargs)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: IO exception: Could not set lock on file : C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases\cognee_graph_ladybug (Error: 33)
+See the docs: https://docs.ladybugdb.com/concurrency for more information.
+
+EXIT_CODE=1

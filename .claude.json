@@ -10,6 +10,13 @@
         "--console-level",
         "warning"
       ]
+    },
+    "powershell": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "mcp-powershell-exec"
+      ]
     }
   }
 }

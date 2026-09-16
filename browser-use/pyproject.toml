@@ -1,0 +1,11 @@
+[project]
+name = "browser-agent"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=0.76.0",
+    "browser-use>=0.12.9",
+    "langchain-google-genai>=4.2.4",
+    "python-dotenv>=1.2.2",
+]

@@ -64,6 +64,26 @@
         "panel": "shared"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "PowerShell: Start MCP server",
+      "type": "shell",
+      "command": "npm run powershell:mcp",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "PowerShell: Run sample script",
+      "type": "shell",
+      "command": "npm run powershell:script",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
     }
   ]
 }

@@ -1,0 +1,270 @@
+- generic:
+  - generic [ref=e3]:
+    - banner [ref=e6]:
+      - generic [ref=e9]:
+        - generic [ref=e741]:
+          - img "Running..." [ref=e742]:
+            - img [ref=e743]
+          - button "Stop" [ref=e747] [cursor=pointer]
+        - button "Deploy" [ref=e11] [cursor=pointer]:
+          - generic [ref=e13]: Deploy
+        - button "Main menu" [ref=e15] [cursor=pointer]:
+          - img [ref=e16]
+    - generic [ref=e19]:
+      - generic [ref=e21]:
+        - heading "MoneyPrinterTurbo v1.3.0" [level=1] [ref=e28]:
+          - text: MoneyPrinterTurbo v1.3.0
+          - generic [ref=e29]:
+            - link "Link to heading":
+              - /url: "#money-printer-turbo-v1-3-0"
+              - img
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - generic [ref=e199]: pt - Português Brasileiro
+            - combobox "Selected pt - Português Brasileiro. Language / 语言" [ref=e201]
+          - img "open" [ref=e203]
+      - group [ref=e36]:
+        - generic "keyboard_arrow_right Configurações Básicas (Clique para expandir)" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]:
+            - generic [ref=e40]: keyboard_arrow_right
+            - paragraph [ref=e43]:
+              - strong [ref=e44]: Configurações Básicas
+              - text: (Clique para expandir)
+      - generic [ref=e46]:
+        - generic [ref=e50]:
+          - paragraph [ref=e55]:
+            - strong [ref=e56]: Configurações do Roteiro do Vídeo
+          - generic [ref=e205]:
+            - paragraph [ref=e209]: Tema do Vídeo (Forneça uma palavra-chave, a IA irá gerar automaticamente o roteiro do vídeo)
+            - textbox "Tema do Vídeo (Forneça uma palavra-chave, :red[a IA irá gerar automaticamente] o roteiro do vídeo)" [ref=e212]:
+              - /placeholder: ""
+          - generic [ref=e213]:
+            - paragraph [ref=e217]: Idioma para Gerar o Roteiro do Vídeo (a IA irá gerar automaticamente com base no idioma do seu tema)
+            - generic [ref=e219]:
+              - generic [ref=e220]:
+                - generic [ref=e221]: Detectar Automaticamente
+                - combobox "Selected Detectar Automaticamente. Idioma para Gerar o Roteiro do Vídeo (a IA irá gerar automaticamente com base no idioma do seu tema)" [ref=e223]
+              - img "open" [ref=e225]
+          - group [ref=e63]:
+            - generic "keyboard_arrow_right Advanced Script Settings" [ref=e64] [cursor=pointer]:
+              - generic [ref=e65]:
+                - generic [ref=e67]: keyboard_arrow_right
+                - paragraph [ref=e70]: Advanced Script Settings
+          - button "Clique para usar a IA para gerar o [Roteiro do Vídeo] e as [Palavras-chave do Vídeo] com base no tema" [ref=e228] [cursor=pointer]:
+            - paragraph [ref=e232]:
+              - text: Clique para usar a IA para gerar o [Roteiro do Vídeo] e as [Palavras-chave do Vídeo] com base no
+              - strong [ref=e233]: tema
+          - generic [ref=e234]:
+            - paragraph [ref=e238]: Roteiro do Vídeo (① Opcional, gerado pela IA ② Pontuação adequada ajuda na geração de legendas)
+            - textbox "Roteiro do Vídeo (:blue[① Opcional, gerado pela IA ② Pontuação adequada ajuda na geração de legendas])" [ref=e241]:
+              - /placeholder: ""
+              - text: "O imperador Marco Aurélio governava o maior império do mundo. E ainda assim, escrevia para si mesmo: \"Não desperdices o que resta da tua vida em pensamentos sobre outros homens.\" Ele sabia. O único domínio real que temos é sobre a nossa mente. Epicteto nasceu escravo. Foi torturado. E mesmo assim deixou uma das filosofias mais libertadoras da história. Porque ele entendeu algo que poucos entendem: a liberdade não está nas correntes que outros te colocam. Está na resposta que tu escolhes dar. Isso é estoicismo. Não é resignação. É precisão. Saber o que depende de ti. E agir com toda a força sobre isso. E soltar, com serenidade, todo o resto. MEDULLA OTII. A medula da contemplação."
+          - button "Clique para usar a IA para gerar [Palavras-chave do Vídeo] com base no roteiro" [ref=e243] [cursor=pointer]:
+            - paragraph [ref=e247]:
+              - text: Clique para usar a IA para gerar [Palavras-chave do Vídeo] com base no
+              - strong [ref=e248]: roteiro
+          - generic [ref=e249]:
+            - paragraph [ref=e253]:
+              - text: Palavras-chave do Vídeo (
+              - generic [ref=e254]:
+                - text: ① Opcional, gerado pela IA ② Use
+                - strong [ref=e255]: vírgulas em inglês
+                - text: para separar, somente em inglês
+              - text: )
+            - textbox "Palavras-chave do Vídeo (:blue[① Opcional, gerado pela IA ② Use **vírgulas em inglês** para separar, somente em inglês])" [ref=e258]:
+              - /placeholder: ""
+              - text: ancient ruins,starry sky,contemplation,mountain silhouette,ocean waves,candle flame,forest light,cosmos galaxy,stoic philosophy,solitude nature
+        - generic [ref=e80]:
+          - generic [ref=e82]:
+            - paragraph [ref=e87]:
+              - strong [ref=e88]: Configurações do Vídeo
+            - generic [ref=e259]:
+              - paragraph [ref=e263]: Fonte do Vídeo
+              - generic [ref=e265]:
+                - generic [ref=e266]:
+                  - generic [ref=e267]: Pexels
+                  - combobox "Selected Pexels. Fonte do Vídeo" [ref=e269]
+                - img "open" [ref=e271]
+            - generic [ref=e273]:
+              - paragraph [ref=e277]: Modo de Concatenação de Vídeo
+              - generic [ref=e279]:
+                - generic [ref=e280]:
+                  - generic [ref=e281]: Concatenação Aleatória (Recomendado)
+                  - combobox "Selected Concatenação Aleatória (Recomendado). Modo de Concatenação de Vídeo" [ref=e283]
+                - img "open" [ref=e285]
+            - generic [ref=e287]:
+              - paragraph [ref=e291]: Modo de Transição de Vídeo
+              - generic [ref=e293]:
+                - generic [ref=e294]:
+                  - generic [ref=e295]: Nenhuma Transição
+                  - combobox "Selected Nenhuma Transição. Modo de Transição de Vídeo" [ref=e297]
+                - img "open" [ref=e299]
+            - generic [ref=e301]:
+              - paragraph [ref=e305]: Proporção do Vídeo
+              - generic [ref=e307]:
+                - generic [ref=e308]:
+                  - generic [ref=e309]: Retrato 9:16
+                  - combobox "Selected Retrato 9:16. Proporção do Vídeo" [ref=e311]
+                - img "open" [ref=e313]
+            - generic [ref=e315]:
+              - paragraph [ref=e319]: Duração Máxima dos Clipes de Vídeo (segundos)
+              - generic [ref=e321]:
+                - generic [ref=e322]:
+                  - generic [ref=e323]: "3"
+                  - combobox "Selected 3. Duração Máxima dos Clipes de Vídeo (segundos)" [ref=e325]
+                - img "open" [ref=e327]
+            - generic [ref=e329]:
+              - paragraph [ref=e333]: Número de Vídeos Gerados Simultaneamente
+              - generic [ref=e335]:
+                - generic [ref=e336]:
+                  - generic [ref=e337]: "1"
+                  - combobox "Selected 1. Número de Vídeos Gerados Simultaneamente" [ref=e339]
+                - img "open" [ref=e341]
+            - group [ref=e103]:
+              - generic "keyboard_arrow_right Advanced Video Settings" [ref=e104] [cursor=pointer]:
+                - generic [ref=e105]:
+                  - generic [ref=e107]: keyboard_arrow_right
+                  - paragraph [ref=e110]: Advanced Video Settings
+          - generic [ref=e112]:
+            - paragraph [ref=e117]:
+              - strong [ref=e118]: Configurações de Áudio
+            - generic [ref=e708]:
+              - paragraph [ref=e712]: Servidores TTS
+              - generic [ref=e714]:
+                - generic [ref=e715]:
+                  - generic [ref=e716]: Google Gemini TTS
+                  - combobox "Selected Google Gemini TTS. Servidores TTS" [ref=e718]
+                - img "open" [ref=e720]
+            - generic [ref=e725]:
+              - paragraph [ref=e729]: Voz de Síntese de Fala
+              - generic [ref=e731]:
+                - generic [ref=e732]:
+                  - generic [ref=e733]: gemini:Charon-Masculino
+                  - combobox "Selected gemini:Charon-Masculino. Voz de Síntese de Fala" [ref=e735]
+                - img "open" [ref=e737]
+            - button "Reproduzir Voz" [ref=e372] [cursor=pointer]:
+              - paragraph [ref=e376]: Reproduzir Voz
+            - generic [ref=e377]:
+              - paragraph [ref=e381]: Volume da Fala (1.0 representa 100%)
+              - generic [ref=e383]:
+                - generic [ref=e384]:
+                  - generic [ref=e385]: "1.0"
+                  - combobox "Selected 1.0. Volume da Fala (1.0 representa 100%)" [ref=e387]
+                - img "open" [ref=e389]
+            - generic [ref=e391]:
+              - paragraph [ref=e395]: Velocidade da Fala (1.0 significa velocidade 1x)
+              - generic [ref=e397]:
+                - generic [ref=e398]:
+                  - generic [ref=e399]: "1.0"
+                  - combobox "Selected 1.0. Velocidade da Fala (1.0 significa velocidade 1x)" [ref=e401]
+                - img "open" [ref=e403]
+            - generic [ref=e405]:
+              - paragraph [ref=e409]: Custom Audio File
+              - region "Custom Audio File" [ref=e410] [cursor=pointer]:
+                - button "Choose File" [ref=e411]
+                - button "upload Upload" [ref=e413]:
+                  - generic [ref=e415]:
+                    - generic [ref=e417]: upload
+                    - paragraph [ref=e419]: Upload
+                - generic [ref=e422]: 200MB per file • MP3, WAV, M4A, AAC, FLAC, OGG
+            - generic [ref=e423]:
+              - paragraph [ref=e427]: Música de Fundo
+              - generic [ref=e429]:
+                - generic [ref=e430]:
+                  - generic [ref=e431]: Música de Fundo Aleatória
+                  - combobox "Selected Música de Fundo Aleatória. Música de Fundo" [ref=e433]
+                - img "open" [ref=e435]
+            - generic [ref=e437]:
+              - paragraph [ref=e441]: Volume da Música de Fundo (0.2 representa 20%, a música de fundo não deve ser muito alta)
+              - generic [ref=e443]:
+                - generic [ref=e444]:
+                  - generic [ref=e445]: "0.2"
+                  - combobox "Selected 0.2. Volume da Música de Fundo (0.2 representa 20%, a música de fundo não deve ser muito alta)" [ref=e447]
+                - img "open" [ref=e449]
+        - generic [ref=e136]:
+          - generic [ref=e138]:
+            - paragraph [ref=e143]:
+              - strong [ref=e144]: Configurações de Legendas
+            - generic [ref=e452] [cursor=pointer]:
+              - checkbox "Ativar Legendas (Se desmarcado, as configurações abaixo não terão efeito)" [checked]
+              - paragraph [ref=e457]: Ativar Legendas (Se desmarcado, as configurações abaixo não terão efeito)
+            - generic [ref=e458]:
+              - paragraph [ref=e462]: Fonte da Legenda
+              - generic [ref=e464]:
+                - generic [ref=e465]:
+                  - generic [ref=e466]: MicrosoftYaHeiBold.ttc
+                  - combobox "Selected MicrosoftYaHeiBold.ttc. Fonte da Legenda" [ref=e468]
+                - img "open" [ref=e470]
+            - generic [ref=e472]:
+              - paragraph [ref=e476]: Posição da Legenda
+              - generic [ref=e478]:
+                - generic [ref=e479]:
+                  - generic [ref=e480]: Inferior (Recomendado)
+                  - combobox "Selected Inferior (Recomendado). Posição da Legenda" [ref=e482]
+                - img "open" [ref=e484]
+            - generic [ref=e152]:
+              - paragraph [ref=e490]: Cor da Fonte da Legenda
+              - generic [ref=e494]:
+                - paragraph [ref=e498]: Tamanho da Fonte da Legenda
+                - generic [ref=e499]:
+                  - slider "Tamanho da Fonte da Legenda" [ref=e503]:
+                    - generic:
+                      - generic:
+                        - paragraph: "60"
+                  - generic:
+                    - generic:
+                      - paragraph: "30"
+                    - generic:
+                      - paragraph: "100"
+            - generic [ref=e162]:
+              - paragraph [ref=e509]: Cor do Contorno da Legenda
+              - generic [ref=e513]:
+                - paragraph [ref=e517]: Largura do Contorno da Legenda
+                - generic [ref=e518]:
+                  - slider "Largura do Contorno da Legenda" [ref=e522]:
+                    - generic:
+                      - generic:
+                        - paragraph: "1.50"
+                  - generic:
+                    - generic:
+                      - paragraph: "0.00"
+                    - generic:
+                      - paragraph: "10.00"
+            - generic [ref=e172]:
+              - generic [ref=e525] [cursor=pointer]:
+                - checkbox "Ativar fundo da legenda" [checked]
+                - paragraph [ref=e530]: Ativar fundo da legenda
+              - paragraph [ref=e535]: Cor do fundo da legenda
+            - generic [ref=e539] [cursor=pointer]:
+              - checkbox "Rounded Subtitle Background"
+              - generic [ref=e542]:
+                - paragraph [ref=e544]: Rounded Subtitle Background
+                - button "Help for Rounded Subtitle Background" [ref=e548]:
+                  - img [ref=e549]
+          - group [ref=e185]:
+            - generic "keyboard_arrow_right Clique para mostrar o gerenciamento de chaves de API" [ref=e186] [cursor=pointer]:
+              - generic [ref=e187]:
+                - generic [ref=e189]: keyboard_arrow_right
+                - paragraph [ref=e192]: Clique para mostrar o gerenciamento de chaves de API
+      - button "Gerar Vídeo" [active] [ref=e553] [cursor=pointer]:
+        - paragraph [ref=e557]: Gerar Vídeo
+      - code [ref=e752]:
+        - text: 2026-06-11 10:37:40.390 | INFO | __main__:<module>:1487 - Começar a Gerar Vídeo
+        - text: "2026-06-11 10:37:40.396 | INFO | __main__:<module>:1488 - { \"video_subject\": \"\", \"video_script\": \"O imperador Marco Aurélio governava o maior império do mundo. E ainda assim, escrevia para si mesmo: \\\"Não desperdices o que resta da tua vida em pensamentos sobre outros homens.\\\"\\n\\nEle sabia. O único domínio real que temos é sobre a nossa mente.\\n\\nEpicteto nasceu escravo. Foi torturado. E mesmo assim deixou uma das filosofias mais libertadoras da história.\\n\\nPorque ele entendeu algo que poucos entendem: a liberdade não está nas correntes que outros te colocam. Está na resposta que tu escolhes dar.\\n\\nIsso é estoicismo. Não é resignação. É precisão.\\n\\nSaber o que depende de ti. E agir com toda a força sobre isso.\\n\\nE soltar, com serenidade, todo o resto.\\n\\nMEDULLA OTII. A medula da contemplação.\", \"video_terms\": \"ancient ruins,starry sky,contemplation,mountain silhouette,ocean waves,candle flame,forest light,cosmos galaxy,stoic philosophy,solitude nature\", \"video_aspect\": \"9:16\", \"video_concat_mode\": \"random\", \"video_transition_mode\": \"None\", \"video_clip_duration\": 3, \"video_count\": 1, \"video_source\": \"pexels\", \"video_materials\": null, \"custom_audio_file\": null, \"video_language\": \"\", \"voice_name\": \"gemini:Charon-Male\", \"voice_volume\": 1.0, \"voice_rate\": 1.0, \"bgm_type\": \"random\", \"bgm_file\": \"\", \"bgm_volume\": 0.2, \"subtitle_enabled\": true, \"subtitle_position\": \"bottom\", \"custom_position\": 70.0, \"font_name\": \"MicrosoftYaHeiBold.ttc\", \"text_fore_color\": \"#FFFFFF\", \"text_background_color\": \"#000000\", \"rounded_subtitle_background\": false, \"font_size\": 60, \"stroke_color\": \"#000000\", \"stroke_width\": 1.5, \"n_threads\": 2, \"paragraph_number\": 1, \"video_script_prompt\": \"\", \"custom_system_prompt\": \"\""
+        - text: "}"
+        - text: "2026-06-11 10:37:40.403 | INFO | app.services.task:start:251 - start task: 86bfe207-8ec8-4e62-a78f-aa70b94d501d, stop_at: video"
+        - text: 2026-06-11 10:37:40.406 | INFO | app.services.task:generate_script:17 -
+        - text: "## generating video script"
+        - text: "2026-06-11 10:37:40.408 | DEBUG | app.services.task:generate_script:28 - video script: O imperador Marco Aurélio governava o maior império do mundo. E ainda assim, escrevia para si mesmo: \"Não desperdices o que resta da tua vida em pensamentos sobre outros homens.\" Ele sabia. O único domínio real que temos é sobre a nossa mente. Epicteto nasceu escravo. Foi torturado. E mesmo assim deixou uma das filosofias mais libertadoras da história. Porque ele entendeu algo que poucos entendem: a liberdade não está nas correntes que outros te colocam. Está na resposta que tu escolhes dar. Isso é estoicismo. Não é resignação. É precisão. Saber o que depende de ti. E agir com toda a força sobre isso. E soltar, com serenidade, todo o resto. MEDULLA OTII. A medula da contemplação."
+        - text: 2026-06-11 10:37:40.412 | INFO | app.services.task:generate_terms:39 -
+        - text: "## generating video terms"
+        - text: "2026-06-11 10:37:40.413 | DEBUG | app.services.task:generate_terms:53 - video terms: [ \"ancient ruins\", \"starry sky\", \"contemplation\", \"mountain silhouette\", \"ocean waves\", \"candle flame\", \"forest light\", \"cosmos galaxy\", \"stoic philosophy\", \"solitude nature\""
+        - text: "]"
+        - text: 2026-06-11 10:37:40.428 | INFO | app.services.task:generate_audio:86 -
+        - text: "## generating audio"
+        - text: 2026-06-11 10:37:40.435 | INFO | app.services.task:generate_audio:96 - no custom audio file provided, using TTS to generate audio.
+      - generic:
+        - iframe
+  - alert [ref=e753]:
+    - paragraph [ref=e758]: Gerando vídeo, por favor aguarde...
+    - button "Close" [ref=e759] [cursor=pointer]

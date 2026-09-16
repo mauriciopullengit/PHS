@@ -1,0 +1,22 @@
+[   52743ms] [WARNING] Unrecognized feature: 'ambient-light-sensor'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   52743ms] [WARNING] Unrecognized feature: 'battery'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   52743ms] [WARNING] Unrecognized feature: 'document-domain'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   52743ms] [WARNING] Unrecognized feature: 'layout-animations'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   52743ms] [WARNING] Unrecognized feature: 'legacy-image-formats'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   52743ms] [WARNING] Unrecognized feature: 'oversized-images'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   52743ms] [WARNING] Unrecognized feature: 'vr'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   52743ms] [WARNING] Unrecognized feature: 'wake-lock'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   52799ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ about:srcdoc:0
+[  578969ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ about:srcdoc:0
+[ 2392320ms] [WARNING] WebSocket onclose @ http://localhost:8501/static/js/index.dkY5s53S.js:183
+[ 2469478ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://localhost:8501/_stcore/health:0
+[ 2469479ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://localhost:8501/_stcore/host-config:0
+[ 3683998ms] [WARNING] WebSocket onclose @ http://localhost:8501/static/js/index.dkY5s53S.js:183
+[20819569ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://localhost:8501/_stcore/health:0
+[20819569ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://localhost:8501/_stcore/host-config:0
+[20822404ms] [ERROR] Access to XMLHttpRequest at 'http://gc.kis.v2.scr.kaspersky-labs.com/B585950B-1135-4F48-A0B0-5C4E37D37048/EAD6826A-80A5-4896-84C6-A5606826F353/from?get&nocache=1cb11&tm=2026-06-11T23%3A56%3A59.907Z' from origin 'http://localhost:8501' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:8501/:0
+[20822405ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://gc.kis.v2.scr.kaspersky-labs.com/B585950B-1135-4F48-A0B0-5C4E37D37048/EAD6826A-80A5-4896-84C6-A5606826F353/from?get&nocache=1cb11&tm=2026-06-11T23%3A56%3A59.907Z:0
+[20822471ms] [ERROR] Access to XMLHttpRequest at 'http://gc.kis.v2.scr.kaspersky-labs.com/B585950B-1135-4F48-A0B0-5C4E37D37048/EAD6826A-80A5-4896-84C6-A5606826F353/from?get&nocache=1e7b7&tm=2026-06-11T23%3A57%3A01.798Z&second=true' from origin 'http://localhost:8501' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:8501/:0
+[20822473ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://gc.kis.v2.scr.kaspersky-labs.com/B585950B-1135-4F48-A0B0-5C4E37D37048/EAD6826A-80A5-4896-84C6-A5606826F353/from?get&nocache=1e7b7&tm=2026-06-11T23%3A57%3A01.798Z&second=true:0
+[20822562ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:8501/_stcore/health:0
+[20822564ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:8501/_stcore/host-config:0

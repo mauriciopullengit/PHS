@@ -1,0 +1,44 @@
+[   39314ms] [WARNING] Unrecognized feature: 'ambient-light-sensor'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   39314ms] [WARNING] Unrecognized feature: 'battery'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   39314ms] [WARNING] Unrecognized feature: 'document-domain'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   39315ms] [WARNING] Unrecognized feature: 'layout-animations'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   39315ms] [WARNING] Unrecognized feature: 'legacy-image-formats'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   39315ms] [WARNING] Unrecognized feature: 'oversized-images'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   39315ms] [WARNING] Unrecognized feature: 'vr'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   39315ms] [WARNING] Unrecognized feature: 'wake-lock'. @ http://localhost:8501/static/js/index.dkY5s53S.js:1
+[   39333ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ about:srcdoc:0
+[  478479ms] [WARNING] An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing. @ about:srcdoc:0
+[ 3300181ms] [WARNING] WebSocket onclose @ http://localhost:8501/static/js/index.dkY5s53S.js:183
+[ 3354255ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://localhost:8501/_stcore/health:0
+[ 3354257ms] [ERROR] Failed to load resource: net::ERR_NETWORK_IO_SUSPENDED @ http://localhost:8501/_stcore/host-config:0
+[ 3354381ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ http://gc.kis.v2.scr.kaspersky-labs.com/B585950B-1135-4F48-A0B0-5C4E37D37048/55CC8AFB-C3CD-4FAE-AF62-1BA99D82F13C/from?get&nocache=18217&tm=2026-06-11T17%3A35%3A39.515Z:0
+[ 3354586ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://gc.kis.v2.scr.kaspersky-labs.com/B585950B-1135-4F48-A0B0-5C4E37D37048/55CC8AFB-C3CD-4FAE-AF62-1BA99D82F13C/from?get&nocache=1a372&tm=2026-06-11T17%3A35%3A39.636Z&second=true:0
+[ 3354591ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:8501/_stcore/health:0
+[ 3354591ms] [ERROR] Failed to load resource: net::ERR_NETWORK_CHANGED @ http://localhost:8501/_stcore/host-config:0
+[ 5385834ms] [WARNING] WebSocket onclose @ http://localhost:8501/static/js/index.dkY5s53S.js:183
+[ 5388189ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[ 5388191ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0
+[ 5388437ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[ 5390635ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0
+[ 5390636ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[ 5390986ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0
+[ 5392989ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[ 5393402ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0
+[ 5396141ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[ 5396142ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0
+[ 5400357ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[ 5400358ms] [ERROR] Client Error in reaching server endpoint - No response received when attempting to reach /_stcore/health @ http://localhost:8501/static/js/index.dkY5s53S.js:182
+[ 5400361ms] [ERROR] Is Streamlit still running? If you accidentally stopped Streamlit, just restart it in your terminal: @ http://localhost:8501/static/js/index.dkY5s53S.js:187
+[ 5400363ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0
+[ 5404718ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[ 5404718ms] [ERROR] Client Error in reaching server endpoint - No response received when attempting to reach /_stcore/health @ http://localhost:8501/static/js/index.dkY5s53S.js:182
+[ 5404718ms] [ERROR] Is Streamlit still running? If you accidentally stopped Streamlit, just restart it in your terminal: @ http://localhost:8501/static/js/index.dkY5s53S.js:187
+[ 5404730ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0
+[ 5409040ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[ 5409040ms] [ERROR] Client Error in reaching server endpoint - No response received when attempting to reach /_stcore/health @ http://localhost:8501/static/js/index.dkY5s53S.js:182
+[ 5409041ms] [ERROR] Is Streamlit still running? If you accidentally stopped Streamlit, just restart it in your terminal: @ http://localhost:8501/static/js/index.dkY5s53S.js:187
+[ 5409041ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0
+[ 5413384ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/health:0
+[ 5413384ms] [ERROR] Client Error in reaching server endpoint - No response received when attempting to reach /_stcore/health @ http://localhost:8501/static/js/index.dkY5s53S.js:182
+[ 5413385ms] [ERROR] Is Streamlit still running? If you accidentally stopped Streamlit, just restart it in your terminal: @ http://localhost:8501/static/js/index.dkY5s53S.js:187
+[ 5413386ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8501/_stcore/host-config:0

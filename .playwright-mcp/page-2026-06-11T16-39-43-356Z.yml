@@ -1,0 +1,253 @@
+- generic:
+  - generic:
+    - generic [ref=e3]:
+      - banner [ref=e6]:
+        - generic [ref=e9]:
+          - generic [ref=e535]:
+            - img [ref=e536]
+            - generic [ref=e538]: Connecting
+          - button "Main menu" [ref=e23] [cursor=pointer]:
+            - img [ref=e24]
+      - generic [ref=e27]:
+        - generic [ref=e34]:
+          - heading "MoneyPrinterTurbo v1.3.0" [level=1] [ref=e41]:
+            - text: MoneyPrinterTurbo v1.3.0
+            - generic [ref=e42]:
+              - link "Link to heading":
+                - /url: "#money-printer-turbo-v1-3-0"
+                - img
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - generic [ref=e62]: pt - Português Brasileiro
+              - combobox "Selected pt - Português Brasileiro. Language / 语言" [disabled] [ref=e64]
+            - img "open" [ref=e66]
+        - group [ref=e49]:
+          - generic "keyboard_arrow_right Configurações Básicas (Clique para expandir)" [ref=e50] [cursor=pointer]:
+            - generic [ref=e51]:
+              - generic [ref=e53]: keyboard_arrow_right
+              - paragraph [ref=e56]:
+                - strong [ref=e57]: Configurações Básicas
+                - text: (Clique para expandir)
+        - generic [ref=e69]:
+          - generic [ref=e73]:
+            - paragraph [ref=e78]:
+              - strong [ref=e79]: Configurações do Roteiro do Vídeo
+            - generic [ref=e81]:
+              - paragraph [ref=e85]: Tema do Vídeo (Forneça uma palavra-chave, a IA irá gerar automaticamente o roteiro do vídeo)
+              - textbox "Tema do Vídeo (Forneça uma palavra-chave, :red[a IA irá gerar automaticamente] o roteiro do vídeo)" [disabled] [ref=e88]:
+                - /placeholder: ""
+                - text: "A serenidade como força: o estoicismo e a paz interior"
+              - generic [ref=e532]: Press Enter to apply
+            - generic [ref=e90]:
+              - paragraph [ref=e94]: Idioma para Gerar o Roteiro do Vídeo (a IA irá gerar automaticamente com base no idioma do seu tema)
+              - generic [ref=e96]:
+                - generic [ref=e97]:
+                  - generic [ref=e98]: Detectar Automaticamente
+                  - combobox "Selected Detectar Automaticamente. Idioma para Gerar o Roteiro do Vídeo (a IA irá gerar automaticamente com base no idioma do seu tema)" [disabled] [ref=e100]
+                - img "open" [ref=e102]
+            - group [ref=e106]:
+              - generic "keyboard_arrow_right Advanced Script Settings" [ref=e107] [cursor=pointer]:
+                - generic [ref=e108]:
+                  - generic [ref=e110]: keyboard_arrow_right
+                  - paragraph [ref=e113]: Advanced Script Settings
+            - button "Clique para usar a IA para gerar o [Roteiro do Vídeo] e as [Palavras-chave do Vídeo] com base no tema" [disabled] [ref=e116]:
+              - paragraph [ref=e120]:
+                - text: Clique para usar a IA para gerar o [Roteiro do Vídeo] e as [Palavras-chave do Vídeo] com base no
+                - strong [ref=e121]: tema
+            - generic [ref=e123]:
+              - paragraph [ref=e127]: Roteiro do Vídeo (① Opcional, gerado pela IA ② Pontuação adequada ajuda na geração de legendas)
+              - textbox "Roteiro do Vídeo (:blue[① Opcional, gerado pela IA ② Pontuação adequada ajuda na geração de legendas])" [disabled] [ref=e130]:
+                - /placeholder: ""
+            - button "Clique para usar a IA para gerar [Palavras-chave do Vídeo] com base no roteiro" [disabled] [ref=e133]:
+              - paragraph [ref=e137]:
+                - text: Clique para usar a IA para gerar [Palavras-chave do Vídeo] com base no
+                - strong [ref=e138]: roteiro
+            - generic [ref=e140]:
+              - paragraph [ref=e144]:
+                - text: Palavras-chave do Vídeo (
+                - generic [ref=e145]:
+                  - text: ① Opcional, gerado pela IA ② Use
+                  - strong [ref=e146]: vírgulas em inglês
+                  - text: para separar, somente em inglês
+                - text: )
+              - textbox "Palavras-chave do Vídeo (:blue[① Opcional, gerado pela IA ② Use **vírgulas em inglês** para separar, somente em inglês])" [disabled] [ref=e149]:
+                - /placeholder: ""
+          - generic [ref=e151]:
+            - generic [ref=e153]:
+              - paragraph [ref=e158]:
+                - strong [ref=e159]: Configurações do Vídeo
+              - generic [ref=e161]:
+                - paragraph [ref=e165]: Fonte do Vídeo
+                - generic [ref=e167]:
+                  - generic [ref=e168]:
+                    - generic [ref=e169]: Pexels
+                    - combobox "Selected Pexels. Fonte do Vídeo" [disabled] [ref=e171]
+                  - img "open" [ref=e173]
+              - generic [ref=e176]:
+                - paragraph [ref=e180]: Modo de Concatenação de Vídeo
+                - generic [ref=e182]:
+                  - generic [ref=e183]:
+                    - generic [ref=e184]: Concatenação Aleatória (Recomendado)
+                    - combobox "Selected Concatenação Aleatória (Recomendado). Modo de Concatenação de Vídeo" [disabled] [ref=e186]
+                  - img "open" [ref=e188]
+              - generic [ref=e191]:
+                - paragraph [ref=e195]: Modo de Transição de Vídeo
+                - generic [ref=e197]:
+                  - generic [ref=e198]:
+                    - generic [ref=e199]: Nenhuma Transição
+                    - combobox "Selected Nenhuma Transição. Modo de Transição de Vídeo" [disabled] [ref=e201]
+                  - img "open" [ref=e203]
+              - generic [ref=e206]:
+                - paragraph [ref=e210]: Proporção do Vídeo
+                - generic [ref=e212]:
+                  - generic [ref=e213]:
+                    - generic [ref=e214]: Retrato 9:16
+                    - combobox "Selected Retrato 9:16. Proporção do Vídeo" [disabled] [ref=e216]
+                  - img "open" [ref=e218]
+              - generic [ref=e221]:
+                - paragraph [ref=e225]: Duração Máxima dos Clipes de Vídeo (segundos)
+                - generic [ref=e227]:
+                  - generic [ref=e228]:
+                    - generic [ref=e229]: "3"
+                    - combobox "Selected 3. Duração Máxima dos Clipes de Vídeo (segundos)" [disabled] [ref=e231]
+                  - img "open" [ref=e233]
+              - generic [ref=e236]:
+                - paragraph [ref=e240]: Número de Vídeos Gerados Simultaneamente
+                - generic [ref=e242]:
+                  - generic [ref=e243]:
+                    - generic [ref=e244]: "1"
+                    - combobox "Selected 1. Número de Vídeos Gerados Simultaneamente" [disabled] [ref=e246]
+                  - img "open" [ref=e248]
+              - group [ref=e252]:
+                - generic "keyboard_arrow_right Advanced Video Settings" [ref=e253] [cursor=pointer]:
+                  - generic [ref=e254]:
+                    - generic [ref=e256]: keyboard_arrow_right
+                    - paragraph [ref=e259]: Advanced Video Settings
+            - generic [ref=e261]:
+              - paragraph [ref=e266]:
+                - strong [ref=e267]: Configurações de Áudio
+              - generic [ref=e269]:
+                - paragraph [ref=e273]: Servidores TTS
+                - generic [ref=e275]:
+                  - generic [ref=e276]:
+                    - generic [ref=e277]: Google Gemini TTS
+                    - combobox "Selected Google Gemini TTS. Servidores TTS" [disabled] [ref=e279]
+                  - img "open" [ref=e281]
+              - generic [ref=e284]:
+                - paragraph [ref=e288]: Voz de Síntese de Fala
+                - generic [ref=e290]:
+                  - generic [ref=e291]:
+                    - generic [ref=e292]: gemini:Charon-Masculino
+                    - combobox "Selected gemini:Charon-Masculino. Voz de Síntese de Fala" [disabled] [ref=e294]
+                  - img "open" [ref=e296]
+              - button "Reproduzir Voz" [disabled] [ref=e300]:
+                - paragraph [ref=e304]: Reproduzir Voz
+              - generic [ref=e306]:
+                - paragraph [ref=e310]: Volume da Fala (1.0 representa 100%)
+                - generic [ref=e312]:
+                  - generic [ref=e313]:
+                    - generic [ref=e314]: "1.0"
+                    - combobox "Selected 1.0. Volume da Fala (1.0 representa 100%)" [disabled] [ref=e316]
+                  - img "open" [ref=e318]
+              - generic [ref=e321]:
+                - paragraph [ref=e325]: Velocidade da Fala (1.0 significa velocidade 1x)
+                - generic [ref=e327]:
+                  - generic [ref=e328]:
+                    - generic [ref=e329]: "1.0"
+                    - combobox "Selected 1.0. Velocidade da Fala (1.0 significa velocidade 1x)" [disabled] [ref=e331]
+                  - img "open" [ref=e333]
+              - generic [ref=e336]:
+                - paragraph [ref=e340]: Custom Audio File
+                - region "Custom Audio File" [ref=e341]:
+                  - button "Choose File" [disabled] [ref=e342]
+                  - button "upload Upload" [disabled] [ref=e344]:
+                    - generic [ref=e346]:
+                      - generic [ref=e348]: upload
+                      - paragraph [ref=e350]: Upload
+                  - generic [ref=e353]: 200MB per file • MP3, WAV, M4A, AAC, FLAC, OGG
+              - generic [ref=e355]:
+                - paragraph [ref=e359]: Música de Fundo
+                - generic [ref=e361]:
+                  - generic [ref=e362]:
+                    - generic [ref=e363]: Música de Fundo Aleatória
+                    - combobox "Selected Música de Fundo Aleatória. Música de Fundo" [disabled] [ref=e365]
+                  - img "open" [ref=e367]
+              - generic [ref=e370]:
+                - paragraph [ref=e374]: Volume da Música de Fundo (0.2 representa 20%, a música de fundo não deve ser muito alta)
+                - generic [ref=e376]:
+                  - generic [ref=e377]:
+                    - generic [ref=e378]: "0.2"
+                    - combobox "Selected 0.2. Volume da Música de Fundo (0.2 representa 20%, a música de fundo não deve ser muito alta)" [disabled] [ref=e380]
+                  - img "open" [ref=e382]
+          - generic [ref=e385]:
+            - generic [ref=e387]:
+              - paragraph [ref=e392]:
+                - strong [ref=e393]: Configurações de Legendas
+              - generic [ref=e396]:
+                - checkbox "Ativar Legendas (Se desmarcado, as configurações abaixo não terão efeito)" [checked] [disabled]
+                - paragraph [ref=e401]: Ativar Legendas (Se desmarcado, as configurações abaixo não terão efeito)
+              - generic [ref=e403]:
+                - paragraph [ref=e407]: Fonte da Legenda
+                - generic [ref=e409]:
+                  - generic [ref=e410]:
+                    - generic [ref=e411]: MicrosoftYaHeiBold.ttc
+                    - combobox "Selected MicrosoftYaHeiBold.ttc. Fonte da Legenda" [disabled] [ref=e413]
+                  - img "open" [ref=e415]
+              - generic [ref=e418]:
+                - paragraph [ref=e422]: Posição da Legenda
+                - generic [ref=e424]:
+                  - generic [ref=e425]:
+                    - generic [ref=e426]: Inferior (Recomendado)
+                    - combobox "Selected Inferior (Recomendado). Posição da Legenda" [disabled] [ref=e428]
+                  - img "open" [ref=e430]
+              - generic [ref=e433]:
+                - paragraph [ref=e441]: Cor da Fonte da Legenda
+                - generic [ref=e448]:
+                  - paragraph [ref=e452]: Tamanho da Fonte da Legenda
+                  - generic [ref=e453]:
+                    - slider "Tamanho da Fonte da Legenda" [ref=e457]:
+                      - generic:
+                        - generic:
+                          - paragraph: "48"
+                    - generic:
+                      - generic:
+                        - paragraph: "30"
+                      - generic:
+                        - paragraph: "100"
+              - generic [ref=e460]:
+                - paragraph [ref=e468]: Cor do Contorno da Legenda
+                - generic [ref=e475]:
+                  - paragraph [ref=e479]: Largura do Contorno da Legenda
+                  - generic [ref=e480]:
+                    - slider "Largura do Contorno da Legenda" [ref=e484]:
+                      - generic:
+                        - generic:
+                          - paragraph: "1.50"
+                    - generic:
+                      - generic:
+                        - paragraph: "0.00"
+                      - generic:
+                        - paragraph: "10.00"
+              - generic [ref=e492]:
+                - checkbox "Ativar fundo da legenda" [disabled]
+                - paragraph [ref=e497]: Ativar fundo da legenda
+              - generic [ref=e502]:
+                - checkbox "Rounded Subtitle Background" [disabled]
+                - generic [ref=e505]:
+                  - paragraph [ref=e507]: Rounded Subtitle Background
+                  - button "Help for Rounded Subtitle Background" [ref=e511] [cursor=pointer]:
+                    - img [ref=e512]
+            - group [ref=e517]:
+              - generic "keyboard_arrow_right Clique para mostrar o gerenciamento de chaves de API" [ref=e518] [cursor=pointer]:
+                - generic [ref=e519]:
+                  - generic [ref=e521]: keyboard_arrow_right
+                  - paragraph [ref=e524]: Clique para mostrar o gerenciamento de chaves de API
+        - button "Gerar Vídeo" [disabled] [ref=e527]:
+          - paragraph [ref=e531]: Gerar Vídeo
+    - dialog "dialog" [ref=e541]:
+      - generic [ref=e542]: Connection error
+      - generic [ref=e543]:
+        - generic [ref=e544]: "Is Streamlit still running? If you accidentally stopped Streamlit, just restart it in your terminal:"
+        - code [ref=e547]: streamlit run yourscript.py
+      - button "Close" [ref=e548] [cursor=pointer]:
+        - img [ref=e549]

@@ -1,0 +1,31 @@
+{
+  "_source": "Chrome autofill — perfil principal (use_count: 198)",
+  "nome_completo": "Mauricio de Bragança Pullen Parente",
+  "primeiro_nome": "Mauricio",
+  "sobrenome": "Parente",
+  "email": "mauricio.pullen@gmail.com",
+  "email_secundario": "mauricio_pullen@yahoo.com.br",
+  "telefone": "+55 21 98148-5677",
+  "telefone_curto": "21981485677",
+  "cpf": "051.837.797-08",
+  "endereco": {
+    "rua": "Rua Professor Miguel Couto",
+    "numero": "341",
+    "complemento": "apto 1101",
+    "bairro": "Icaraí",
+    "cidade": "Niterói",
+    "estado": "RJ",
+    "estado_extenso": "Rio de Janeiro",
+    "cep": "24230-240",
+    "pais": "Brasil",
+    "pais_codigo": "BR"
+  },
+  "endereco_completo": "Rua Professor Miguel Couto, 341 apto 1101, Icaraí, Niterói - RJ, 24230-240",
+  "username": "mauricio_pullen",
+  "familia": {
+    "amora": {
+      "nome": "Amora de Bragança Maynards Pullen Parente",
+      "telefone": "+55 21 98148-5677"
+    }
+  }
+}

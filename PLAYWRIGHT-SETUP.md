@@ -1,7 +1,9 @@
 # Playwright MCP + CLI Setup
 
 ## Objetivo
-Ter dois modos de automação:
+Fluxo dedicado ao Playwright. Este documento é apenas para o projeto Playwright; o projeto PowerShell está documentado em `POWERSHELL-SETUP.md`.
+
+Este guia descreve dois modos de automação:
 - `@playwright/mcp` para automação total via MCP
 - Playwright CLI + scripts rápidos para uso econômico e comandos diretos
 

@@ -1,0 +1,77 @@
+# ============================================================
+# Jarvis Voice — OpenJarvis + Claude + Edge TTS PT-BR
+# ============================================================
+# Fluxo: Microfone → FasterWhisper (STT local) → Claude → Edge TTS (PT-BR)
+#
+# Edge TTS = Microsoft neural voices, grátis, sem API key
+# Backend customizado registrado via edge_tts_backend.py + start.py
+#
+# Vozes disponíveis (edite voice_id abaixo):
+#   pt-BR-AntonioNeural           — masculino, claro  ← padrão Jarvis
+#   pt-BR-FranciscaNeural         — feminino, natural
+#   pt-BR-ThalitaMultilingualNeural — feminino, jovem e fluido
+#   (MacerioMultilingualNeural nao disponivel nesta regiao)
+# ============================================================
+
+[recipe]
+name        = "jarvis-voice"
+description = "Assistente de voz estilo Jarvis usando Claude Sonnet como cérebro"
+version     = "0.1.0"
+author      = "mauriciopullen"
+
+# ── Modelo & Engine ──────────────────────────────────────────
+[intelligence]
+model       = "claude-sonnet-4-6"
+max_tokens  = 1024
+temperature = 0.7
+
+[engine]
+key = "cloud"           # usa ANTHROPIC_API_KEY do ambiente
+
+# ── Voz de Entrada (STT) ─────────────────────────────────────
+[speech]
+stt_backend  = "faster_whisper"   # local, sem custo
+stt_model    = "base"             # troque por "small" ou "medium" para mais precisão
+language     = "pt"               # "en" para inglês, "" para auto-detect
+device       = "auto"
+compute_type = "float16"
+
+# ── Voz de Saída (TTS) ───────────────────────────────────────
+tts_backend = "edge_tts"          # backend customizado (edge_tts_backend.py)
+voice_id    = "pt-BR-FranciscaNeural"  # feminino PT-BR
+speed       = 1.05                # ligeiramente mais rápido que padrão
+
+# ── Agente ───────────────────────────────────────────────────
+[agent]
+type      = "conversational"
+max_turns = 100
+persona   = "jarvis"
+
+tools = [
+  "transcribe_audio",    # STT → texto
+  "text_to_speech",      # texto → áudio
+  "think",               # raciocínio interno
+  "memory_store",        # lembrar contexto entre sessões
+  "memory_search",       # buscar memória anterior
+  "web_search",          # pesquisa opcional
+]
+
+system_prompt = """
+Você é Jarvis — assistente de voz pessoal, preciso e elegante.
+Responda SEMPRE de forma concisa (1-3 frases no máximo), pois a resposta será falada em voz alta.
+Evite listas, markdown, emojis ou formatação — use apenas linguagem conversacional natural.
+Se precisar de mais contexto, faça UMA pergunta direta.
+Trate o usuário com respeito e discreta ironia britânica quando apropriado.
+Quando não tiver certeza, diga isso claramente.
+"""
+
+# ── Servidor API (opcional) ───────────────────────────────────
+[server]
+host = "127.0.0.1"
+port = 8000
+
+# ── Memória Persistente ───────────────────────────────────────
+[memory]
+backend  = "local"
+path     = "./jarvis-memory"
+max_size = 1000

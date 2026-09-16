@@ -1,0 +1,716 @@
+
+[2m2026-07-17T00:23:20.856575[0m [[32m[1minfo     [0m] [1mLog file created at: C:\Users\mauri\.cognee\logs\2026-07-16_21-23-20.log[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mlog_file[0m=[35mC:\Users\mauri\.cognee\logs\2026-07-16_21-23-20.log[0m
+
+[2m2026-07-17T00:23:20.866204[0m [[33m[1mwarning  [0m] [1mCognee 1.0 changes: New API — remember/recall/forget/improve (V1 add/cognify/search still work). Session memory enabled by default (CACHING=false to disable). Multi-user access control on by default (ENABLE_BACKEND_ACCESS_CONTROL=false to disable). Agents (@cognee.agent) auto-verified on registration. See https://docs.cognee.ai/[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-07-17T00:23:20.866204[0m [[32m[1minfo     [0m] [1mLogging initialized           [0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mcognee_version[0m=[35m1.3.0[0m [36mdatabase_path[0m=[35mC:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases[0m [36mos_info[0m=[35m'Windows 11 (10.0.26200)'[0m [36mpython_version[0m=[35m3.12.10[0m [36mstructlog_version[0m=[35m25.5.0[0m
+
+[2m2026-07-17T00:23:20.866204[0m [[32m[1minfo     [0m] [1mDatabase storage: C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-07-17T00:23:22.399794[0m [[32m[1minfo     [0m] [1mauth posture: authentication=disabled, multi_tenant=disabled (inherited from ENABLE_BACKEND_ACCESS_CONTROL)[0m [[0m[1m[34mget_authenticated_user[0m][0m
+
+[2m2026-07-17T00:23:36.188838[0m [[32m[1minfo     [0m] [1mDeleted Ladybug database files at C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases\cognee_graph_ladybug[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-07-17T00:23:36.212255[0m [[32m[1minfo     [0m] [1mLog file created at: C:\Users\mauri\.cognee\logs\2026-07-16_21-23-20.log[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mlog_file[0m=[35mC:\Users\mauri\.cognee\logs\2026-07-16_21-23-20.log[0m
+
+[2m2026-07-17T00:23:36.212255[0m [[33m[1mwarning  [0m] [1mCognee 1.0 changes: New API — remember/recall/forget/improve (V1 add/cognify/search still work). Session memory enabled by default (CACHING=false to disable). Multi-user access control on by default (ENABLE_BACKEND_ACCESS_CONTROL=false to disable). Agents (@cognee.agent) auto-verified on registration. See https://docs.cognee.ai/[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-07-17T00:23:36.212255[0m [[32m[1minfo     [0m] [1mLogging initialized           [0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mcognee_version[0m=[35m1.3.0[0m [36mdatabase_path[0m=[35mC:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases[0m [36mos_info[0m=[35m'Windows 11 (10.0.26200)'[0m [36mpython_version[0m=[35m3.12.10[0m [36mstructlog_version[0m=[35m25.5.0[0m
+
+[2m2026-07-17T00:23:36.212255[0m [[32m[1minfo     [0m] [1mDatabase storage: C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_system\databases[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-07-17T00:23:36.212255[0m [[33m[1mwarning  [0m] [1mCounting tokens for embedding model 'nomic-embed-text:latest' with HUGGINGFACE_TOKENIZER='nomic-ai/nomic-embed-text-v1.5'. Make sure they share a tokenizer, otherwise chunk sizing may be off.[0m [[0m[1m[34mtokenizer_resolver[0m][0m
+
+[2m2026-07-17T00:23:36.212255[0m [[33m[1mwarning  [0m] [1mCould not load a matching tokenizer for embedding model 'nomic-ai/nomic-embed-text-v1.5' (No module named 'transformers'). Falling back to TikToken, so token counts are approximate. Token counts drive chunk sizing and the --dry-run estimate, so a tokenizer that does not match the embedding model will mis-size chunks. Set HUGGINGFACE_TOKENIZER to a tokenizer matching your embedding model to fix this.[0m [[0m[1m[34mtokenizer_resolver[0m][0m
+
+[2m2026-07-17T00:23:43.937213[0m [[32m[1minfo     [0m] [1mDatabase deleted successfully.[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mStorage manager absolute path: C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\.cognee_cache[0m
+
+[1mDeleting cache...             [0m
+
+[1m\u2713 Cache deleted successfully! [0m
+
+======================================================================
+INGESTAO — 8 notas de manobrabilidade
+======================================================================
+  + circulo-de-evolucao.md
+  + condicoes-prova-manobrabilidade.md
+  + criterios-manobrabilidade-imo.md
+  + curva-de-giro-hidrodinamica.md
+  + manobra-espiral-pullout.md
+  + metodos-predicao-manobrabilidade.md
+  + teste-parada-atras.md
+  + teste-zig-zag.md
+
+[2m2026-07-17T00:23:44.329033[0m [[32m[1minfo     [0m] [1mLadybug database closed successfully[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[1mUser 20f38230-fc2c-4cfb-bce2-c6bca0881579 has registered.[0m
+
+[2m2026-07-17T00:23:44.745049[0m [[32m[1minfo     [0m] [1mTesting connection to LLM endpoint...[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-07-17T00:24:16.295135[0m [[31m[1merror    [0m] [1mLLM connection test timed out after 30s. Check that your LLM endpoint is reachable and responding. Set COGNEE_SKIP_CONNECTION_TEST=true to bypass this check.[0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m
+
+[2m2026-07-17T00:24:16.302832[0m [[31m[1merror    [0m] [1mException                     [0m [[0m[1m[34mcognee.shared.logging_utils[0m][0m [36mexception_message[0m=[35m'LLM connection test timed out after 30s. Check that your LLM endpoint is reachable and responding. Set COGNEE_SKIP_CONNECTION_TEST=true to bypass this check.'[0m [36mexception_type[0m=[35mTimeoutError[0m [36mtraceback[0m=[35mTrue[0m
+[31m\u250c\u2500[0m[31m\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500[0m[31m\u2500\u2510[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py [31m\u2502[0m
+[31m\u2502[0m :520 in wait_for                                                            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 517 [0m[2m\u2502   \u2502   \u2502   [0m[94mraise[0m [96mTimeoutError[0m [94mfrom[0m[90m [0m[4;96mexc[0m                              [31m\u2502[0m
+[31m\u2502[0m   [2m 518 [0m[2m\u2502   [0m                                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m 519 [0m[2m\u2502   [0m[94masync[0m [94mwith[0m [1;4mtimeouts.timeout(timeout)[0m:                            [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 520 [2m\u2502   \u2502   [0m[94mreturn[0m [94mawait[0m fut                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 521 [0m                                                                     [31m\u2502[0m
+[31m\u2502[0m   [2m 522 [0m[94masync[0m [94mdef[0m[90m [0m[92m_wait[0m(fs, timeout, return_when, loop):                     [31m\u2502[0m
+[31m\u2502[0m   [2m 523 [0m[2;90m\u2502   [0m[33m"""Internal helper for wait().[0m                                   [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\llm\LLMGateway.py:34 in _record_session_usage_after                 [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 31 [0m[2;33m\u2502   [0m[33many active session tracker. Failures never propagate — usage[0m      [31m\u2502[0m
+[31m\u2502[0m   [2m 32 [0m[2;33m\u2502   [0m[33maccounting is strictly auxiliary.[0m                                 [31m\u2502[0m
+[31m\u2502[0m   [2m 33 [0m[2;33m\u2502   [0m[33m"""[0m                                                               [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 34 [2m\u2502   [0mresult = [1;4;94mawait[0m[1;4m coro[0m                                               [31m\u2502[0m
+[31m\u2502[0m   [2m 35 [0m[2m\u2502   [0m[94mtry[0m:                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m 36 [0m[2m\u2502   \u2502   [0m[94mfrom[0m[90m [0m[4;96mcognee[0m[4;96m.[0m[4;96mmodules[0m[4;96m.[0m[4;96msession_lifecycle[0m[4;96m.[0m[4;96musage_tracking[0m[90m [0m[94mimport[0m r [31m\u2502[0m
+[31m\u2502[0m   [2m 37 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \observability\get_observe.py:30 in async_wrapper                           [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 27 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mfrom[0m[90m [0m[4;96mcognee[0m[4;96m.[0m[4;96mmodules[0m[4;96m.[0m[4;96mobservability[0m[4;96m.[0m[4;96mtrace_context[0m[90m [0m[94mi[0m [31m\u2502[0m
+[31m\u2502[0m       is_tracing_enabled                                                    [31m\u2502[0m
+[31m\u2502[0m   [2m 28 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m 29 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mif[0m [95mnot[0m is_tracing_enabled():                      [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 30 [2m\u2502   \u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mreturn[0m [1;4;94mawait[0m[1;4m wrapped(*args, **kwargs)[0m         [31m\u2502[0m
+[31m\u2502[0m   [2m 31 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m 32 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mfrom[0m[90m [0m[4;96mcognee[0m[4;96m.[0m[4;96mmodules[0m[4;96m.[0m[4;96mobservability[0m[4;96m.[0m[4;96mtracing[0m[90m [0m[94mimport[0m  [31m\u2502[0m
+[31m\u2502[0m   [2m 33 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   \u2502   [0mget_tracer,                                   [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\async [31m\u2502[0m
+[31m\u2502[0m io\__init__.py:193 in async_wrapped                                         [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m190 [0m[2m\u2502   \u2502   \u2502   [0m[2m# calling the same wrapped functions multiple times in th[0m [31m\u2502[0m
+[31m\u2502[0m   [2m191 [0m[2m\u2502   \u2502   \u2502   [0mcopy = [96mself[0m.copy()                                        [31m\u2502[0m
+[31m\u2502[0m   [2m192 [0m[2m\u2502   \u2502   \u2502   [0masync_wrapped.statistics = copy.statistics  [2m# type: ignor[0m [31m\u2502[0m
+[31m\u2502[0m [31m> [0m193 [2m\u2502   \u2502   \u2502   [0m[94mreturn[0m [1;4;94mawait[0m[1;4m copy(fn, *args, **kwargs)[0m                    [31m\u2502[0m
+[31m\u2502[0m   [2m194 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m195 [0m[2m\u2502   \u2502   [0m[2m# Preserve attributes[0m                                         [31m\u2502[0m
+[31m\u2502[0m   [2m196 [0m[2m\u2502   \u2502   [0masync_wrapped.retry = [96mself[0m  [2m# type: ignore[attr-defined][0m      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\async [31m\u2502[0m
+[31m\u2502[0m io\__init__.py:112 in __call__                                              [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m109 [0m[2m\u2502   \u2502   [0mretry_state = RetryCallState(retry_object=[96mself[0m, fn=fn, args=a [31m\u2502[0m
+[31m\u2502[0m   [2m110 [0m[2m\u2502   \u2502   [0mis_async = _utils.is_coroutine_callable(fn)                   [31m\u2502[0m
+[31m\u2502[0m   [2m111 [0m[2m\u2502   \u2502   [0m[94mwhile[0m [94mTrue[0m:                                                   [31m\u2502[0m
+[31m\u2502[0m [31m> [0m112 [2m\u2502   \u2502   \u2502   [0mdo = [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m.iter(retry_state=retry_state)[0m             [31m\u2502[0m
+[31m\u2502[0m   [2m113 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m [96misinstance[0m(do, DoAttempt):                             [31m\u2502[0m
+[31m\u2502[0m   [2m114 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mtry[0m:                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m115 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mif[0m is_async:                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\async [31m\u2502[0m
+[31m\u2502[0m io\__init__.py:157 in iter                                                  [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m154 [0m[2m\u2502   \u2502   [0m[96mself[0m._begin_iter(retry_state)                                 [31m\u2502[0m
+[31m\u2502[0m   [2m155 [0m[2m\u2502   \u2502   [0mresult = [94mNone[0m                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m156 [0m[2m\u2502   \u2502   [0m[94mfor[0m action [95min[0m [96mself[0m.iter_state.actions:                        [31m\u2502[0m
+[31m\u2502[0m [31m> [0m157 [2m\u2502   \u2502   \u2502   [0mresult = [1;4;94mawait[0m[1;4m action(retry_state)[0m                        [31m\u2502[0m
+[31m\u2502[0m   [2m158 [0m[2m\u2502   \u2502   [0m[94mreturn[0m result                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m159 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m160 [0m[2m\u2502   [0m[94mdef[0m[90m [0m[92m__iter__[0m([96mself[0m) -> t.Generator[AttemptManager, [94mNone[0m, [94mNone[0m]:    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\_util [31m\u2502[0m
+[31m\u2502[0m s.py:111 in inner                                                           [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m108 [0m[2m\u2502   \u2502   [0m[94mreturn[0m call                                                   [31m\u2502[0m
+[31m\u2502[0m   [2m109 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m110 [0m[2m\u2502   [0m[94masync[0m [94mdef[0m[90m [0m[92minner[0m(*args: typing.Any, **kwargs: typing.Any) -> typin [31m\u2502[0m
+[31m\u2502[0m [31m> [0m111 [2m\u2502   \u2502   [0m[94mreturn[0m [1;4mcall(*args, **kwargs)[0m                                  [31m\u2502[0m
+[31m\u2502[0m   [2m112 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m113 [0m[2m\u2502   [0m[94mreturn[0m inner                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m114 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\__ini [31m\u2502[0m
+[31m\u2502[0m t__.py:393 in <lambda>                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m390 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m391 [0m[2m\u2502   [0m[94mdef[0m[90m [0m[92m_post_retry_check_actions[0m([96mself[0m, retry_state: [33m"[0m[33mRetryCallState[0m[33m"[0m [31m\u2502[0m
+[31m\u2502[0m   [2m392 [0m[2m\u2502   \u2502   [0m[94mif[0m [95mnot[0m ([96mself[0m.iter_state.is_explicit_retry [95mor[0m [96mself[0m.iter_state. [31m\u2502[0m
+[31m\u2502[0m [31m> [0m393 [2m\u2502   \u2502   \u2502   [0m[96mself[0m._add_action_func([94mlambda[0m rs: [1;4mrs.outcome.result()[0m)     [31m\u2502[0m
+[31m\u2502[0m   [2m394 [0m[2m\u2502   \u2502   \u2502   [0m[94mreturn[0m                                                    [31m\u2502[0m
+[31m\u2502[0m   [2m395 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m396 [0m[2m\u2502   \u2502   [0m[94mif[0m [96mself[0m.after [95mis[0m [95mnot[0m [94mNone[0m:                                    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\concurrent\futur [31m\u2502[0m
+[31m\u2502[0m es\_base.py:449 in result                                                   [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m446 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mif[0m [96mself[0m._state [95min[0m [CANCELLED, CANCELLED_AND_NOTIFIED] [31m\u2502[0m
+[31m\u2502[0m   [2m447 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mraise[0m CancelledError()                            [31m\u2502[0m
+[31m\u2502[0m   [2m448 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94melif[0m [96mself[0m._state == FINISHED:                         [31m\u2502[0m
+[31m\u2502[0m [31m> [0m449 [2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mreturn[0m [96mself[0m.__get_result()                        [31m\u2502[0m
+[31m\u2502[0m   [2m450 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m451 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[96mself[0m._condition.wait(timeout)                         [31m\u2502[0m
+[31m\u2502[0m   [2m452 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\concurrent\futur [31m\u2502[0m
+[31m\u2502[0m es\_base.py:401 in __get_result                                             [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m398 [0m[2m\u2502   [0m[94mdef[0m[90m [0m[92m__get_result[0m([96mself[0m):                                           [31m\u2502[0m
+[31m\u2502[0m   [2m399 [0m[2m\u2502   \u2502   [0m[94mif[0m [96mself[0m._exception:                                           [31m\u2502[0m
+[31m\u2502[0m   [2m400 [0m[2m\u2502   \u2502   \u2502   [0m[94mtry[0m:                                                      [31m\u2502[0m
+[31m\u2502[0m [31m> [0m401 [2m\u2502   \u2502   \u2502   \u2502   [0m[94mraise[0m [96mself[0m._exception                                 [31m\u2502[0m
+[31m\u2502[0m   [2m402 [0m[2m\u2502   \u2502   \u2502   [0m[94mfinally[0m:                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m403 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[2m# Break a reference cycle with the exception in self.[0m [31m\u2502[0m
+[31m\u2502[0m   [2m404 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[1;4;96mself[0m = [94mNone[0m                                           [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\async [31m\u2502[0m
+[31m\u2502[0m io\__init__.py:116 in __call__                                              [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m113 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m [96misinstance[0m(do, DoAttempt):                             [31m\u2502[0m
+[31m\u2502[0m   [2m114 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mtry[0m:                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m115 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mif[0m is_async:                                      [31m\u2502[0m
+[31m\u2502[0m [31m> [0m116 [2m\u2502   \u2502   \u2502   \u2502   \u2502   \u2502   [0mresult = [94mawait[0m fn(*args, **kwargs)            [31m\u2502[0m
+[31m\u2502[0m   [2m117 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94melse[0m:                                             [31m\u2502[0m
+[31m\u2502[0m   [2m118 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   \u2502   [0mresult = fn(*args, **kwargs)                  [31m\u2502[0m
+[31m\u2502[0m   [2m119 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mexcept[0m [96mBaseException[0m:  [2m# noqa: B902[0m                   [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\llm\structured_output_framework\litellm_instructor\llm\ollama\adapt [31m\u2502[0m
+[31m\u2502[0m er.py:133 in acreate_structured_output                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m130 [0m[2m\u2502   \u2502   [0m[2m# parse failures and retry storms on local llama.cpp-compatib[0m [31m\u2502[0m
+[31m\u2502[0m   [2m131 [0m[2m\u2502   \u2502   [0m[94mif[0m response_model [95mis[0m [96mstr[0m:                                     [31m\u2502[0m
+[31m\u2502[0m   [2m132 [0m[2m\u2502   \u2502   \u2502   [0m[94masync[0m [94mwith[0m llm_rate_limiter_context_manager():            [31m\u2502[0m
+[31m\u2502[0m [31m> [0m133 [2m\u2502   \u2502   \u2502   \u2502   [0mresponse = [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m.client.chat.completions.create([0m [31m\u2502[0m
+[31m\u2502[0m   [2m134 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[1;4mmodel=[0m[1;4;96mself[0m[1;4m.model,[0m                                 [31m\u2502[0m
+[31m\u2502[0m   [2m135 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[1;4mmessages=[[0m                                        [31m\u2502[0m
+[31m\u2502[0m   [2m136 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   \u2502   [0m[1;4m{[0m[1;4;33m"[0m[1;4;33mrole[0m[1;4;33m"[0m[1;4m: [0m[1;4;33m"[0m[1;4;33msystem[0m[1;4;33m"[0m[1;4m, [0m[1;4;33m"[0m[1;4;33mcontent[0m[1;4;33m"[0m[1;4m: system_prompt},[0m [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\resourc [31m\u2502[0m
+[31m\u2502[0m es\chat\completions\completions.py:2877 in create                           [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m2874 [0m[2m\u2502   \u2502   [0mtimeout: [96mfloat[0m | httpx.Timeout | [94mNone[0m | NotGiven = not_given [31m\u2502[0m
+[31m\u2502[0m   [2m2875 [0m[2m\u2502   [0m) -> ChatCompletion | AsyncStream[ChatCompletionChunk]:          [31m\u2502[0m
+[31m\u2502[0m   [2m2876 [0m[2m\u2502   \u2502   [0mvalidate_response_format(response_format)                    [31m\u2502[0m
+[31m\u2502[0m [31m> [0m2877 [2m\u2502   \u2502   [0m[94mreturn[0m [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._post([0m                                     [31m\u2502[0m
+[31m\u2502[0m   [2m2878 [0m[2m\u2502   \u2502   \u2502   [0m[1;4;33m"[0m[1;4;33m/chat/completions[0m[1;4;33m"[0m[1;4m,[0m                                     [31m\u2502[0m
+[31m\u2502[0m   [2m2879 [0m[2m\u2502   \u2502   \u2502   [0m[1;4mbody=[0m[1;4;94mawait[0m[1;4m async_maybe_transform([0m                        [31m\u2502[0m
+[31m\u2502[0m   [2m2880 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[1;4m{[0m                                                    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\_base_c [31m\u2502[0m
+[31m\u2502[0m lient.py:1931 in post                                                       [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1928 [0m[2m\u2502   \u2502   [0mopts = FinalRequestOptions.construct(                        [31m\u2502[0m
+[31m\u2502[0m   [2m1929 [0m[2m\u2502   \u2502   \u2502   [0mmethod=[33m"[0m[33mpost[0m[33m"[0m, url=path, json_data=body, content=content [31m\u2502[0m
+[31m\u2502[0m        async_to_httpx_files(files), **options                               [31m\u2502[0m
+[31m\u2502[0m   [2m1930 [0m[2m\u2502   \u2502   [0m)                                                            [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1931 [2m\u2502   \u2502   [0m[94mreturn[0m [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m.request(cast_to, opts, stream=stream, stre[0m [31m\u2502[0m
+[31m\u2502[0m   [2m1932 [0m[2m\u2502   [0m                                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m1933 [0m[2m\u2502   [0m[94masync[0m [94mdef[0m[90m [0m[92mpatch[0m(                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m1934 [0m[2m\u2502   \u2502   [0m[96mself[0m,                                                        [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\_base_c [31m\u2502[0m
+[31m\u2502[0m lient.py:1648 in request                                                    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1645 [0m[2m\u2502   \u2502   \u2502   [0m                                                         [31m\u2502[0m
+[31m\u2502[0m   [2m1646 [0m[2m\u2502   \u2502   \u2502   [0mresponse = [94mNone[0m                                          [31m\u2502[0m
+[31m\u2502[0m   [2m1647 [0m[2m\u2502   \u2502   \u2502   [0m[94mtry[0m:                                                     [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1648 [2m\u2502   \u2502   \u2502   \u2502   [0mresponse = [94mawait[0m [96mself[0m._send_request(                 [31m\u2502[0m
+[31m\u2502[0m   [2m1649 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mrequest,                                         [31m\u2502[0m
+[31m\u2502[0m   [2m1650 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mstream=stream [95mor[0m [96mself[0m._should_stream_response_bo [31m\u2502[0m
+[31m\u2502[0m   [2m1651 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m**kwargs,                                        [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\_client [31m\u2502[0m
+[31m\u2502[0m .py:1074 in _send_request                                                   [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1071 [0m[2m\u2502   \u2502   [0mstream: [96mbool[0m,                                                [31m\u2502[0m
+[31m\u2502[0m   [2m1072 [0m[2m\u2502   \u2502   [0m**kwargs: Unpack[HttpxSendArgs],                             [31m\u2502[0m
+[31m\u2502[0m   [2m1073 [0m[2m\u2502   [0m) -> httpx.Response:                                             [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1074 [2m\u2502   \u2502   [0mresponse = [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._send_with_auth_retry(request, stream=[0m [31m\u2502[0m
+[31m\u2502[0m   [2m1075 [0m[2m\u2502   \u2502   [0m[94mif[0m [96mself[0m._provider_runtime [95mis[0m [95mnot[0m [94mNone[0m:                       [31m\u2502[0m
+[31m\u2502[0m   [2m1076 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m [96mself[0m._provider_runtime.normalize_async_response [95mis[0m [95mno[0m [31m\u2502[0m
+[31m\u2502[0m   [2m1077 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mresponse = [94mawait[0m                                     [31m\u2502[0m
+[31m\u2502[0m        [96mself[0m._provider_runtime.normalize_async_response(response)            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\_client [31m\u2502[0m
+[31m\u2502[0m .py:1052 in _send_with_auth_retry                                           [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1049 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mrequest.headers[[33m"[0m[33mAuthorization[0m[33m"[0m] = [33mf[0m[33m"[0m[33mBearer [0m[33m{[0m[94mawait[0m[90m [0m  [31m\u2502[0m
+[31m\u2502[0m        [96mself[0m._workload_identity_auth.get_token_async()[33m}[0m[33m"[0m                     [31m\u2502[0m
+[31m\u2502[0m   [2m1050 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mused_workload_identity_auth = [94mTrue[0m                   [31m\u2502[0m
+[31m\u2502[0m   [2m1051 [0m[2m\u2502   \u2502   [0m                                                             [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1052 [2m\u2502   \u2502   [0mresponse = [1;4;94mawait[0m[1;4m [0m[1;4;96msuper[0m[1;4m()._send_request(request, stream=strea[0m [31m\u2502[0m
+[31m\u2502[0m   [2m1053 [0m[2m\u2502   \u2502   [0m[94mif[0m (                                                         [31m\u2502[0m
+[31m\u2502[0m   [2m1054 [0m[2m\u2502   \u2502   \u2502   [0mresponse.status_code == [94m401[0m                              [31m\u2502[0m
+[31m\u2502[0m   [2m1055 [0m[2m\u2502   \u2502   \u2502   [0m[95mand[0m [96mself[0m._workload_identity_auth [95mis[0m [95mnot[0m [94mNone[0m             [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\_base_c [31m\u2502[0m
+[31m\u2502[0m lient.py:1571 in _send_request                                              [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1568 [0m[2m\u2502   \u2502   [0mstream: [96mbool[0m,                                                [31m\u2502[0m
+[31m\u2502[0m   [2m1569 [0m[2m\u2502   \u2502   [0m**kwargs: Unpack[HttpxSendArgs],                             [31m\u2502[0m
+[31m\u2502[0m   [2m1570 [0m[2m\u2502   [0m) -> httpx.Response:                                             [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1571 [2m\u2502   \u2502   [0m[94mreturn[0m [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._client.send(request, stream=stream, **kwa[0m [31m\u2502[0m
+[31m\u2502[0m   [2m1572 [0m[2m\u2502   [0m                                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m1573 [0m[2m\u2502   [0m[1;95m@overload[0m                                                        [31m\u2502[0m
+[31m\u2502[0m   [2m1574 [0m[2m\u2502   [0m[94masync[0m [94mdef[0m[90m [0m[92mrequest[0m(                                               [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpx\_client. [31m\u2502[0m
+[31m\u2502[0m py:1629 in send                                                             [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1626 [0m[2m\u2502   \u2502   [0m                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1627 [0m[2m\u2502   \u2502   [0mauth = [96mself[0m._build_request_auth(request, auth)               [31m\u2502[0m
+[31m\u2502[0m   [2m1628 [0m[2m\u2502   \u2502   [0m                                                             [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1629 [2m\u2502   \u2502   [0mresponse = [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._send_handling_auth([0m                   [31m\u2502[0m
+[31m\u2502[0m   [2m1630 [0m[2m\u2502   \u2502   \u2502   [0m[1;4mrequest,[0m                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m1631 [0m[2m\u2502   \u2502   \u2502   [0m[1;4mauth=auth,[0m                                               [31m\u2502[0m
+[31m\u2502[0m   [2m1632 [0m[2m\u2502   \u2502   \u2502   [0m[1;4mfollow_redirects=follow_redirects,[0m                       [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpx\_client. [31m\u2502[0m
+[31m\u2502[0m py:1657 in _send_handling_auth                                              [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1654 [0m[2m\u2502   \u2502   \u2502   [0mrequest = [94mawait[0m auth_flow.[92m__anext__[0m()                    [31m\u2502[0m
+[31m\u2502[0m   [2m1655 [0m[2m\u2502   \u2502   \u2502   [0m                                                         [31m\u2502[0m
+[31m\u2502[0m   [2m1656 [0m[2m\u2502   \u2502   \u2502   [0m[94mwhile[0m [94mTrue[0m:                                              [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1657 [2m\u2502   \u2502   \u2502   \u2502   [0mresponse = [94mawait[0m [96mself[0m._send_handling_redirects(      [31m\u2502[0m
+[31m\u2502[0m   [2m1658 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mrequest,                                         [31m\u2502[0m
+[31m\u2502[0m   [2m1659 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mfollow_redirects=follow_redirects,               [31m\u2502[0m
+[31m\u2502[0m   [2m1660 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mhistory=history,                                 [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpx\_client. [31m\u2502[0m
+[31m\u2502[0m py:1694 in _send_handling_redirects                                         [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1691 [0m[2m\u2502   \u2502   \u2502   [0m[94mfor[0m hook [95min[0m [96mself[0m._event_hooks[[33m"[0m[33mrequest[0m[33m"[0m]:                [31m\u2502[0m
+[31m\u2502[0m   [2m1692 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mawait[0m hook(request)                                  [31m\u2502[0m
+[31m\u2502[0m   [2m1693 [0m[2m\u2502   \u2502   \u2502   [0m                                                         [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1694 [2m\u2502   \u2502   \u2502   [0mresponse = [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._send_single_request(request)[0m      [31m\u2502[0m
+[31m\u2502[0m   [2m1695 [0m[2m\u2502   \u2502   \u2502   [0m[94mtry[0m:                                                     [31m\u2502[0m
+[31m\u2502[0m   [2m1696 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mfor[0m hook [95min[0m [96mself[0m._event_hooks[[33m"[0m[33mresponse[0m[33m"[0m]:           [31m\u2502[0m
+[31m\u2502[0m   [2m1697 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mawait[0m hook(response)                             [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpx\_client. [31m\u2502[0m
+[31m\u2502[0m py:1730 in _send_single_request                                             [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1727 [0m[2m\u2502   \u2502   \u2502   [0m)                                                        [31m\u2502[0m
+[31m\u2502[0m   [2m1728 [0m[2m\u2502   \u2502   [0m                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1729 [0m[2m\u2502   \u2502   [0m[94mwith[0m request_context(request=request):                       [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1730 [2m\u2502   \u2502   \u2502   [0mresponse = [1;4;94mawait[0m[1;4m transport.handle_async_request(request)[0m [31m\u2502[0m
+[31m\u2502[0m   [2m1731 [0m[2m\u2502   \u2502   [0m                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1732 [0m[2m\u2502   \u2502   [0m[94massert[0m [96misinstance[0m(response.stream, AsyncByteStream)          [31m\u2502[0m
+[31m\u2502[0m   [2m1733 [0m[2m\u2502   \u2502   [0mresponse.request = request                                   [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpx\_transpo [31m\u2502[0m
+[31m\u2502[0m rts\default.py:394 in handle_async_request                                  [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m391 [0m[2m\u2502   \u2502   \u2502   [0mextensions=request.extensions,                            [31m\u2502[0m
+[31m\u2502[0m   [2m392 [0m[2m\u2502   \u2502   [0m)                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m393 [0m[2m\u2502   \u2502   [0m[94mwith[0m map_httpcore_exceptions():                               [31m\u2502[0m
+[31m\u2502[0m [31m> [0m394 [2m\u2502   \u2502   \u2502   [0mresp = [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._pool.handle_async_request(req)[0m         [31m\u2502[0m
+[31m\u2502[0m   [2m395 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m396 [0m[2m\u2502   \u2502   [0m[94massert[0m [96misinstance[0m(resp.stream, typing.AsyncIterable)          [31m\u2502[0m
+[31m\u2502[0m   [2m397 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_asyn [31m\u2502[0m
+[31m\u2502[0m c\connection_pool.py:256 in handle_async_request                            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m253 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mclosing = [96mself[0m._assign_requests_to_connections()      [31m\u2502[0m
+[31m\u2502[0m   [2m254 [0m[2m\u2502   \u2502   \u2502   [0m                                                          [31m\u2502[0m
+[31m\u2502[0m   [2m255 [0m[2m\u2502   \u2502   \u2502   [0m[94mawait[0m [96mself[0m._close_connections(closing)                    [31m\u2502[0m
+[31m\u2502[0m [31m> [0m256 [2m\u2502   \u2502   \u2502   [0m[1;4;94mraise[0m[1;4m exc [0m[1;4;94mfrom[0m[1;4;90m [0m[1;4;94mNone[0m                                       [31m\u2502[0m
+[31m\u2502[0m   [2m257 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m258 [0m[2m\u2502   \u2502   [0m[2m# Return the response. Note that in this case we still have t[0m [31m\u2502[0m
+[31m\u2502[0m   [2m259 [0m[2m\u2502   \u2502   [0m[2m# the point at which the response is closed.[0m                  [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_asyn [31m\u2502[0m
+[31m\u2502[0m c\connection_pool.py:236 in handle_async_request                            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m233 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m234 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mtry[0m:                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m235 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[2m# Send the request on the assigned connection.[0m    [31m\u2502[0m
+[31m\u2502[0m [31m> [0m236 [2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mresponse = [94mawait[0m connection.handle_async_request( [31m\u2502[0m
+[31m\u2502[0m   [2m237 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   \u2502   [0mpool_request.request                          [31m\u2502[0m
+[31m\u2502[0m   [2m238 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m)                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m239 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mexcept[0m ConnectionNotAvailable:                        [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_asyn [31m\u2502[0m
+[31m\u2502[0m c\connection.py:103 in handle_async_request                                 [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m100 [0m[2m\u2502   \u2502   \u2502   [0m[96mself[0m._connect_failed = [94mTrue[0m                               [31m\u2502[0m
+[31m\u2502[0m   [2m101 [0m[2m\u2502   \u2502   \u2502   [0m[94mraise[0m exc                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m102 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m [31m> [0m103 [2m\u2502   \u2502   [0m[94mreturn[0m [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._connection.handle_async_request(request)[0m   [31m\u2502[0m
+[31m\u2502[0m   [2m104 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m105 [0m[2m\u2502   [0m[94masync[0m [94mdef[0m[90m [0m[92m_connect[0m([96mself[0m, request: Request) -> AsyncNetworkStream: [31m\u2502[0m
+[31m\u2502[0m   [2m106 [0m[2m\u2502   \u2502   [0mtimeouts = request.extensions.get([33m"[0m[33mtimeout[0m[33m"[0m, {})              [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_asyn [31m\u2502[0m
+[31m\u2502[0m c\http11.py:136 in handle_async_request                                     [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m133 [0m[2m\u2502   \u2502   \u2502   [0m[94mwith[0m AsyncShieldCancellation():                           [31m\u2502[0m
+[31m\u2502[0m   [2m134 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94masync[0m [94mwith[0m Trace([33m"[0m[33mresponse_closed[0m[33m"[0m, logger, request)  [31m\u2502[0m
+[31m\u2502[0m   [2m135 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mawait[0m [96mself[0m._response_closed()                     [31m\u2502[0m
+[31m\u2502[0m [31m> [0m136 [2m\u2502   \u2502   \u2502   [0m[1;4;94mraise[0m[1;4m exc[0m                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m137 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m138 [0m[2m\u2502   [0m[2m# Sending the request...[0m                                          [31m\u2502[0m
+[31m\u2502[0m   [2m139 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_asyn [31m\u2502[0m
+[31m\u2502[0m c\http11.py:106 in handle_async_request                                     [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m103 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mreason_phrase,                                    [31m\u2502[0m
+[31m\u2502[0m   [2m104 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mheaders,                                          [31m\u2502[0m
+[31m\u2502[0m   [2m105 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mtrailing_data,                                    [31m\u2502[0m
+[31m\u2502[0m [31m> [0m106 [2m\u2502   \u2502   \u2502   \u2502   [0m) = [94mawait[0m [96mself[0m._receive_response_headers(**kwargs)    [31m\u2502[0m
+[31m\u2502[0m   [2m107 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mtrace.return_value = (                                [31m\u2502[0m
+[31m\u2502[0m   [2m108 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mhttp_version,                                     [31m\u2502[0m
+[31m\u2502[0m   [2m109 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mstatus,                                           [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_asyn [31m\u2502[0m
+[31m\u2502[0m c\http11.py:177 in _receive_response_headers                                [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m174 [0m[2m\u2502   \u2502   [0mtimeout = timeouts.get([33m"[0m[33mread[0m[33m"[0m, [94mNone[0m)                          [31m\u2502[0m
+[31m\u2502[0m   [2m175 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m176 [0m[2m\u2502   \u2502   [0m[94mwhile[0m [94mTrue[0m:                                                   [31m\u2502[0m
+[31m\u2502[0m [31m> [0m177 [2m\u2502   \u2502   \u2502   [0mevent = [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._receive_event(timeout=timeout)[0m        [31m\u2502[0m
+[31m\u2502[0m   [2m178 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m [96misinstance[0m(event, h11.Response):                       [31m\u2502[0m
+[31m\u2502[0m   [2m179 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mbreak[0m                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m180 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m (                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_asyn [31m\u2502[0m
+[31m\u2502[0m c\http11.py:217 in _receive_event                                           [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m214 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mevent = [96mself[0m._h11_state.next_event()                  [31m\u2502[0m
+[31m\u2502[0m   [2m215 [0m[2m\u2502   \u2502   \u2502   [0m                                                          [31m\u2502[0m
+[31m\u2502[0m   [2m216 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m event [95mis[0m h11.NEED_DATA:                                [31m\u2502[0m
+[31m\u2502[0m [31m> [0m217 [2m\u2502   \u2502   \u2502   \u2502   [0mdata = [1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._network_stream.read([0m               [31m\u2502[0m
+[31m\u2502[0m   [2m218 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[1;4;96mself[0m[1;4m.READ_NUM_BYTES, timeout=timeout[0m              [31m\u2502[0m
+[31m\u2502[0m   [2m219 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[1;4m)[0m                                                     [31m\u2502[0m
+[31m\u2502[0m   [2m220 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_back [31m\u2502[0m
+[31m\u2502[0m ends\anyio.py:35 in read                                                    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 32 [0m[2m\u2502   \u2502   [0m[94mwith[0m map_exceptions(exc_map):                                 [31m\u2502[0m
+[31m\u2502[0m   [2m 33 [0m[2m\u2502   \u2502   \u2502   [0m[94mwith[0m anyio.fail_after(timeout):                           [31m\u2502[0m
+[31m\u2502[0m   [2m 34 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mtry[0m:                                                  [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 35 [2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[94mreturn[0m [94mawait[0m [96mself[0m._stream.receive(max_bytes=max_b [31m\u2502[0m
+[31m\u2502[0m   [2m 36 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[1;4;94mexcept[0m[1;4m anyio.EndOfStream:  [0m[1;2;4m# pragma: nocover[0m          [31m\u2502[0m
+[31m\u2502[0m   [2m 37 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0m[1;4;94mreturn[0m[1;4m [0m[1;4;33mb[0m[1;4;33m"[0m[1;4;33m"[0m                                        [31m\u2502[0m
+[31m\u2502[0m   [2m 38 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\anyio\_backend [31m\u2502[0m
+[31m\u2502[0m s\_asyncio.py:1337 in receive                                               [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m1334 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[95mand[0m [95mnot[0m [96mself[0m._protocol.is_at_eof                     [31m\u2502[0m
+[31m\u2502[0m   [2m1335 [0m[2m\u2502   \u2502   \u2502   [0m):                                                       [31m\u2502[0m
+[31m\u2502[0m   [2m1336 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[96mself[0m._transport.resume_reading()                     [31m\u2502[0m
+[31m\u2502[0m [31m> [0m1337 [2m\u2502   \u2502   \u2502   \u2502   [0m[1;4;94mawait[0m[1;4m [0m[1;4;96mself[0m[1;4m._protocol.read_event.wait()[0m               [31m\u2502[0m
+[31m\u2502[0m   [2m1338 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[96mself[0m._transport.pause_reading()                      [31m\u2502[0m
+[31m\u2502[0m   [2m1339 [0m[2m\u2502   \u2502   \u2502   [0m[94melse[0m:                                                    [31m\u2502[0m
+[31m\u2502[0m   [2m1340 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mawait[0m AsyncIOBackend.checkpoint()                    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\locks.py [31m\u2502[0m
+[31m\u2502[0m :212 in wait                                                                [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m209 [0m[2m\u2502   \u2502   [0mfut = [96mself[0m._get_loop().create_future()                        [31m\u2502[0m
+[31m\u2502[0m   [2m210 [0m[2m\u2502   \u2502   [0m[96mself[0m._waiters.append(fut)                                     [31m\u2502[0m
+[31m\u2502[0m   [2m211 [0m[2m\u2502   \u2502   [0m[94mtry[0m:                                                          [31m\u2502[0m
+[31m\u2502[0m [31m> [0m212 [2m\u2502   \u2502   \u2502   [0m[94mawait[0m fut                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m213 [0m[2m\u2502   \u2502   \u2502   [0m[94mreturn[0m [94mTrue[0m                                               [31m\u2502[0m
+[31m\u2502[0m   [2m214 [0m[2m\u2502   \u2502   [0m[94mfinally[0m:                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m215 [0m[2m\u2502   \u2502   \u2502   [0m[1;4;96mself[0m[1;4m._waiters.remove(fut)[0m                                 [31m\u2502[0m
+[31m\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518[0m
+[1;91mCancelledError[0m
+
+[3mThe above exception was the direct cause of the following exception:[0m
+
+[31m\u250c\u2500[0m[31m\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500[0m[31m\u2500\u2510[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\llm\utils.py:87 in test_llm_connection                              [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 84 [0m[2;33m\u2502   [0m[33m"""[0m                                                               [31m\u2502[0m
+[31m\u2502[0m   [2m 85 [0m[2m\u2502   [0m[94mtry[0m:                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m 86 [0m[2m\u2502   \u2502   [0mlogger.info([33m"[0m[33mTesting connection to LLM endpoint...[0m[33m"[0m)          [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 87 [2m\u2502   \u2502   [0m[94mawait[0m asyncio.wait_for(                                       [31m\u2502[0m
+[31m\u2502[0m   [2m 88 [0m[2m\u2502   \u2502   \u2502   [0mLLMGateway.acreate_structured_output(                     [31m\u2502[0m
+[31m\u2502[0m   [2m 89 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mtext_input=[33m"[0m[33mtest[0m[33m"[0m,                                    [31m\u2502[0m
+[31m\u2502[0m   [2m 90 [0m[2m\u2502   \u2502   \u2502   \u2502   [0msystem_prompt=[33m'[0m[33mRespond to me with the following strin[0m [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py [31m\u2502[0m
+[31m\u2502[0m :519 in wait_for                                                            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 516 [0m[2m\u2502   \u2502   [0m[94mexcept[0m exceptions.CancelledError [94mas[0m exc:                     [31m\u2502[0m
+[31m\u2502[0m   [2m 517 [0m[2m\u2502   \u2502   \u2502   [0m[94mraise[0m [96mTimeoutError[0m [94mfrom[0m[90m [0m[4;96mexc[0m                              [31m\u2502[0m
+[31m\u2502[0m   [2m 518 [0m[2m\u2502   [0m                                                                 [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 519 [2m\u2502   [0m[94masync[0m [94mwith[0m [1;4mtimeouts.timeout(timeout)[0m:                            [31m\u2502[0m
+[31m\u2502[0m   [2m 520 [0m[2m\u2502   \u2502   [0m[94mreturn[0m [94mawait[0m fut                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 521 [0m                                                                     [31m\u2502[0m
+[31m\u2502[0m   [2m 522 [0m[94masync[0m [94mdef[0m[90m [0m[92m_wait[0m(fs, timeout, return_when, loop):                     [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts [31m\u2502[0m
+[31m\u2502[0m .py:115 in __aexit__                                                        [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m112 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m [96mself[0m._task.uncancel() <= [96mself[0m._cancelling [95mand[0m exc_type [31m\u2502[0m
+[31m\u2502[0m       exceptions.CancelledError:                                            [31m\u2502[0m
+[31m\u2502[0m   [2m113 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[2m# Since there are no new cancel requests, we're[0m       [31m\u2502[0m
+[31m\u2502[0m   [2m114 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[2m# handling this.[0m                                      [31m\u2502[0m
+[31m\u2502[0m [31m> [0m115 [2m\u2502   \u2502   \u2502   \u2502   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mTimeoutError[0m[1;4m [0m[1;4;94mfrom[0m[1;4;90m [0m[1;4;96mexc_val[0m                       [31m\u2502[0m
+[31m\u2502[0m   [2m116 [0m[2m\u2502   \u2502   [0m[94melif[0m [96mself[0m._state [95mis[0m _State.ENTERED:                           [31m\u2502[0m
+[31m\u2502[0m   [2m117 [0m[2m\u2502   \u2502   \u2502   [0m[96mself[0m._state = _State.EXITED                               [31m\u2502[0m
+[31m\u2502[0m   [2m118 [0m                                                                      [31m\u2502[0m
+[31m\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518[0m
+[1;91mTimeoutError[0m
+
+[3mDuring handling of the above exception, another exception occurred:[0m
+
+[31m\u250c\u2500[0m[31m\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500[0m[31m\u2500\u2510[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\pilot.py:65 in <module>                [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m62 [0m[2m\u2502   \u2502   [0m[96mprint[0m([33mf[0m[33m"[0m[33m\n[0m[33m[tempo: [0m[33m{[0mdt[33m:[0m[33m.1f[0m[33m}[0m[33ms][0m[33m"[0m)                                 [31m\u2502[0m
+[31m\u2502[0m   [2m63 [0m                                                                       [31m\u2502[0m
+[31m\u2502[0m   [2m64 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                             [31m\u2502[0m
+[31m\u2502[0m [31m> [0m65 [2m\u2502   [0m[1;4masyncio.run(main())[0m                                                [31m\u2502[0m
+[31m\u2502[0m   [2m66 [0m                                                                       [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners. [31m\u2502[0m
+[31m\u2502[0m py:195 in run                                                               [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m192 [0m[2m\u2502   \u2502   \u2502   [0m[33m"[0m[33masyncio.run() cannot be called from a running event loop[0m [31m\u2502[0m
+[31m\u2502[0m   [2m193 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m194 [0m[2m\u2502   [0m[94mwith[0m Runner(debug=debug, loop_factory=loop_factory) [94mas[0m runner:    [31m\u2502[0m
+[31m\u2502[0m [31m> [0m195 [2m\u2502   \u2502   [0m[94mreturn[0m [1;4mrunner.run(main)[0m                                       [31m\u2502[0m
+[31m\u2502[0m   [2m196 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m197 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m198 [0m[94mdef[0m[90m [0m[92m_cancel_all_tasks[0m(loop):                                          [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners. [31m\u2502[0m
+[31m\u2502[0m py:118 in run                                                               [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m115 [0m[2m\u2502   \u2502   [0m                                                              [31m\u2502[0m
+[31m\u2502[0m   [2m116 [0m[2m\u2502   \u2502   [0m[96mself[0m._interrupt_count = [94m0[0m                                     [31m\u2502[0m
+[31m\u2502[0m   [2m117 [0m[2m\u2502   \u2502   [0m[94mtry[0m:                                                          [31m\u2502[0m
+[31m\u2502[0m [31m> [0m118 [2m\u2502   \u2502   \u2502   [0m[94mreturn[0m [96mself[0m._loop.run_until_complete(task)                [31m\u2502[0m
+[31m\u2502[0m   [2m119 [0m[2m\u2502   \u2502   [0m[94mexcept[0m exceptions.CancelledError:                             [31m\u2502[0m
+[31m\u2502[0m   [2m120 [0m[2m\u2502   \u2502   \u2502   [0m[94mif[0m [96mself[0m._interrupt_count > [94m0[0m:                             [31m\u2502[0m
+[31m\u2502[0m   [2m121 [0m[2m\u2502   \u2502   \u2502   \u2502   [0muncancel = [96mgetattr[0m(task, [33m"[0m[33muncancel[0m[33m"[0m, [94mNone[0m)            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_eve [31m\u2502[0m
+[31m\u2502[0m nts.py:691 in run_until_complete                                            [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 688 [0m[2m\u2502   \u2502   [0m[94mif[0m [95mnot[0m future.done():                                        [31m\u2502[0m
+[31m\u2502[0m   [2m 689 [0m[2m\u2502   \u2502   \u2502   [0m[94mraise[0m [96mRuntimeError[0m([33m'[0m[33mEvent loop stopped before Future com[0m [31m\u2502[0m
+[31m\u2502[0m   [2m 690 [0m[2m\u2502   \u2502   [0m                                                             [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 691 [2m\u2502   \u2502   [0m[94mreturn[0m [1;4mfuture.result()[0m                                       [31m\u2502[0m
+[31m\u2502[0m   [2m 692 [0m[2m\u2502   [0m                                                                 [31m\u2502[0m
+[31m\u2502[0m   [2m 693 [0m[2m\u2502   [0m[94mdef[0m[90m [0m[92mstop[0m([96mself[0m):                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m 694 [0m[2;90m\u2502   \u2502   [0m[33m"""Stop running the event loop.[0m                              [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\pilot.py:43 in main                    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m40 [0m[2m\u2502   [0msep([33mf[0m[33m"[0m[33mINGESTAO — [0m[33m{[0m[96mlen[0m(arquivos)[33m}[0m[33m notas de manobrabilidade[0m[33m"[0m)        [31m\u2502[0m
+[31m\u2502[0m   [2m41 [0m[2m\u2502   [0m[94mfor[0m a [95min[0m arquivos: [96mprint[0m([33m"[0m[33m  +[0m[33m"[0m, os.path.basename(a))               [31m\u2502[0m
+[31m\u2502[0m   [2m42 [0m[2m\u2502   [0mt0 = time.time()                                                   [31m\u2502[0m
+[31m\u2502[0m [31m> [0m43 [2m\u2502   [0m[1;4;94mawait[0m[1;4m cognee.add(arquivos)[0m                                         [31m\u2502[0m
+[31m\u2502[0m   [2m44 [0m[2m\u2502   [0m[96mprint[0m([33mf[0m[33m"[0m[33m[add] concluido em [0m[33m{[0mtime.time()-t0[33m:[0m[33m.1f[0m[33m}[0m[33ms[0m[33m"[0m)                 [31m\u2502[0m
+[31m\u2502[0m   [2m45 [0m[2m\u2502   [0m                                                                   [31m\u2502[0m
+[31m\u2502[0m   [2m46 [0m[2m\u2502   [0m[2m# 3) construcao do grafo (entity extraction via mistral local — pa[0m [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\api\v1\ [31m\u2502[0m
+[31m\u2502[0m add\add.py:258 in add                                                       [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m255 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m256 [0m[2m\u2502   [0mpipeline_executor_func = get_pipeline_executor(run_in_background= [31m\u2502[0m
+[31m\u2502[0m   [2m257 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m [31m> [0m258 [2m\u2502   [0mresult = [1;4;94mawait[0m[1;4m pipeline_executor_func([0m                            [31m\u2502[0m
+[31m\u2502[0m   [2m259 [0m[2m\u2502   \u2502   [0m[1;4mpipeline=run_pipeline,[0m                                        [31m\u2502[0m
+[31m\u2502[0m   [2m260 [0m[2m\u2502   \u2502   [0m[1;4mtasks=tasks,[0m                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m261 [0m[2m\u2502   \u2502   [0m[1;4mdatasets=[authorized_dataset.id],[0m                             [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\layers\pipeline_execution_mode.py:44 in run_pipeline_blocking    [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 41 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m 42 [0m[2m\u2502   [0mtotal_run_info: Dict[[96mstr[0m, Any] = {}                               [31m\u2502[0m
+[31m\u2502[0m   [2m 43 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 44 [2m\u2502   [0m[94masync[0m [94mfor[0m run_info [95min[0m [1;4magen[0m:                                       [31m\u2502[0m
+[31m\u2502[0m   [2m 45 [0m[2m\u2502   \u2502   [0mdataset_id = [96mgetattr[0m(run_info, [33m"[0m[33mdataset_id[0m[33m"[0m, [94mNone[0m)            [31m\u2502[0m
+[31m\u2502[0m   [2m 46 [0m[2m\u2502   \u2502   [0m[94mif[0m dataset_id:                                                [31m\u2502[0m
+[31m\u2502[0m   [2m 47 [0m[2m\u2502   \u2502   \u2502   [0mtotal_run_info[dataset_id] = run_info                     [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\operations\pipeline.py:99 in run_pipeline                        [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 96 [0m[2m\u2502   [0mdata_cache: [96mbool[0m = [94mFalse[0m,                                         [31m\u2502[0m
+[31m\u2502[0m   [2m 97 [0m):                                                                    [31m\u2502[0m
+[31m\u2502[0m   [2m 98 [0m[2m\u2502   [0mvalidate_pipeline_tasks(tasks)                                    [31m\u2502[0m
+[31m\u2502[0m [31m> [0m 99 [2m\u2502   [0m[1;4;94mawait[0m[1;4m setup_and_check_environment(vector_db_config, graph_db_conf[0m [31m\u2502[0m
+[31m\u2502[0m   [2m100 [0m[2m\u2502   [0m                                                                  [31m\u2502[0m
+[31m\u2502[0m   [2m101 [0m[2m\u2502   [0muser, authorized_datasets = [94mawait[0m resolve_authorized_user_dataset [31m\u2502[0m
+[31m\u2502[0m   [2m102 [0m                                                                      [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules [31m\u2502[0m
+[31m\u2502[0m \pipelines\layers\setup_and_check_environment.py:54 in                      [31m\u2502[0m
+[31m\u2502[0m setup_and_check_environment                                                 [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m51 [0m[2m\u2502   \u2502   \u2502   \u2502   \u2502   [0mtest_embedding_connection,                         [31m\u2502[0m
+[31m\u2502[0m   [2m52 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m)                                                      [31m\u2502[0m
+[31m\u2502[0m   [2m53 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m                                                       [31m\u2502[0m
+[31m\u2502[0m [31m> [0m54 [2m\u2502   \u2502   \u2502   \u2502   [0m[1;4;94mawait[0m[1;4m test_llm_connection()[0m                            [31m\u2502[0m
+[31m\u2502[0m   [2m55 [0m[2m\u2502   \u2502   \u2502   \u2502   [0mdetected_embedding_dimensions = [94mawait[0m test_embedding_c [31m\u2502[0m
+[31m\u2502[0m   [2m56 [0m[2m\u2502   \u2502   \u2502   \u2502   [0m[94mawait[0m determine_embedding_dimensions(detected_embeddin [31m\u2502[0m
+[31m\u2502[0m   [2m57 [0m[2m\u2502   \u2502   \u2502   [0m_first_run_done = [94mTrue[0m                                     [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrast [31m\u2502[0m
+[31m\u2502[0m ructure\llm\utils.py:102 in test_llm_connection                             [31m\u2502[0m
+[31m\u2502[0m                                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m 99 [0m[2m\u2502   \u2502   \u2502   [0m[33m"[0m[33mSet COGNEE_SKIP_CONNECTION_TEST=true to bypass this chec[0m [31m\u2502[0m
+[31m\u2502[0m   [2m100 [0m[2m\u2502   \u2502   [0m)                                                             [31m\u2502[0m
+[31m\u2502[0m   [2m101 [0m[2m\u2502   \u2502   [0mlogger.error(msg)                                             [31m\u2502[0m
+[31m\u2502[0m [31m> [0m102 [2m\u2502   \u2502   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mTimeoutError[0m[1;4m(msg)[0m                                       [31m\u2502[0m
+[31m\u2502[0m   [2m103 [0m[2m\u2502   [0m[94mexcept[0m litellm.exceptions.AuthenticationError [94mas[0m e:               [31m\u2502[0m
+[31m\u2502[0m   [2m104 [0m[2m\u2502   \u2502   [0mmsg = (                                                       [31m\u2502[0m
+[31m\u2502[0m   [2m105 [0m[2m\u2502   \u2502   \u2502   [0m[33m"[0m[33mLLM authentication failed. Check your LLM_API_KEY config[0m [31m\u2502[0m
+[31m\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518[0m
+[1;91mTimeoutError: [0mLLM connection test timed out after 30s. Check that your LLM 
+endpoint is reachable and responding. Set [33mCOGNEE_SKIP_CONNECTION_TEST[0m=[35mtrue[0m to 
+bypass this check.
+
+Traceback (most recent call last):
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\llm\LLMGateway.py", line 34, in _record_session_usage_after
+    result = await coro
+             ^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\observability\get_observe.py", line 30, in async_wrapper
+    return await wrapped(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 193, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\llm\structured_output_framework\litellm_instructor\llm\ollama\adapter.py", line 133, in acreate_structured_output
+    response = await self.client.chat.completions.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2877, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\_base_client.py", line 1931, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\_base_client.py", line 1648, in request
+    response = await self._send_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\_client.py", line 1074, in _send_request
+    response = await self._send_with_auth_retry(request, stream=stream, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\_client.py", line 1052, in _send_with_auth_retry
+    response = await super()._send_request(request, stream=stream, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\openai\_base_client.py", line 1571, in _send_request
+    return await self._client.send(request, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 35, in read
+    return await self._stream.receive(max_bytes=max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1337, in receive
+    await self._protocol.read_event.wait()
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\locks.py", line 212, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\llm\utils.py", line 87, in test_llm_connection
+    await asyncio.wait_for(
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mauri\Projetos\cognee-pilot\pilot.py", line 65, in <module>
+    asyncio.run(main())
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\pilot.py", line 43, in main
+    await cognee.add(arquivos)
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\api\v1\add\add.py", line 258, in add
+    result = await pipeline_executor_func(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\layers\pipeline_execution_mode.py", line 44, in run_pipeline_blocking
+    async for run_info in agen:
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\operations\pipeline.py", line 99, in run_pipeline
+    await setup_and_check_environment(vector_db_config, graph_db_config)
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\modules\pipelines\layers\setup_and_check_environment.py", line 54, in setup_and_check_environment
+    await test_llm_connection()
+  File "C:\Users\mauri\Projetos\cognee-pilot\.venv\Lib\site-packages\cognee\infrastructure\llm\utils.py", line 102, in test_llm_connection
+    raise TimeoutError(msg)
+TimeoutError: LLM connection test timed out after 30s. Check that your LLM endpoint is reachable and responding. Set COGNEE_SKIP_CONNECTION_TEST=true to bypass this check.
+EXIT_CODE=1

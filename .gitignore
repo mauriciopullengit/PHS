@@ -7,3 +7,10 @@ test-results/
 *.local
 .vscode/*local*.json
 .DS_Store
+.venv/
+__pycache__/
+
+# repositórios git próprios (backup é o remoto deles, não o PHS)
+/MoneyPrinterTurbo/
+/llm-council/
+/browser-harness/

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Jarvis — Arc Reactor</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: radial-gradient(ellipse at 50% 60%, #001428 0%, #000509 60%, #000 100%);
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    font-family: 'Segoe UI', sans-serif; overflow: hidden;
+  }
+
+  /* Glow de fundo — imita luz do reator no peito do Tony */
+  .ambient {
+    position: fixed; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 500px 400px at 50% 50%, #00aaff08 0%, transparent 70%);
+    animation: ambient-pulse 3s ease-in-out infinite;
+  }
+  @keyframes ambient-pulse {
+    0%,100% { opacity:.6; }
+    50%      { opacity:1; }
+  }
+
+  .reactor-wrap {
+    position: relative; display: flex; flex-direction: column;
+    align-items: center; gap: 36px;
+  }
+
+  canvas#arc { display:block; }
+
+  /* Status */
+  .status-row {
+    display: flex; align-items: center; gap: 12px;
+    color: #00d4ff; font-size: 11px; letter-spacing: 5px;
+    text-transform: uppercase; opacity: .8;
+  }
+  .status-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #00ff88;
+    box-shadow: 0 0 6px #00ff88;
+    animation: blink 2s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+  /* Botões de estado */
+  .controls {
+    display: flex; gap: 10px; margin-top: 8px;
+  }
+  .ctrl-btn {
+    padding: 8px 20px; border-radius: 20px;
+    border: 1px solid #00d4ff44; background: transparent;
+    color: #00d4ff88; font-size: 12px; letter-spacing: 2px;
+    cursor: pointer; transition: all .2s; text-transform: uppercase;
+  }
+  .ctrl-btn:hover, .ctrl-btn.on {
+    background: #00d4ff15; border-color: #00d4ff;
+    color: #00d4ff; box-shadow: 0 0 12px #00d4ff33;
+  }
+</style>
+</head>
+<body>
+<div class="ambient"></div>
+
+<div class="reactor-wrap">
+  <canvas id="arc" width="420" height="420"></canvas>
+
+  <div class="status-row">
+    <div class="status-dot"></div>
+    <span id="statusText">Sistema Jarvis — Em Espera</span>
+  </div>
+
+  <div class="controls">
+    <button class="ctrl-btn on"  onclick="setState('idle')">Idle</button>
+    <button class="ctrl-btn" onclick="setState('listening')">Ouvindo</button>
+    <button class="ctrl-btn" onclick="setState('thinking')">Pensando</button>
+    <button class="ctrl-btn" onclick="setState('speaking')">Falando</button>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('arc');
+const ctx    = canvas.getContext('2d');
+const CX = 210, CY = 210;
+
+// ── Estado ───────────────────────────────────────────────────
+let state    = 'idle';
+let t        = 0;
+let sparks   = [];
+let arcs     = [];
+
+const STATUS = {
+  idle:      'Sistema Jarvis — Em Espera',
+  listening: 'Ouvindo — Fale agora',
+  thinking:  'Processando — Aguarde',
+  speaking:  'Francisca — Respondendo',
+};
+
+function setState(s) {
+  state = s;
+  document.getElementById('statusText').textContent = STATUS[s];
+  document.querySelectorAll('.ctrl-btn').forEach(b => b.classList.remove('on'));
+  document.querySelectorAll('.ctrl-btn')[['idle','listening','thinking','speaking'].indexOf(s)].classList.add('on');
+}
+
+// ── Parâmetros por estado ────────────────────────────────────
+function params() {
+  switch(state) {
+    case 'idle':      return { speed:1,   glow:0.5, core:0.6, sparks:false, charge:0   };
+    case 'listening': return { speed:2.2, glow:0.8, core:0.8, sparks:true,  charge:0.3 };
+    case 'thinking':  return { speed:3.5, glow:1.0, core:1.0, sparks:true,  charge:0.7 };
+    case 'speaking':  return { speed:2.8, glow:1.2, core:1.2, sparks:true,  charge:0.5 };
+  }
+}
+
+// ── Helpers ──────────────────────────────────────────────────
+function glow(color, blur) {
+  ctx.shadowColor = color;
+  ctx.shadowBlur  = blur;
+}
+function clearGlow() { ctx.shadowBlur = 0; }
+
+function polarX(cx,cy,r,a) { return cx + r*Math.cos(a); }
+function polarY(cx,cy,r,a) { return cy + r*Math.sin(a); }
+
+// ── Sparks ───────────────────────────────────────────────────
+function spawnSpark() {
+  const angle = Math.random() * Math.PI * 2;
+  const r0    = 60 + Math.random() * 30;
+  sparks.push({
+    x: CX + r0*Math.cos(angle), y: CY + r0*Math.sin(angle),
+    vx: (Math.random()-.5)*3, vy: (Math.random()-.5)*3,
+    life: 1, decay: .03 + Math.random()*.05,
+  });
+}
+
+// ── Arc electricity ──────────────────────────────────────────
+function spawnArc() {
+  const a1 = Math.random()*Math.PI*2, r1 = 55+Math.random()*20;
+  const a2 = a1 + (Math.random()-.5)*1.2, r2 = 55+Math.random()*20;
+  arcs.push({
+    x1: CX+r1*Math.cos(a1), y1: CY+r1*Math.sin(a1),
+    x2: CX+r2*Math.cos(a2), y2: CY+r2*Math.sin(a2),
+    mx: CX+(r1+r2)/2*Math.cos((a1+a2)/2)+(Math.random()-0.5)*30,
+    my: CY+(r1+r2)/2*Math.sin((a1+a2)/2)+(Math.random()-0.5)*30,
+    life: 1, decay: .15,
+  });
+}
+
+// ── Desenho ──────────────────────────────────────────────────
+function drawFrame() {
+  ctx.clearRect(0,0,420,420);
+  const p    = params();
+  const beat = 0.5 + 0.5*Math.sin(t * (state==='thinking'?4:2));
+  const eGlow = p.glow * (0.85 + 0.15*beat);
+
+  // ── 1. Anel externo metálico ─────────────────────────────
+  // Gradiente metálico escuro
+  const gradMetal = ctx.createRadialGradient(CX-10,CY-10,150, CX,CY,200);
+  gradMetal.addColorStop(0, '#2a3a4a');
+  gradMetal.addColorStop(.4,'#1a2535');
+  gradMetal.addColorStop(1, '#0a1520');
+
+  ctx.beginPath(); ctx.arc(CX,CY,195,0,Math.PI*2);
+  ctx.fillStyle = gradMetal; ctx.fill();
+
+  // Borda exterior
+  ctx.beginPath(); ctx.arc(CX,CY,195,0,Math.PI*2);
+  ctx.strokeStyle = '#2a4060'; ctx.lineWidth = 3;
+  glow('#004488',8); ctx.stroke(); clearGlow();
+
+  // Parafusos de fixação (120° cada)
+  for(let i=0;i<3;i++) {
+    const a = (i/3)*Math.PI*2 - Math.PI/2;
+    const bx = CX + 182*Math.cos(a), by = CY + 182*Math.sin(a);
+    ctx.beginPath(); ctx.arc(bx,by,7,0,Math.PI*2);
+    const gBolt = ctx.createRadialGradient(bx-2,by-2,1,bx,by,7);
+    gBolt.addColorStop(0,'#3a5070'); gBolt.addColorStop(1,'#0d1e2e');
+    ctx.fillStyle = gBolt; ctx.fill();
+    ctx.strokeStyle='#00aaff33'; ctx.lineWidth=1; ctx.stroke();
+    // Cruz do parafuso
+    ctx.strokeStyle='#1a3050'; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(bx-3,by); ctx.lineTo(bx+3,by); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(bx,by-3); ctx.lineTo(bx,by+3); ctx.stroke();
+  }
+
+  // ── 2. Canal energético externo ─────────────────────────
+  ctx.beginPath(); ctx.arc(CX,CY,170,0,Math.PI*2);
+  ctx.strokeStyle = `rgba(0,100,180,${0.3*eGlow})`;
+  ctx.lineWidth = 8; glow('#0066cc',12*eGlow); ctx.stroke(); clearGlow();
+
+  // ── 3. Anel rotativo 1 (horário) ────────────────────────
+  const rot1 = t * p.speed * 0.4;
+  ctx.save(); ctx.translate(CX,CY); ctx.rotate(rot1);
+  ctx.beginPath(); ctx.arc(0,0,148,0,Math.PI*2);
+  ctx.setLineDash([25,8,8,8,40,8,12,8]);
+  ctx.strokeStyle = `rgba(0,170,255,${0.7*eGlow})`;
+  ctx.lineWidth = 3; glow('#00aaff',15*eGlow); ctx.stroke();
+  ctx.setLineDash([]); ctx.restore(); clearGlow();
+
+  // ── 4. Anel rotativo 2 (anti-horário, mais brilhante) ───
+  const rot2 = -t * p.speed * 0.6;
+  ctx.save(); ctx.translate(CX,CY); ctx.rotate(rot2);
+  ctx.beginPath(); ctx.arc(0,0,128,0,Math.PI*2);
+  ctx.setLineDash([15,10,35,10]);
+  ctx.strokeStyle = `rgba(0,200,255,${0.8*eGlow})`;
+  ctx.lineWidth = 2.5; glow('#00ccff',18*eGlow); ctx.stroke();
+  ctx.setLineDash([]); ctx.restore(); clearGlow();
+
+  // ── 5. Anel intermediário fixo com marcações ─────────────
+  ctx.beginPath(); ctx.arc(CX,CY,110,0,Math.PI*2);
+  const gRing = ctx.createRadialGradient(CX,CY,90,CX,CY,115);
+  gRing.addColorStop(0, `rgba(0,100,160,${0.4*eGlow})`);
+  gRing.addColorStop(1, `rgba(0,60,120,${0.2*eGlow})`);
+  ctx.strokeStyle = gRing; ctx.lineWidth = 10;
+  glow('#0088cc',10*eGlow); ctx.stroke(); clearGlow();
+
+  // Marcações no anel intermediário (12 segmentos)
+  for(let i=0;i<12;i++) {
+    const a = (i/12)*Math.PI*2;
+    ctx.beginPath();
+    ctx.moveTo(CX+101*Math.cos(a), CY+101*Math.sin(a));
+    ctx.lineTo(CX+119*Math.cos(a), CY+119*Math.sin(a));
+    ctx.strokeStyle = `rgba(0,180,255,${0.5*eGlow})`;
+    ctx.lineWidth = i%3===0 ? 2 : 1;
+    glow('#00aaff', i%3===0 ? 8 : 4); ctx.stroke(); clearGlow();
+  }
+
+  // ── 6. Anel interno ──────────────────────────────────────
+  const rot3 = t * p.speed * 1.2;
+  ctx.save(); ctx.translate(CX,CY); ctx.rotate(rot3);
+  ctx.beginPath(); ctx.arc(0,0,88,0,Math.PI*2);
+  ctx.setLineDash([10,5,20,5,10,5,30,5]);
+  ctx.strokeStyle = `rgba(100,220,255,${0.9*eGlow})`;
+  ctx.lineWidth = 2; glow('#00eeff',20*eGlow); ctx.stroke();
+  ctx.setLineDash([]); ctx.restore(); clearGlow();
+
+  // ── 7. Triângulo energético (Iron Man 3) ─────────────────
+  const triAng  = -Math.PI/2 + t * p.speed * 0.25;
+  const triR    = 68;
+  const triAlpha= 0.6 + 0.4*beat;
+  ctx.save(); ctx.translate(CX,CY); ctx.rotate(triAng);
+  ctx.beginPath();
+  for(let i=0;i<3;i++){
+    const a = (i/3)*Math.PI*2 - Math.PI/2;
+    const x = triR*Math.cos(a), y = triR*Math.sin(a);
+    i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+  }
+  ctx.closePath();
+  ctx.strokeStyle = `rgba(0,220,255,${triAlpha*eGlow})`;
+  ctx.lineWidth   = 2.5;
+  glow('#00eeff', 25*eGlow); ctx.stroke();
+  // Triângulo interno (invertido)
+  ctx.rotate(Math.PI);
+  ctx.beginPath();
+  for(let i=0;i<3;i++){
+    const a = (i/3)*Math.PI*2 - Math.PI/2;
+    const x = (triR*.6)*Math.cos(a), y = (triR*.6)*Math.sin(a);
+    i===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+  }
+  ctx.closePath();
+  ctx.strokeStyle = `rgba(150,240,255,${triAlpha*.7*eGlow})`;
+  ctx.lineWidth   = 1.5;
+  glow('#aaeeff', 15*eGlow); ctx.stroke();
+  ctx.restore(); clearGlow();
+
+  // Vértices do triângulo com bolas de energia
+  for(let i=0;i<3;i++){
+    const a = triAng + (i/3)*Math.PI*2 - Math.PI/2;
+    const vx = CX + triR*Math.cos(a), vy = CY + triR*Math.sin(a);
+    ctx.beginPath(); ctx.arc(vx,vy,4,0,Math.PI*2);
+    const gVtx = ctx.createRadialGradient(vx,vy,0,vx,vy,4);
+    gVtx.addColorStop(0,'#ffffff'); gVtx.addColorStop(1,'#00aaff');
+    ctx.fillStyle = gVtx; glow('#00ffff',20*eGlow); ctx.fill(); clearGlow();
+  }
+
+  // ── 8. Core central — gradiente de profundidade ──────────
+  const coreSize = 42 * (1 + 0.06*beat*p.core);
+  // Brilho externo do core
+  const gCore0 = ctx.createRadialGradient(CX,CY,0,CX,CY,coreSize+25);
+  gCore0.addColorStop(0, `rgba(180,240,255,${0.15*eGlow*p.core})`);
+  gCore0.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.beginPath(); ctx.arc(CX,CY,coreSize+25,0,Math.PI*2);
+  ctx.fillStyle = gCore0; ctx.fill();
+
+  // Core real
+  const gCore = ctx.createRadialGradient(CX-5,CY-5,0, CX,CY,coreSize);
+  gCore.addColorStop(0,   '#ffffff');
+  gCore.addColorStop(0.2, '#e0f8ff');
+  gCore.addColorStop(0.5, `rgba(0,200,255,${p.core})`);
+  gCore.addColorStop(0.8, `rgba(0,80,180,${0.8*p.core})`);
+  gCore.addColorStop(1,   `rgba(0,30,80,${0.4*p.core})`);
+  ctx.beginPath(); ctx.arc(CX,CY,coreSize,0,Math.PI*2);
+  ctx.fillStyle = gCore;
+  glow('#00eeff', 40*eGlow*p.core); ctx.fill(); clearGlow();
+
+  // Reflexo de luz no core
+  const gRefl = ctx.createRadialGradient(CX-12,CY-12,0, CX-12,CY-12,15);
+  gRefl.addColorStop(0, `rgba(255,255,255,${0.4*p.core})`);
+  gRefl.addColorStop(1, 'rgba(255,255,255,0)');
+  ctx.beginPath(); ctx.arc(CX-12,CY-12,15,0,Math.PI*2);
+  ctx.fillStyle = gRefl; ctx.fill();
+
+  // ── 9. Descargas elétricas ───────────────────────────────
+  if(p.sparks && Math.random() < .08*p.speed) spawnSpark();
+  if(p.sparks && Math.random() < .04*p.speed) spawnArc();
+
+  // Sparks
+  sparks = sparks.filter(s => s.life > 0);
+  sparks.forEach(s => {
+    ctx.beginPath(); ctx.arc(s.x,s.y,1.5,0,Math.PI*2);
+    ctx.fillStyle = `rgba(100,220,255,${s.life})`;
+    glow('#00ffff',8*s.life); ctx.fill(); clearGlow();
+    s.x += s.vx; s.y += s.vy; s.vy += 0.05; s.life -= s.decay;
+  });
+
+  // Arc electricity
+  arcs = arcs.filter(a => a.life > 0);
+  arcs.forEach(a => {
+    ctx.beginPath(); ctx.moveTo(a.x1,a.y1);
+    ctx.quadraticCurveTo(a.mx,a.my,a.x2,a.y2);
+    ctx.strokeStyle = `rgba(180,240,255,${a.life*0.9})`;
+    ctx.lineWidth   = 1 + a.life;
+    glow('#ffffff', 12*a.life); ctx.stroke(); clearGlow();
+    a.life -= a.decay;
+  });
+
+  // ── 10. Raios radiais do core ────────────────────────────
+  if(state === 'thinking' || state === 'speaking') {
+    for(let i=0;i<6;i++){
+      const a = (i/6)*Math.PI*2 + t*0.5;
+      const rStart = coreSize;
+      const rEnd   = rStart + 20 + 15*Math.sin(t*3 + i);
+      ctx.beginPath();
+      ctx.moveTo(CX+rStart*Math.cos(a), CY+rStart*Math.sin(a));
+      ctx.lineTo(CX+rEnd*Math.cos(a),   CY+rEnd*Math.sin(a));
+      ctx.strokeStyle = `rgba(0,240,255,${0.4*beat})`;
+      ctx.lineWidth   = 1.5;
+      glow('#00ffff',10*beat); ctx.stroke(); clearGlow();
+    }
+  }
+
+  t += 0.016;
+  requestAnimationFrame(drawFrame);
+}
+
+drawFrame();
+</script>
+</body>
+</html>

@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Jarvis — Sistema de IA</title>
+<style>
+/* ── Reset & Base ─────────────────────────────────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:      #000812;
+  --panel:   #010e1c;
+  --border:  #00d4ff18;
+  --accent:  #00d4ff;
+  --text:    #c8e0f0;
+  --dim:     #5a8aaa;
+  --user-bg: #0a2035;
+  --ai-bg:   #060f1a;
+  --radius:  14px;
+}
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);
+  font-family:'Segoe UI',system-ui,sans-serif;font-size:14px}
+
+/* ── Layout ───────────────────────────────────────────────────────────── */
+.layout{display:flex;height:100vh}
+.left{
+  flex:0 0 58%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:18px;
+  background:radial-gradient(ellipse 80% 70% at 50% 55%,#001428 0%,var(--bg) 75%);
+  position:relative;
+}
+.right{
+  flex:1;display:flex;flex-direction:column;
+  border-left:1px solid var(--border);background:var(--panel);
+}
+
+/* ── Scan line effect ─────────────────────────────────────────────────── */
+.left::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,20,40,.15) 3px,rgba(0,20,40,.15) 4px);
+}
+
+/* ── Reactor canvas (Three.js / WebGL) ────────────────────────────────── */
+#reactor{display:block;position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.left .status-row{position:absolute;bottom:46px;left:0;right:0;justify-content:center;z-index:2}
+.left .vol-bar{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2}
+
+/* ── Status row ───────────────────────────────────────────────────────── */
+.status-row{
+  display:flex;align-items:center;gap:10px;z-index:1;
+  color:var(--accent);font-size:11px;letter-spacing:4px;text-transform:uppercase;
+}
+.status-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:#00ff88;box-shadow:0 0 6px #00ff88;
+  animation:blink 2s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* ── Chat panel ───────────────────────────────────────────────────────── */
+.chat-header{
+  padding:12px 20px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:10px;
+  color:var(--accent);font-size:11px;letter-spacing:3px;text-transform:uppercase;
+}
+.chat-header .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
+/* Toggle Groq / Claude */
+.engine-toggle{
+  margin-left:auto;display:flex;align-items:center;gap:6px;
+  background:#00d4ff0a;border:1px solid var(--border);
+  border-radius:20px;padding:3px 4px;
+}
+.eng-btn{
+  padding:3px 10px;border-radius:16px;border:none;cursor:pointer;
+  font-size:9px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--dim);background:transparent;transition:all .2s;
+}
+.eng-btn.active{background:var(--accent);color:#000;font-weight:700;}
+
+.messages{
+  flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;
+  scrollbar-width:thin;scrollbar-color:var(--border) transparent;
+}
+.messages::-webkit-scrollbar{width:4px}
+.messages::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+
+/* ── Bubbles ──────────────────────────────────────────────────────────── */
+.bubble{max-width:88%;padding:10px 14px;border-radius:var(--radius);line-height:1.55;word-break:break-word}
+.bubble.wiki{max-width:96%;white-space:pre-wrap;font-size:12px;line-height:1.5;
+  background:#06131f;border:1px solid #00e67633;color:#c8e6d8}
+.bubble.wiki .whead{color:#00e676;font-weight:700;letter-spacing:1px}
+.bubble.user{
+  align-self:flex-end;background:var(--user-bg);
+  border:1px solid #00d4ff22;border-bottom-right-radius:4px;
+  color:#d8f0ff;
+}
+.bubble.ai{
+  align-self:flex-start;background:var(--ai-bg);
+  border:1px solid #00d4ff14;border-bottom-left-radius:4px;
+  color:var(--text);
+}
+.bubble.ai .sender{
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:5px;opacity:.8;
+}
+.bubble.typing span{
+  display:inline-block;width:6px;height:6px;margin:0 2px;
+  background:var(--accent);border-radius:50%;opacity:.4;
+  animation:dot-bounce .9s ease-in-out infinite;
+}
+.bubble.typing span:nth-child(2){animation-delay:.15s}
+.bubble.typing span:nth-child(3){animation-delay:.3s}
+@keyframes dot-bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px);opacity:1}}
+
+/* ── Input area ───────────────────────────────────────────────────────── */
+.input-area{
+  padding:14px 16px;border-top:1px solid var(--border);
+  display:flex;flex-direction:column;gap:10px;
+}
+.mic-row{display:flex;align-items:center;justify-content:center;gap:14px}
+.mic-btn{
+  width:60px;height:60px;border-radius:50%;border:2px solid var(--accent);
+  background:#00d4ff0a;cursor:pointer;transition:all .2s;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;position:relative;
+}
+.mic-btn:hover{background:#00d4ff18;box-shadow:0 0 20px #00d4ff33}
+.mic-btn.active{
+  background:#ff003322;border-color:#ff4466;
+  animation:mic-pulse 1s ease-in-out infinite;
+}
+@keyframes mic-pulse{
+  0%,100%{box-shadow:0 0 0 0 #ff446644}
+  50%{box-shadow:0 0 0 12px #ff446600}
+}
+.mic-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--dim)}
+
+.text-row{display:flex;gap:8px}
+.text-input{
+  flex:1;background:#00d4ff08;border:1px solid var(--border);
+  border-radius:8px;padding:9px 12px;color:var(--text);outline:none;
+  font-size:13px;transition:border .2s;
+}
+.text-input:focus{border-color:#00d4ff44}
+.text-input::placeholder{color:var(--dim)}
+.send-btn{
+  padding:9px 16px;border-radius:8px;border:1px solid var(--border);
+  background:#00d4ff10;color:var(--accent);cursor:pointer;
+  font-size:12px;letter-spacing:2px;transition:all .2s;
+}
+.send-btn:hover{background:#00d4ff20;border-color:var(--accent)}
+
+/* ── File attach ──────────────────────────────────────────────────────── */
+.attach-btn{
+  padding:9px 12px;border-radius:8px;border:1px solid var(--border);
+  background:#00d4ff10;color:var(--accent);cursor:pointer;
+  font-size:16px;transition:all .2s;flex-shrink:0;
+}
+.attach-btn:hover{background:#00d4ff20;border-color:var(--accent)}
+.attach-btn.on{background:#00e67622;border-color:#00e676;color:#00e676;box-shadow:0 0 10px #00e67633}
+.file-pill{
+  display:flex;align-items:center;gap:8px;
+  padding:5px 10px;background:#00d4ff0d;
+  border:1px solid #00d4ff2e;border-radius:6px;
+  font-size:12px;color:var(--accent);
+}
+.file-pill .pill-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px}
+.file-pill .pill-close{
+  background:none;border:none;color:var(--dim);cursor:pointer;
+  font-size:14px;padding:0;line-height:1;flex-shrink:0;
+}
+.file-pill .pill-close:hover{color:#ff4466}
+
+/* ── Vol bar ──────────────────────────────────────────────────────────── */
+.vol-bar{height:2px;background:#00d4ff12;border-radius:1px;overflow:hidden}
+.vol-fill{height:100%;background:var(--accent);border-radius:1px;width:0%;transition:width .05s}
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.181.2/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.181.2/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ════ LEFT — REACTOR ════ -->
+  <div class="left">
+    <canvas id="reactor"></canvas>
+    <div class="status-row">
+      <div class="status-dot"></div>
+      <span id="statusTxt">Sistema Jarvis — Em Espera</span>
+    </div>
+    <div class="vol-bar" style="width:220px"><div class="vol-fill" id="volFill"></div></div>
+  </div>
+
+  <!-- ════ RIGHT — CHAT ════ -->
+  <div class="right">
+    <div class="chat-header">
+      <div class="dot"></div>
+      <span>Francisca — IA Jarvis</span>
+      <div class="engine-toggle">
+        <button class="eng-btn active" id="btnGroq"   onclick="setEngine('groq')">Groq</button>
+        <button class="eng-btn"        id="btnClaude" onclick="setEngine('claude')">Claude</button>
+        <button class="eng-btn"        id="btnLocal"  onclick="setEngine('local')" style="display:none">Local</button>
+      </div>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="bubble ai">
+        <div class="sender">Francisca</div>
+        Sistema Jarvis inicializado. Clique no microfone e fale. 🧠 ativa a memória do vault. Comandos do wiki: "wiki build" (gera o catálogo do vault), "wiki status", "wiki pending", "wiki lint", "wiki query &lt;pergunta&gt;", "wiki ingest &lt;título&gt;: &lt;conteúdo&gt;".
+      </div>
+    </div>
+
+    <div class="input-area">
+      <div class="mic-row">
+        <div style="text-align:center">
+          <button class="mic-btn" id="micBtn" onclick="toggleMic()" title="Clique para falar">🎤</button>
+          <div class="mic-label" id="micLabel">Toque para falar</div>
+        </div>
+      </div>
+
+      <!-- Pill exibido quando arquivo está selecionado -->
+      <input type="file" id="fileInput"
+             accept=".txt,.md,.pdf,.csv,.json,.log,.xml,.html,.docx,.xlsx,.pptx,.doc,.xls,.ppt,.jpg,.jpeg,.png,.webp,.gif"
+             style="display:none" onchange="onFileSelected(this)">
+      <div id="filePill" class="file-pill" style="display:none">
+        <span>📎</span>
+        <span class="pill-name" id="fileNameLabel"></span>
+        <button class="pill-close" onclick="clearFile()" title="Remover arquivo">✕</button>
+      </div>
+
+      <div class="text-row">
+        <button class="attach-btn" id="memBtn" onclick="toggleMemory()" title="Memória: consultar o vault Claude Memory">🧠</button>
+        <button class="attach-btn" onclick="document.getElementById('fileInput').click()" title="Anexar arquivo (PDF, imagem, texto)">📎</button>
+        <input class="text-input" id="textInput" placeholder="Ou escreva aqui..." onkeydown="if(event.key==='Enter')sendText()"/>
+        <button class="send-btn" onclick="sendText()">ENVIAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════════════════════════════════
+const API   = window.location.origin;
+let appState= 'idle';      // idle | listening | thinking | speaking
+let history = [];          // [{role,content}]
+let mediaRec= null;
+let audioChunks = [];
+let isRecording = false;
+let pendingFile = null;    // arquivo aguardando envio
+let engine  = 'groq';      // 'groq' | 'claude' | 'local'
+let useMemory = false;     // consulta o vault Claude Memory
+
+function toggleMemory() {
+  useMemory = !useMemory;
+  const btn = document.getElementById('memBtn');
+  btn.classList.toggle('on', useMemory);
+  setState(appState); // mantém status
+  const label = useMemory ? 'Memória ATIVA — consultando o vault' : 'Memória: consultar o vault Claude Memory';
+  btn.title = label;
+}
+
+// Cor base do orb por engine (estado de repouso → vai a branco no pico da voz)
+const ENGINE_COLORS = {
+  groq:   { r:   0, g: 230, b: 118 },  // verde esmeralda
+  claude: { r: 255, g: 140, b:   0 },  // laranja
+  local:  { r:  60, g: 220, b: 110 },  // verde-limão (distinto do groq)
+};
+let baseColor = ENGINE_COLORS.groq;
+
+function setEngine(e) {
+  engine = e;
+  baseColor = ENGINE_COLORS[e] || ENGINE_COLORS.groq;
+  for (const [name, id] of [['groq','btnGroq'],['claude','btnClaude'],['local','btnLocal']]) {
+    const btn = document.getElementById(id);
+    const on  = name === e;
+    btn.classList.toggle('active', on);
+    const c = ENGINE_COLORS[name];
+    btn.style.background = on ? `rgb(${c.r},${c.g},${c.b})` : 'transparent';
+    btn.style.color      = on ? '#001018' : '';
+  }
+  if (window.__setEng3d) window.__setEng3d(e);
+}
+
+// Detecta Ollama + memória ao carregar
+(async () => {
+  try {
+    const h = await fetch(`${API}/health`).then(r => r.json());
+    if (h.ollama) {
+      const btn = document.getElementById('btnLocal');
+      btn.style.display = '';
+      btn.title = `Modelo: ${h.ollama_model}`;
+    }
+    const mem = document.getElementById('memBtn');
+    if (h.memory) {
+      mem.title = `Memória pronta — ${h.memory_files} arquivos, ${h.memory_chunks} trechos. Clique para ativar.`;
+    } else {
+      mem.title = 'Memória indexando...';
+    }
+  } catch(e) {}
+})();
+
+// Audio analysis
+let audioCtx= null;
+let analyser = null;
+let dataArray= null;
+let rawAmp   = 0;
+let smoothAmp= 0;
+let peakAmp  = 0;
+
+// ══════════════════════════════════════════════════════════════════
+//  AUDIO ANALYSIS
+// ══════════════════════════════════════════════════════════════════
+function initAnalyser(sourceNode) {
+  analyser = audioCtx.createAnalyser();
+  analyser.fftSize = 512;
+  analyser.smoothingTimeConstant = 0.6;
+  dataArray = new Uint8Array(analyser.frequencyBinCount);
+  sourceNode.connect(analyser);
+  analyser.connect(audioCtx.destination);
+}
+
+function getAmplitude() {
+  if (!analyser) return 0;
+  analyser.getByteFrequencyData(dataArray);
+  // Voice frequency range: ~300Hz–4kHz
+  const lo = Math.floor(dataArray.length * 0.04);
+  const hi = Math.floor(dataArray.length * 0.38);
+  let sum = 0;
+  for (let i = lo; i < hi; i++) sum += dataArray[i];
+  return sum / (hi - lo) / 255;
+}
+
+// Ponte para o módulo Three.js (reator 3D)
+window.__getAmp     = getAmplitude;
+window.__isSpeaking = () => appState === 'speaking';
+
+// ══════════════════════════════════════════════════════════════════
+//  STATUS & UI
+// ══════════════════════════════════════════════════════════════════
+const STATUS_TEXT = {
+  idle:      'Sistema Jarvis — Em Espera',
+  listening: 'Ouvindo — Fale agora...',
+  thinking:  'Processando — Aguarde',
+  speaking:  'Francisca — Respondendo',
+};
+
+function setState(s) {
+  appState = s;
+  document.getElementById('statusTxt').textContent = STATUS_TEXT[s];
+}
+
+function addBubble(role, text, id) {
+  const msgs = document.getElementById('messages');
+  const div  = document.createElement('div');
+  div.className = `bubble ${role === 'user' ? 'user' : 'ai'}`;
+  if (id) div.id = id;
+  if (role !== 'user') {
+    const lbl = document.createElement('div');
+    lbl.className = 'sender';
+    lbl.textContent = 'Francisca';
+    div.appendChild(lbl);
+  }
+  const span = document.createElement('span');
+  span.textContent = text;
+  div.appendChild(span);
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+  return div;
+}
+
+function addTyping() {
+  const msgs = document.getElementById('messages');
+  const div  = document.createElement('div');
+  div.className = 'bubble ai typing';
+  div.id = 'typing-indicator';
+  div.innerHTML = '<span></span><span></span><span></span>';
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function removeTyping() {
+  const el = document.getElementById('typing-indicator');
+  if (el) el.remove();
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  MIC — WEB SPEECH API (instantâneo, sem servidor)
+// ══════════════════════════════════════════════════════════════════
+const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition = null;
+let interimBubble = null;
+
+function initSpeech() {
+  if (!SpeechRec) {
+    alert('Seu browser nao suporta Web Speech API. Use Chrome ou Edge.');
+    return false;
+  }
+  recognition = new SpeechRec();
+  recognition.lang = 'pt-BR';
+  recognition.continuous = false;
+  recognition.interimResults = true;
+  recognition.maxAlternatives = 1;
+
+  recognition.onstart = () => {
+    isRecording = true;
+    setState('listening');
+    document.getElementById('micBtn').classList.add('active');
+    document.getElementById('micBtn').textContent = '⏹';
+    document.getElementById('micLabel').textContent = 'Ouvindo... clique para parar';
+  };
+
+  recognition.onresult = (event) => {
+    let interim = '', final = '';
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+      const t = event.results[i][0].transcript;
+      event.results[i].isFinal ? (final += t) : (interim += t);
+    }
+    // Mostra transcrição parcial em tempo real
+    if (interim || final) {
+      if (!interimBubble) {
+        interimBubble = addBubble('user', '');
+        interimBubble.style.opacity = '.6';
+      }
+      interimBubble.querySelector('span').textContent = interim || final;
+      document.getElementById('messages').scrollTop = 9999;
+    }
+    if (final) {
+      if (interimBubble) {
+        interimBubble.style.opacity = '1';
+        interimBubble = null;
+      }
+      stopMic();
+      sendToAI(final.trim());
+    }
+  };
+
+  recognition.onerror = (e) => {
+    stopMic();
+    if (e.error !== 'no-speech') addBubble('ai', 'Erro no microfone: ' + e.error);
+  };
+
+  recognition.onend = () => { if (isRecording) stopMic(); };
+  return true;
+}
+
+function toggleMic() {
+  if (isRecording) { stopMic(); return; }
+  if (!recognition && !initSpeech()) return;
+  interimBubble = null;
+  try { recognition.start(); } catch(e) { initSpeech(); recognition.start(); }
+}
+
+function stopMic() {
+  isRecording = false;
+  try { if (recognition) recognition.stop(); } catch(e) {}
+  document.getElementById('micBtn').classList.remove('active');
+  document.getElementById('micBtn').textContent = '🎤';
+  document.getElementById('micLabel').textContent = 'Toque para falar';
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  FILE ATTACH
+// ══════════════════════════════════════════════════════════════════
+function onFileSelected(input) {
+  const file = input.files[0];
+  if (!file) return;
+  pendingFile = file;
+  document.getElementById('fileNameLabel').textContent = file.name;
+  document.getElementById('filePill').style.display = 'flex';
+  document.getElementById('textInput').placeholder = 'Faça uma pergunta sobre o arquivo... (opcional)';
+  input.value = '';  // permite re-selecionar o mesmo arquivo
+}
+
+function clearFile() {
+  pendingFile = null;
+  document.getElementById('filePill').style.display = 'none';
+  document.getElementById('textInput').placeholder = 'Ou escreva aqui...';
+}
+
+async function sendFileToAI(file, question) {
+  const label = question ? `📎 ${file.name} — ${question}` : `📎 ${file.name}`;
+  addBubble('user', label);
+  setState('thinking');
+  addTyping();
+
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('question', question || 'Analise este arquivo e explique o conteúdo principal.');
+  formData.append('history', JSON.stringify(history.slice(-6)));
+
+  let fullText = '';
+  let aiBubble = null;
+
+  try {
+    const resp = await fetch(`${API}/analyze`, { method: 'POST', body: formData });
+
+    const reader  = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let   buffer  = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const payload = line.slice(6).trim();
+        if (payload === '[DONE]') break;
+        try {
+          const parsed = JSON.parse(payload);
+          if (parsed.error) throw new Error(parsed.error);
+          if (parsed.text) {
+            fullText += parsed.text;
+            if (!aiBubble) { removeTyping(); aiBubble = addBubble('ai', ''); }
+            aiBubble.querySelector('span').textContent = fullText;
+            document.getElementById('messages').scrollTop = 9999;
+          }
+        } catch(e) { /* skip */ }
+      }
+    }
+
+    if (!aiBubble) removeTyping();
+    if (!fullText) { setState('idle'); return; }
+
+    history.push({ role: 'user',      content: label });
+    history.push({ role: 'assistant', content: fullText });
+    await playTTS(fullText);
+  } catch(e) {
+    removeTyping();
+    setState('idle');
+    addBubble('ai', 'Erro ao analisar arquivo: ' + e.message);
+  }
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  TEXT INPUT
+// ══════════════════════════════════════════════════════════════════
+async function sendText() {
+  const input = document.getElementById('textInput');
+  const text  = input.value.trim();
+
+  if (pendingFile) {
+    const file = pendingFile;
+    input.value = '';
+    clearFile();
+    await sendFileToAI(file, text);
+    return;
+  }
+
+  if (!text) return;
+  input.value = '';
+  addBubble('user', text);
+  setState('thinking');
+  await sendToAI(text);
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  CLAUDE — STREAMING
+// ══════════════════════════════════════════════════════════════════
+// Detecta comando de escrita e salva nota no vault (03- Claude). Retorna true se tratou.
+async function maybeSaveNote(text) {
+  const m = text.match(/^\s*(francisca[,\s]+)?(anota|anote|anotar|salva|salve|guarda|guarde|lembra|lembre|registra|registre)\b(\s+(que|isso|aqui|na mem[oó]ria)[:,]?)?\s*/i);
+  if (!m) return false;
+  const content = text.slice(m[0].length).trim();
+  if (!content) return false;
+  const title = content.split(/[.,;!?\n]/)[0].split(/\s+/).slice(0, 8).join(' ');
+  addBubble('user', '🧠 ' + text);
+  setState('thinking');
+  try {
+    const resp = await fetch(`${API}/memory/save`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, content }),
+    });
+    const data = await resp.json();
+    const msg = data.saved
+      ? `Anotado na memória. Salvei em ${data.rel.split('\\').pop()}.`
+      : 'Não consegui salvar a nota.';
+    addBubble('ai', msg);
+    await playTTS(msg);
+  } catch (e) {
+    addBubble('ai', 'Erro ao salvar na memória.');
+    setState('idle');
+  }
+  return true;
+}
+
+// Bolha que preserva formatação (resultados de wiki)
+function addWikiBubble(detail) {
+  const msgs = document.getElementById('messages');
+  const div = document.createElement('div');
+  div.className = 'bubble ai wiki';
+  // Realça linhas de título (# ...) sem injetar HTML arbitrário
+  const safe = detail.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+  div.innerHTML = safe.replace(/^(#{1,6})\s*(.*)$/gm, '<span class="whead">$2</span>')
+                      .replace(/\*\*(.+?)\*\*/g, '<span class="whead">$1</span>');
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+// Detecta "wiki <comando>" e executa a operação sobre todo o vault
+async function maybeWikiCommand(text) {
+  const m = text.match(/^\s*wiki\b\s*(.*)$/i);
+  if (!m) return false;
+  const command = (m[1] || 'status').trim() || 'status';
+  addBubble('user', '📚 wiki ' + command);
+  setState('thinking');
+  addTyping();
+  try {
+    const resp = await fetch(`${API}/wiki`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ command }),
+    });
+    const data = await resp.json();
+    removeTyping();
+    addWikiBubble(data.detail || data.speech || 'Sem resultado.');
+    if (data.speech) await playTTS(data.speech);
+    else setState('idle');
+  } catch (e) {
+    removeTyping();
+    addBubble('ai', 'Erro no comando wiki: ' + e.message);
+    setState('idle');
+  }
+  return true;
+}
+
+async function sendToAI(userText) {
+  // Comando de wiki: "wiki status", "wiki pending", "wiki lint", "wiki query ...", "wiki ingest ..."
+  if (await maybeWikiCommand(userText)) return;
+
+  // Comando de escrita: "Francisca, anota que...", "salva na memória..."
+  if (useMemory) {
+    const saved = await maybeSaveNote(userText);
+    if (saved) return;
+  }
+
+  setState('thinking');
+  addTyping();
+
+  const body = JSON.stringify({
+    text: userText,
+    history: history.slice(-10),
+    use_memory: useMemory,
+  });
+
+  let fullText = '';
+  let aiBubble = null;
+
+  // Modo Local (Ollama) usa streaming por sentença
+  if (engine === 'local') { await sendToLocal(userText); return; }
+
+  try {
+    const endpoint = engine === 'claude' ? `${API}/ask-claude` : `${API}/ask`;
+    const resp = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body,
+    });
+
+    const reader   = resp.body.getReader();
+    const decoder  = new TextDecoder();
+    let   buffer   = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const payload = line.slice(6).trim();
+        if (payload === '[DONE]') break;
+
+        try {
+          const parsed = JSON.parse(payload);
+          if (parsed.error) throw new Error(parsed.error);
+          if (parsed.text) {
+            fullText += parsed.text;
+            if (!aiBubble) {
+              removeTyping();
+              aiBubble = addBubble('ai', '');
+            }
+            aiBubble.querySelector('span').textContent = fullText;
+            document.getElementById('messages').scrollTop = 9999;
+          }
+        } catch(e) { /* skip bad chunk */ }
+      }
+    }
+
+    if (!aiBubble) removeTyping();
+    if (!fullText) { setState('idle'); return; }
+
+    // Save to history
+    history.push({ role: 'user',      content: userText });
+    history.push({ role: 'assistant', content: fullText });
+
+    // TTS
+    await playTTS(fullText);
+  } catch(e) {
+    removeTyping();
+    setState('idle');
+    addBubble('ai', 'Erro ao conectar com o servidor.');
+  }
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  LOCAL (OLLAMA) — STREAMING POR SENTENÇA + TTS INCREMENTAL
+// ══════════════════════════════════════════════════════════════════
+async function sendToLocal(userText) {
+  setState('thinking');
+  addTyping();
+
+  const body = JSON.stringify({ text: userText, history: history.slice(-6), use_memory: useMemory });
+  let fullText = '';
+  let aiBubble = null;
+  let tokenBuf = '';
+  const ttsQueue = [];
+  let ttsPlaying = false;
+
+  // Regex para quebra de sentença em PT
+  const sentenceEnd = /[.!?…]\s/;
+
+  async function drainTTS() {
+    if (ttsPlaying || ttsQueue.length === 0) return;
+    ttsPlaying = true;
+    const sentence = ttsQueue.shift();
+    setState('speaking');
+    await playTTS(sentence);
+    ttsPlaying = false;
+    drainTTS();
+  }
+
+  function flushSentence(force = false) {
+    if (!tokenBuf.trim()) return;
+    if (force || sentenceEnd.test(tokenBuf) || tokenBuf.length > 180) {
+      // Pega até o último ponto/exclamação/interrogação
+      const match = force ? null : tokenBuf.match(/^(.*[.!?…])\s/s);
+      const sentence = match ? match[1] : tokenBuf.trim();
+      const remainder = match ? tokenBuf.slice(match[0].length) : '';
+      ttsQueue.push(sentence);
+      tokenBuf = remainder;
+      drainTTS();
+    }
+  }
+
+  try {
+    const resp = await fetch(`${API}/ask-local`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body,
+    });
+    const reader  = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const payload = line.slice(6).trim();
+        if (payload === '[DONE]') { flushSentence(true); break; }
+        try {
+          const parsed = JSON.parse(payload);
+          if (parsed.error) { addBubble('ai', 'Erro Ollama: ' + parsed.error); setState('idle'); return; }
+          if (parsed.token) {
+            fullText += parsed.token;
+            tokenBuf += parsed.token;
+            if (!aiBubble) { removeTyping(); aiBubble = addBubble('ai', ''); }
+            aiBubble.querySelector('span').textContent = fullText;
+            document.getElementById('messages').scrollTop = 9999;
+            flushSentence();
+          }
+        } catch(e) {}
+      }
+    }
+
+    // Aguarda fila TTS terminar
+    await new Promise(resolve => {
+      const check = setInterval(() => {
+        if (!ttsPlaying && ttsQueue.length === 0) { clearInterval(check); resolve(); }
+      }, 200);
+    });
+
+    if (fullText) {
+      history.push({ role: 'user',      content: userText });
+      history.push({ role: 'assistant', content: fullText });
+    }
+    setState('idle');
+  } catch(e) {
+    removeTyping();
+    setState('idle');
+    addBubble('ai', 'Erro Ollama: ' + e.message);
+  }
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  TTS — PLAY WITH WEB AUDIO ANALYSIS
+// ══════════════════════════════════════════════════════════════════
+async function playTTS(text) {
+  setState('speaking');
+  try {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') await audioCtx.resume();
+
+    const resp = await fetch(`${API}/tts?text=${encodeURIComponent(text)}`);
+    const arrayBuffer = await resp.arrayBuffer();
+    const audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
+
+    const source = audioCtx.createBufferSource();
+    source.buffer = audioBuffer;
+    initAnalyser(source);  // conecta ao analyser para sync
+    source.start(0);
+    source.onended = () => {
+      analyser = null;
+      dataArray = null;
+      rawAmp = smoothAmp = peakAmp = 0;
+      setState('idle');
+    };
+  } catch(e) {
+    setState('idle');
+  }
+}
+
+setEngine('groq');   // cor inicial do reator 3D + botão
+</script>
+<script type="module">
+import * as THREE from "three";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+import { Reflector } from "three/addons/objects/Reflector.js";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+
+const ENGINE_COLORS3D = {
+  groq:   new THREE.Color(0x00e676),
+  claude: new THREE.Color(0xff7000),
+  local:  new THREE.Color(0x3cdc6e),
+};
+let targetColor = ENGINE_COLORS3D.groq.clone();
+let curColor    = ENGINE_COLORS3D.groq.clone();
+window.__setEng3d = (e) => { if (ENGINE_COLORS3D[e]) targetColor = ENGINE_COLORS3D[e].clone(); };
+
+const canvas = document.getElementById("reactor");
+const panel  = canvas.parentElement;
+function size() { return { w: panel.clientWidth || 600, h: panel.clientHeight || 700 }; }
+
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 0.82;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x000610);
+let { w, h } = size();
+renderer.setSize(w, h, false);
+const camera = new THREE.PerspectiveCamera(42, w / h, 0.1, 100);
+camera.position.set(0, 1.2, 9.0);
+camera.lookAt(0, 0.1, 0);
+
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+
+const reactor = new THREE.Group();
+reactor.rotation.x = -0.30;
+reactor.position.y = 0.55;
+scene.add(reactor);
+
+// Núcleo emissivo
+const coreMat = new THREE.MeshStandardMaterial({
+  color: 0x0a0e14, emissive: curColor.clone(), emissiveIntensity: 1.0, roughness: 0.32, metalness: 0.2,
+});
+const core = new THREE.Mesh(new THREE.SphereGeometry(0.78, 64, 64), coreMat);
+reactor.add(core);
+
+// Halo fresnel
+const haloMat = new THREE.ShaderMaterial({
+  transparent: true, blending: THREE.AdditiveBlending, side: THREE.BackSide, depthWrite: false,
+  uniforms: { uColor: { value: curColor.clone() }, uPow: { value: 3.0 }, uInt: { value: 1.0 } },
+  vertexShader: `varying vec3 vN; varying vec3 vV;
+    void main(){ vN=normalize(normalMatrix*normal); vec4 mv=modelViewMatrix*vec4(position,1.0);
+      vV=normalize(-mv.xyz); gl_Position=projectionMatrix*mv; }`,
+  fragmentShader: `varying vec3 vN; varying vec3 vV; uniform vec3 uColor; uniform float uPow; uniform float uInt;
+    void main(){ float f=pow(1.0-abs(dot(vN,vV)),uPow); gl_FragColor=vec4(uColor*f*uInt,f); }`,
+});
+const halo = new THREE.Mesh(new THREE.SphereGeometry(1.15, 48, 48), haloMat);
+reactor.add(halo);
+
+const inner = new THREE.Mesh(new THREE.SphereGeometry(0.22, 32, 32),
+  new THREE.MeshBasicMaterial({ color: 0xeaf6ff, transparent: true, opacity: 0.85 }));
+reactor.add(inner);
+
+// Anéis metálicos PBR
+const metalDark = new THREE.MeshStandardMaterial({ color: 0x3a4250, metalness: 1.0, roughness: 0.15, envMapIntensity: 1.4 });
+const rings = [];
+function makeRing(radius, tube, seg, zPos, speed){
+  const m = new THREE.Mesh(new THREE.TorusGeometry(radius, tube, 24, seg), metalDark.clone());
+  m.position.z = zPos; reactor.add(m); rings.push({ mesh:m, speed });
+}
+makeRing(1.45, 0.06, 96, 0.10, 0.25);
+makeRing(1.78, 0.11, 8,  0.00, -0.18);
+makeRing(2.15, 0.05, 120,-0.10, 0.32);
+
+// Dentes emissivos
+const teeth = new THREE.Group(); reactor.add(teeth);
+const toothMat = new THREE.MeshStandardMaterial({ color:0x000000, emissive: curColor.clone(), emissiveIntensity: 0.8, roughness:0.4 });
+for(let i=0;i<12;i++){
+  const t = new THREE.Mesh(new THREE.BoxGeometry(0.05,0.18,0.05), toothMat);
+  const a = (i/12)*Math.PI*2;
+  t.position.set(Math.cos(a)*1.45, Math.sin(a)*1.45, 0); t.rotation.z = a; teeth.add(t);
+}
+
+// Triângulo Iron Man
+const triMat = new THREE.MeshStandardMaterial({ color:0x000000, emissive: curColor.clone(), emissiveIntensity: 1.0, roughness:0.3 });
+const triGroup = new THREE.Group(); reactor.add(triGroup);
+for(let i=0;i<3;i++){
+  const bar = new THREE.Mesh(new THREE.BoxGeometry(0.9,0.03,0.03), triMat);
+  const a = (i/3)*Math.PI*2 + Math.PI/2;
+  bar.position.set(Math.cos(a)*0.5, Math.sin(a)*0.5, 0.02); bar.rotation.z = a + Math.PI/2; triGroup.add(bar);
+}
+
+// Piso reflexivo (espelhamento)
+const mirror = new Reflector(new THREE.PlaneGeometry(40, 40), { textureWidth: 1024, textureHeight: 1024, color: 0x0a1420 });
+mirror.rotation.x = -Math.PI/2; mirror.position.y = -2.4; scene.add(mirror);
+const glass = new THREE.Mesh(new THREE.PlaneGeometry(40,40),
+  new THREE.MeshBasicMaterial({ color:0x000610, transparent:true, opacity:0.62 }));
+glass.rotation.x = -Math.PI/2; glass.position.y = -2.39; scene.add(glass);
+
+// Luzes
+const coreLight = new THREE.PointLight(curColor.clone(), 2.0, 24, 1.8);
+coreLight.position.set(0,0,0.5); reactor.add(coreLight);
+scene.add(new THREE.HemisphereLight(0x335577, 0x080a10, 0.4));
+const rim = new THREE.DirectionalLight(0x88bbff, 0.6); rim.position.set(3,4,5); scene.add(rim);
+
+// Partículas
+const pCount = 400, pGeo = new THREE.BufferGeometry(), pPos = new Float32Array(pCount*3);
+for(let i=0;i<pCount;i++){
+  const r = 2.6 + Math.random()*3, a = Math.random()*Math.PI*2, b = (Math.random()-0.5)*Math.PI;
+  pPos[i*3]=Math.cos(a)*Math.cos(b)*r; pPos[i*3+1]=Math.sin(b)*r*0.5; pPos[i*3+2]=Math.sin(a)*Math.cos(b)*r;
+}
+pGeo.setAttribute('position', new THREE.BufferAttribute(pPos,3));
+const particles = new THREE.Points(pGeo, new THREE.PointsMaterial({
+  color: 0x66ccff, size: 0.03, transparent:true, opacity:0.5, blending:THREE.AdditiveBlending, depthWrite:false }));
+scene.add(particles);
+
+// Bloom
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new THREE.Vector2(w, h), 0.35, 0.4, 0.55);
+composer.addPass(bloom);
+composer.addPass(new OutputPass());
+
+// Estado de áudio (suavização local a partir da ponte window.__getAmp)
+let smoothAmp3 = 0, peakAmp3 = 0;
+const volFill = document.getElementById('volFill');
+
+let t = 0;
+function animate(){
+  requestAnimationFrame(animate);
+  t += 0.016;
+
+  const speaking = window.__isSpeaking ? window.__isSpeaking() : false;
+  const raw = (speaking && window.__getAmp) ? window.__getAmp() : 0;
+  smoothAmp3 = smoothAmp3*0.8 + raw*0.2;
+  peakAmp3   = Math.max(peakAmp3*0.9, raw);
+  if (volFill) volFill.style.width = Math.min(raw*250,100) + '%';
+
+  const amp = smoothAmp3, peak = peakAmp3;
+  const idle = !speaking;
+  const pulse = idle ? (Math.sin(t*1.6)*0.5+0.5)*0.25 : 0;
+
+  curColor.lerp(targetColor, 0.08);
+  coreMat.emissive.copy(curColor);
+  haloMat.uniforms.uColor.value.copy(curColor);
+  toothMat.emissive.copy(curColor);
+  triMat.emissive.copy(curColor);
+  coreLight.color.copy(curColor);
+
+  core.scale.setScalar(1 + peak*0.28 + pulse*0.25);
+  inner.scale.setScalar(0.85 + peak*0.5);
+  coreMat.emissiveIntensity = 0.9 + amp*2.4 + pulse*0.6;
+  haloMat.uniforms.uInt.value = 0.45 + amp*1.3 + pulse*0.4;
+  coreLight.intensity = 1.6 + amp*4.5 + pulse*1.2;
+  toothMat.emissiveIntensity = 0.8 + amp*2.6;
+  triMat.emissiveIntensity = 1.0 + amp*2.2;
+  bloom.strength = 0.28 + amp*0.55 + pulse*0.18;
+
+  for(const r of rings){ r.mesh.rotation.z += r.speed*(0.01 + amp*0.05); }
+  teeth.rotation.z += 0.004 + amp*0.02;
+  triGroup.rotation.z -= 0.006 + amp*0.03;
+  particles.rotation.y += 0.0006 + amp*0.004;
+  halo.rotation.y += 0.01;
+
+  camera.position.x = Math.sin(t*0.3)*0.25;
+  camera.position.y = 1.4 + Math.sin(t*0.4)*0.12;
+  camera.lookAt(0, 0.1, 0);
+
+  composer.render();
+}
+
+function onResize(){
+  const s = size();
+  camera.aspect = s.w/s.h; camera.updateProjectionMatrix();
+  renderer.setSize(s.w, s.h, false);
+  composer.setSize(s.w, s.h);
+}
+window.addEventListener("resize", onResize);
+onResize();
+animate();
+
+</script>
+</body>
+</html>

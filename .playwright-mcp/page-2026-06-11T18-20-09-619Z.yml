@@ -1,0 +1,387 @@
+- generic [ref=e3]:
+  - banner [ref=e6]:
+    - generic [ref=e9]:
+      - button "Deploy" [ref=e11] [cursor=pointer]:
+        - generic [ref=e13]: Deploy
+      - button "Main menu" [ref=e15] [cursor=pointer]:
+        - img [ref=e16]
+  - generic [ref=e19]:
+    - generic [ref=e21]:
+      - heading "MoneyPrinterTurbo v1.3.0" [level=1] [ref=e28]:
+        - text: MoneyPrinterTurbo v1.3.0
+        - generic [ref=e29]:
+          - link "Link to heading":
+            - /url: "#money-printer-turbo-v1-3-0"
+            - img
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]: pt - Português Brasileiro
+          - combobox "Selected pt - Português Brasileiro. Language / 语言" [ref=e39]
+        - img "open" [ref=e41]
+    - group [ref=e45]:
+      - generic "keyboard_arrow_right Configurações Básicas (Clique para expandir)" [ref=e46] [cursor=pointer]:
+        - generic [ref=e47]:
+          - generic [ref=e49]: keyboard_arrow_right
+          - paragraph [ref=e52]:
+            - strong [ref=e53]: Configurações Básicas
+            - text: (Clique para expandir)
+    - generic [ref=e55]:
+      - generic [ref=e59]:
+        - paragraph [ref=e64]:
+          - strong [ref=e65]: Configurações do Roteiro do Vídeo
+        - generic [ref=e67]:
+          - paragraph [ref=e71]: Tema do Vídeo (Forneça uma palavra-chave, a IA irá gerar automaticamente o roteiro do vídeo)
+          - textbox "Tema do Vídeo (Forneça uma palavra-chave, :red[a IA irá gerar automaticamente] o roteiro do vídeo)" [ref=e74]:
+            - /placeholder: ""
+            - text: "A serenidade como força: o estoicismo e a paz interior"
+        - generic [ref=e76]:
+          - paragraph [ref=e80]: Idioma para Gerar o Roteiro do Vídeo (a IA irá gerar automaticamente com base no idioma do seu tema)
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - generic [ref=e84]: Detectar Automaticamente
+              - combobox "Selected Detectar Automaticamente. Idioma para Gerar o Roteiro do Vídeo (a IA irá gerar automaticamente com base no idioma do seu tema)" [ref=e86]
+            - img "open" [ref=e88]
+        - group [ref=e92]:
+          - generic "keyboard_arrow_right Advanced Script Settings" [ref=e93] [cursor=pointer]:
+            - generic [ref=e94]:
+              - generic [ref=e96]: keyboard_arrow_right
+              - paragraph [ref=e99]: Advanced Script Settings
+        - button "Clique para usar a IA para gerar o [Roteiro do Vídeo] e as [Palavras-chave do Vídeo] com base no tema" [ref=e102] [cursor=pointer]:
+          - paragraph [ref=e106]:
+            - text: Clique para usar a IA para gerar o [Roteiro do Vídeo] e as [Palavras-chave do Vídeo] com base no
+            - strong [ref=e107]: tema
+        - generic [ref=e109]:
+          - paragraph [ref=e113]: Roteiro do Vídeo (① Opcional, gerado pela IA ② Pontuação adequada ajuda na geração de legendas)
+          - textbox "Roteiro do Vídeo (:blue[① Opcional, gerado pela IA ② Pontuação adequada ajuda na geração de legendas])" [ref=e116]:
+            - /placeholder: ""
+        - button "Clique para usar a IA para gerar [Palavras-chave do Vídeo] com base no roteiro" [ref=e119] [cursor=pointer]:
+          - paragraph [ref=e123]:
+            - text: Clique para usar a IA para gerar [Palavras-chave do Vídeo] com base no
+            - strong [ref=e124]: roteiro
+        - generic [ref=e126]:
+          - paragraph [ref=e130]:
+            - text: Palavras-chave do Vídeo (
+            - generic [ref=e131]:
+              - text: ① Opcional, gerado pela IA ② Use
+              - strong [ref=e132]: vírgulas em inglês
+              - text: para separar, somente em inglês
+            - text: )
+          - textbox "Palavras-chave do Vídeo (:blue[① Opcional, gerado pela IA ② Use **vírgulas em inglês** para separar, somente em inglês])" [ref=e135]:
+            - /placeholder: ""
+            - text: ancient ruins, starry sky, contemplation, mountain silhouette, ocean waves, candle flame, forest light, cosmos galaxy, stoic philosophy, solitude nature
+      - generic [ref=e137]:
+        - generic [ref=e139]:
+          - paragraph [ref=e144]:
+            - strong [ref=e145]: Configurações do Vídeo
+          - generic [ref=e147]:
+            - paragraph [ref=e151]: Fonte do Vídeo
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - generic [ref=e155]: Pexels
+                - combobox "Selected Pexels. Fonte do Vídeo" [ref=e157]
+              - img "open" [ref=e159]
+          - generic [ref=e162]:
+            - paragraph [ref=e166]: Modo de Concatenação de Vídeo
+            - generic [ref=e168]:
+              - generic [ref=e169]:
+                - generic [ref=e170]: Concatenação Aleatória (Recomendado)
+                - combobox "Selected Concatenação Aleatória (Recomendado). Modo de Concatenação de Vídeo" [ref=e172]
+              - img "open" [ref=e174]
+          - generic [ref=e177]:
+            - paragraph [ref=e181]: Modo de Transição de Vídeo
+            - generic [ref=e183]:
+              - generic [ref=e184]:
+                - generic [ref=e185]: Nenhuma Transição
+                - combobox "Selected Nenhuma Transição. Modo de Transição de Vídeo" [ref=e187]
+              - img "open" [ref=e189]
+          - generic [ref=e192]:
+            - paragraph [ref=e196]: Proporção do Vídeo
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - generic [ref=e200]: Retrato 9:16
+                - combobox "Selected Retrato 9:16. Proporção do Vídeo" [ref=e202]
+              - img "open" [ref=e204]
+          - generic [ref=e207]:
+            - paragraph [ref=e211]: Duração Máxima dos Clipes de Vídeo (segundos)
+            - generic [ref=e213]:
+              - generic [ref=e214]:
+                - generic [ref=e215]: "3"
+                - combobox "Selected 3. Duração Máxima dos Clipes de Vídeo (segundos)" [ref=e217]
+              - img "open" [ref=e219]
+          - generic [ref=e222]:
+            - paragraph [ref=e226]: Número de Vídeos Gerados Simultaneamente
+            - generic [ref=e228]:
+              - generic [ref=e229]:
+                - generic [ref=e230]: "1"
+                - combobox "Selected 1. Número de Vídeos Gerados Simultaneamente" [ref=e232]
+              - img "open" [ref=e234]
+          - group [ref=e238]:
+            - generic "keyboard_arrow_right Advanced Video Settings" [ref=e239] [cursor=pointer]:
+              - generic [ref=e240]:
+                - generic [ref=e242]: keyboard_arrow_right
+                - paragraph [ref=e245]: Advanced Video Settings
+        - generic [ref=e247]:
+          - paragraph [ref=e252]:
+            - strong [ref=e253]: Configurações de Áudio
+          - generic [ref=e255]:
+            - paragraph [ref=e259]: Servidores TTS
+            - generic [ref=e261]:
+              - generic [ref=e262]:
+                - generic [ref=e263]: Google Gemini TTS
+                - combobox "Selected Google Gemini TTS. Servidores TTS" [ref=e265]
+              - img "open" [ref=e267]
+          - generic [ref=e270]:
+            - paragraph [ref=e274]: Voz de Síntese de Fala
+            - generic [ref=e276]:
+              - generic [ref=e277]:
+                - generic [ref=e278]: gemini:Charon-Masculino
+                - combobox "Selected gemini:Charon-Masculino. Voz de Síntese de Fala" [ref=e280]
+              - img "open" [ref=e282]
+          - button "Reproduzir Voz" [ref=e286] [cursor=pointer]:
+            - paragraph [ref=e290]: Reproduzir Voz
+          - generic [ref=e292]:
+            - paragraph [ref=e296]: Volume da Fala (1.0 representa 100%)
+            - generic [ref=e298]:
+              - generic [ref=e299]:
+                - generic [ref=e300]: "1.0"
+                - combobox "Selected 1.0. Volume da Fala (1.0 representa 100%)" [ref=e302]
+              - img "open" [ref=e304]
+          - generic [ref=e307]:
+            - paragraph [ref=e311]: Velocidade da Fala (1.0 significa velocidade 1x)
+            - generic [ref=e313]:
+              - generic [ref=e314]:
+                - generic [ref=e315]: "1.0"
+                - combobox "Selected 1.0. Velocidade da Fala (1.0 significa velocidade 1x)" [ref=e317]
+              - img "open" [ref=e319]
+          - generic [ref=e322]:
+            - paragraph [ref=e326]: Custom Audio File
+            - region "Custom Audio File" [ref=e327] [cursor=pointer]:
+              - button "Choose File" [ref=e328]
+              - button "upload Upload" [ref=e330]:
+                - generic [ref=e332]:
+                  - generic [ref=e334]: upload
+                  - paragraph [ref=e336]: Upload
+              - generic [ref=e339]: 200MB per file • MP3, WAV, M4A, AAC, FLAC, OGG
+          - generic [ref=e341]:
+            - paragraph [ref=e345]: Música de Fundo
+            - generic [ref=e347]:
+              - generic [ref=e348]:
+                - generic [ref=e349]: Música de Fundo Aleatória
+                - combobox "Selected Música de Fundo Aleatória. Música de Fundo" [ref=e351]
+              - img "open" [ref=e353]
+          - generic [ref=e356]:
+            - paragraph [ref=e360]: Volume da Música de Fundo (0.2 representa 20%, a música de fundo não deve ser muito alta)
+            - generic [ref=e362]:
+              - generic [ref=e363]:
+                - generic [ref=e364]: "0.2"
+                - combobox "Selected 0.2. Volume da Música de Fundo (0.2 representa 20%, a música de fundo não deve ser muito alta)" [ref=e366]
+              - img "open" [ref=e368]
+      - generic [ref=e371]:
+        - generic [ref=e373]:
+          - paragraph [ref=e378]:
+            - strong [ref=e379]: Configurações de Legendas
+          - generic [ref=e382] [cursor=pointer]:
+            - checkbox "Ativar Legendas (Se desmarcado, as configurações abaixo não terão efeito)" [checked]
+            - paragraph [ref=e387]: Ativar Legendas (Se desmarcado, as configurações abaixo não terão efeito)
+          - generic [ref=e389]:
+            - paragraph [ref=e393]: Fonte da Legenda
+            - generic [ref=e395]:
+              - generic [ref=e396]:
+                - generic [ref=e397]: MicrosoftYaHeiBold.ttc
+                - combobox "Selected MicrosoftYaHeiBold.ttc. Fonte da Legenda" [ref=e399]
+              - img "open" [ref=e401]
+          - generic [ref=e404]:
+            - paragraph [ref=e408]: Posição da Legenda
+            - generic [ref=e410]:
+              - generic [ref=e411]:
+                - generic [ref=e412]: Inferior (Recomendado)
+                - combobox "Selected Inferior (Recomendado). Posição da Legenda" [ref=e414]
+              - img "open" [ref=e416]
+          - generic [ref=e419]:
+            - paragraph [ref=e427]: Cor da Fonte da Legenda
+            - generic [ref=e434]:
+              - paragraph [ref=e438]: Tamanho da Fonte da Legenda
+              - generic [ref=e439]:
+                - slider "Tamanho da Fonte da Legenda" [ref=e443]:
+                  - generic:
+                    - generic:
+                      - paragraph: "48"
+                - generic:
+                  - generic:
+                    - paragraph: "30"
+                  - generic:
+                    - paragraph: "100"
+          - generic [ref=e446]:
+            - paragraph [ref=e454]: Cor do Contorno da Legenda
+            - generic [ref=e461]:
+              - paragraph [ref=e465]: Largura do Contorno da Legenda
+              - generic [ref=e466]:
+                - slider "Largura do Contorno da Legenda" [ref=e470]:
+                  - generic:
+                    - generic:
+                      - paragraph: "1.50"
+                - generic:
+                  - generic:
+                    - paragraph: "0.00"
+                  - generic:
+                    - paragraph: "10.00"
+          - generic [ref=e478] [cursor=pointer]:
+            - checkbox "Ativar fundo da legenda"
+            - paragraph [ref=e483]: Ativar fundo da legenda
+          - generic [ref=e488]:
+            - checkbox "Rounded Subtitle Background" [disabled]
+            - generic [ref=e491]:
+              - paragraph [ref=e493]: Rounded Subtitle Background
+              - button "Help for Rounded Subtitle Background" [ref=e497] [cursor=pointer]:
+                - img [ref=e498]
+        - group [ref=e503]:
+          - generic "keyboard_arrow_right Clique para mostrar o gerenciamento de chaves de API" [ref=e504] [cursor=pointer]:
+            - generic [ref=e505]:
+              - generic [ref=e507]: keyboard_arrow_right
+              - paragraph [ref=e510]: Clique para mostrar o gerenciamento de chaves de API
+    - button "Gerar Vídeo" [active] [ref=e513] [cursor=pointer]:
+      - paragraph [ref=e517]: Gerar Vídeo
+    - code [ref=e532]:
+      - text: 2026-06-11 15:10:51.974 | INFO | __main__:<module>:1487 - Começar a Gerar Vídeo
+      - text: "2026-06-11 15:10:51.977 | INFO | __main__:<module>:1488 - { \"video_subject\": \"A serenidade como força: o estoicismo e a paz interior\", \"video_script\": \"\", \"video_terms\": \"ancient ruins, starry sky, contemplation, mountain silhouette, ocean waves, candle flame, forest light, cosmos galaxy, stoic philosophy, solitude nature\", \"video_aspect\": \"9:16\", \"video_concat_mode\": \"random\", \"video_transition_mode\": \"None\", \"video_clip_duration\": 3, \"video_count\": 1, \"video_source\": \"pexels\", \"video_materials\": null, \"custom_audio_file\": null, \"video_language\": \"\", \"voice_name\": \"gemini:Charon-Male\", \"voice_volume\": 1.0, \"voice_rate\": 1.0, \"bgm_type\": \"random\", \"bgm_file\": \"\", \"bgm_volume\": 0.2, \"subtitle_enabled\": true, \"subtitle_position\": \"bottom\", \"custom_position\": 70.0, \"font_name\": \"MicrosoftYaHeiBold.ttc\", \"text_fore_color\": \"#FFFF00\", \"text_background_color\": false, \"rounded_subtitle_background\": false, \"font_size\": 48, \"stroke_color\": \"#000000\", \"stroke_width\": 1.5, \"n_threads\": 2, \"paragraph_number\": 1, \"video_script_prompt\": \"\", \"custom_system_prompt\": \"\""
+      - text: "}"
+      - text: "2026-06-11 15:10:51.978 | INFO | app.services.task:start:251 - start task: c35de15f-f73d-4441-9032-e27c9b952e43, stop_at: video"
+      - text: 2026-06-11 15:10:51.980 | INFO | app.services.task:generate_script:17 -
+      - text: "## generating video script"
+      - text: "2026-06-11 15:10:51.980 | INFO | app.services.llm:generate_script:645 - generating video script: subject=A serenidade como força: o estoicismo e a paz interior, paragraph_number=1, has_custom_prompt=False, has_custom_system_prompt=False"
+      - text: "2026-06-11 15:10:51.981 | INFO | app.services.llm:_generate_response:123 - llm provider: gemini"
+      - text: "2026-06-11 15:10:55.439 | SUCCESS | app.services.llm:generate_script:693 - completed: O estoicismo, uma filosofia milenar, ensina-nos a encontrar a serenidade não na ausência de problemas, mas na forma como os enfrentamos. Não se trata de suprimir emoções, mas de cultivar a sabedoria para distinguir o que podemos controlar do que não podemos. Ao focar na virtude, na razão e na aceitação do inevitável, libertamo-nos das amarras da ansiedade e do desespero. Essa paz interior, forjada na resiliência e na autodisciplina, revela-se a verdadeira força capaz de nos guiar através das tempestades da vida, transformando a adversidade em oportunidade para o crescimento e a tranquilidade duradoura."
+      - text: 2026-06-11 15:10:55.439 | INFO | app.services.task:generate_terms:39 -
+      - text: "## generating video terms"
+      - text: "2026-06-11 15:10:55.455 | DEBUG | app.services.task:generate_terms:53 - video terms: [ \"ancient ruins\", \"starry sky\", \"contemplation\", \"mountain silhouette\", \"ocean waves\", \"candle flame\", \"forest light\", \"cosmos galaxy\", \"stoic philosophy\", \"solitude nature\""
+      - text: "]"
+      - text: 2026-06-11 15:10:55.462 | INFO | app.services.task:generate_audio:86 -
+      - text: "## generating audio"
+      - text: 2026-06-11 15:10:55.468 | INFO | app.services.task:generate_audio:96 - no custom audio file provided, using TTS to generate audio.
+      - text: "2026-06-11 15:10:55.508 | INFO | app.services.voice:gemini_tts:960 - start, voice name: Charon, try: 1"
+      - text: "2026-06-11 15:11:13.286 | INFO | app.services.voice:gemini_tts:1024 - completed, output file: .\\storage\\tasks\\c35de15f-f73d-4441-9032-e27c9b952e43\\audio.mp3"
+      - text: 2026-06-11 15:11:13.286 | INFO | app.services.task:generate_subtitle:136 -
+      - text: "## generating subtitle"
+      - text: 2026-06-11 15:11:13.286 | INFO | app.services.task:generate_subtitle:142 -
+      - text: "## generating subtitle, provider: whisper"
+      - text: "2026-06-11 15:11:13.293 | INFO | app.services.subtitle:create:32 - loading model: small, device: cpu, compute_type: int8"
+      - text: "2026-06-11 15:12:07.339 | INFO | app.services.subtitle:create:50 - start, output file: .\\storage\\tasks\\c35de15f-f73d-4441-9032-e27c9b952e43\\subtitle.srt"
+      - text: "2026-06-11 15:12:11.955 | INFO | app.services.subtitle:create:62 - detected language: 'pt', probability: 0.99"
+      - text: 2026-06-11 15:12:18.367 | DEBUG | app.services.subtitle:recognized:75 - [0.00s -> 1.24s] O estoicismo
+      - text: 2026-06-11 15:12:18.367 | DEBUG | app.services.subtitle:recognized:75 - [1.44s -> 2.96s] uma filosofia milenar
+      - text: 2026-06-11 15:12:18.368 | DEBUG | app.services.subtitle:recognized:75 - [3.42s -> 7.28s] ensina-nos a encontrar a serenidade não na ausência de problemas
+      - text: 2026-06-11 15:12:18.369 | DEBUG | app.services.subtitle:recognized:75 - [7.84s -> 9.84s] mas na forma como os enfrentamos
+      - text: 2026-06-11 15:12:18.372 | DEBUG | app.services.subtitle:recognized:75 - [10.58s -> 12.66s] Não se trata de suprimir emoções
+      - text: 2026-06-11 15:12:18.372 | DEBUG | app.services.subtitle:recognized:75 - [13.10s -> 18.40s] mas de cultivar a sabedoria para distinguir o que podemos controlar do que não podemos
+      - text: 2026-06-11 15:12:18.375 | DEBUG | app.services.subtitle:recognized:75 - [19.24s -> 20.62s] Ao focar na virtude
+      - text: 2026-06-11 15:12:18.375 | DEBUG | app.services.subtitle:recognized:75 - [20.82s -> 23.40s] na razão e na aceitação do inevitável
+      - text: 2026-06-11 15:12:18.377 | DEBUG | app.services.subtitle:recognized:75 - [23.84s -> 27.24s] libertámonos das amarras da ansiedade e do desespero
+      - text: 2026-06-11 15:12:24.854 | DEBUG | app.services.subtitle:recognized:75 - [27.82s -> 29.00s] Essa paz interior
+      - text: 2026-06-11 15:12:24.855 | DEBUG | app.services.subtitle:recognized:75 - [29.44s -> 32.24s] forjada na resiliência e na autodisciplina
+      - text: 2026-06-11 15:12:24.857 | DEBUG | app.services.subtitle:recognized:75 - [32.76s -> 37.60s] revela-se a verdadeira força capaz de nos guiar através das tempestades da vida
+      - text: 2026-06-11 15:12:24.858 | DEBUG | app.services.subtitle:recognized:75 - [38.12s -> 44.04s] transformando a adversidade em oportunidade para o crescimento e a tranquilidade duradoura
+      - text: "2026-06-11 15:12:24.860 | INFO | app.services.subtitle:create:125 - complete, elapsed: 12.90 s"
+      - text: "2026-06-11 15:12:24.863 | INFO | app.services.subtitle:create:142 - subtitle file created: .\\storage\\tasks\\c35de15f-f73d-4441-9032-e27c9b952e43\\subtitle.srt"
+      - text: 2026-06-11 15:12:24.864 | INFO | app.services.task:generate_subtitle:155 -
+      - text: "## correcting subtitle"
+      - text: "2026-06-11 15:12:24.870 | WARNING | app.services.subtitle:correct:236 - Merged/Corrected - Script: libertamo-nos das amarras da ansiedade e do desespero, Subtitle: libertámonos das amarras da ansiedade e do desespero"
+      - text: 2026-06-11 15:12:24.874 | INFO | app.services.subtitle:correct:290 - Subtitle corrected
+      - text: 2026-06-11 15:12:24.880 | INFO | app.services.task:get_video_materials:180 -
+      - text: "## downloading videos from pexels"
+      - text: "2026-06-11 15:12:24.882 | INFO | app.services.material:search_videos_pexels:71 - searching videos: https://api.pexels.com/videos/search?query=ancient+ruins&per_page=20&orientation=portrait, with proxies: {}"
+      - text: 2026-06-11 15:12:25.027 | INFO | app.services.material:download_videos:328 - found 16 videos for 'ancient ruins'
+      - text: "2026-06-11 15:12:25.029 | INFO | app.services.material:search_videos_pexels:71 - searching videos: https://api.pexels.com/videos/search?query=starry+sky&per_page=20&orientation=portrait, with proxies: {}"
+      - text: 2026-06-11 15:12:25.134 | INFO | app.services.material:download_videos:328 - found 15 videos for 'starry sky'
+      - text: "2026-06-11 15:12:25.137 | INFO | app.services.material:search_videos_pexels:71 - searching videos: https://api.pexels.com/videos/search?query=contemplation&per_page=20&orientation=portrait, with proxies: {}"
+      - text: 2026-06-11 15:12:25.258 | INFO | app.services.material:download_videos:328 - found 17 videos for 'contemplation'
+      - text: "2026-06-11 15:12:25.260 | INFO | app.services.material:search_videos_pexels:71 - searching videos: https://api.pexels.com/videos/search?query=mountain+silhouette&per_page=20&orientation=portrait, with proxies: {}"
+      - text: 2026-06-11 15:12:25.523 | INFO | app.services.material:download_videos:328 - found 19 videos for 'mountain silhouette'
+      - text: "2026-06-11 15:12:25.525 | INFO | app.services.material:search_videos_pexels:71 - searching videos: https://api.pexels.com/videos/search?query=ocean+waves&per_page=20&orientation=portrait, with proxies: {}"
+      - text: 2026-06-11 15:12:25.662 | INFO | app.services.material:download_videos:328 - found 19 videos for 'ocean waves'
+      - text: "2026-06-11 15:12:25.664 | INFO | app.services.material:search_videos_pexels:71 - searching videos: https://api.pexels.com/videos/search?query=candle+flame&per_page=20&orientation=portrait, with proxies: {}"
+      - text: 2026-06-11 15:12:25.772 | INFO | app.services.material:download_videos:328 - found 14 videos for 'candle flame'
+      - text: "2026-06-11 15:12:25.776 | INFO | app.services.material:search_videos_pexels:71 - searching videos: https://api.pexels.com/videos/search?query=forest+light&per_page=20&orientation=portrait, with proxies: {}"
+      - text: 2026-06-11 15:12:25.900 | INFO | app.services.material:download_videos:328 - found 19 videos for 'forest light'
+      - text: "2026-06-11 15:12:25.918 | INFO | app.services.material:search_videos_pexels:71 - searching videos: https://api.pexels.com/videos/search?query=cosmos+galaxy&per_page=20&orientation=portrait, with proxies: {}"
+      - text: 2026-06-11 15:12:26.026 | INFO | app.services.material:download_videos:328 - found 19 videos for 'cosmos galaxy'
+      - text: "2026-06-11 15:12:26.030 | INFO | app.services.material:search_videos_pexels:71 - searching videos: https://api.pexels.com/videos/search?query=stoic+philosophy&per_page=20&orientation=portrait, with proxies: {}"
+      - text: 2026-06-11 15:12:26.144 | INFO | app.services.material:download_videos:328 - found 13 videos for 'stoic philosophy'
+      - text: "2026-06-11 15:12:26.145 | INFO | app.services.material:search_videos_pexels:71 - searching videos: https://api.pexels.com/videos/search?query=solitude+nature&per_page=20&orientation=portrait, with proxies: {}"
+      - text: 2026-06-11 15:12:26.236 | INFO | app.services.material:download_videos:328 - found 18 videos for 'solitude nature'
+      - text: "2026-06-11 15:12:26.237 | INFO | app.services.material:download_videos:336 - found total videos: 167, required duration: 45 seconds, found duration: 2528.0 seconds"
+      - text: "2026-06-11 15:12:26.238 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/35611657/15091544_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:28.755 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-ad061b8e72067e2b633b22ce14ff5dd7.mp4"
+      - text: "2026-06-11 15:12:28.756 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/4603814/4603814-hd_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:31.481 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-397a40dfbcdc9a0ca3a319789526531f.mp4"
+      - text: "2026-06-11 15:12:31.482 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/14881907/14881907-hd_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:34.369 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-a26034e0805a6f4491327f5ab2b60517.mp4"
+      - text: "2026-06-11 15:12:34.373 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/36687583/15552083_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:35.378 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-e26011e489358bf64ba555487531d6b5.mp4"
+      - text: "2026-06-11 15:12:35.381 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/32844974/13999442_1080_1920_25fps.mp4"
+      - text: "2026-06-11 15:12:38.180 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-0e3ed1bb1e4116528d5918741269dfdf.mp4"
+      - text: "2026-06-11 15:12:38.181 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/6734777/6734777-hd_1080_1920_24fps.mp4"
+      - text: "2026-06-11 15:12:41.178 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-9eeeb48c6181e04d8fbd3177ff0f94b4.mp4"
+      - text: "2026-06-11 15:12:41.179 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/37617054/15943819_1080_1920_60fps.mp4"
+      - text: "2026-06-11 15:12:43.781 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-00a41ab35b9d54a2befba38052275d90.mp4"
+      - text: "2026-06-11 15:12:43.781 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/32460336/13844383_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:45.013 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-a8f69ad46f1ae39a28fb68de7be823a1.mp4"
+      - text: "2026-06-11 15:12:45.015 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/30054113/12891205_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:46.321 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-d8ccb9ad75b7fe79f75fb129ef345bdb.mp4"
+      - text: "2026-06-11 15:12:46.323 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/14374617/14374617-hd_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:47.681 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-27d681bfea6639d42ed3e959459e91c7.mp4"
+      - text: "2026-06-11 15:12:47.681 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/7694476/7694476-hd_1080_1920_25fps.mp4"
+      - text: "2026-06-11 15:12:47.695 | INFO | app.services.material:save_video:258 - video already exists: .\\storage\\cache_videos/vid-5e1623fa4be484a0383f7723deace586.mp4"
+      - text: "2026-06-11 15:12:47.695 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-5e1623fa4be484a0383f7723deace586.mp4"
+      - text: "2026-06-11 15:12:47.697 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/16829181/16829181-hd_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:48.841 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-3e5fff40e40d0d8c050713c0f4797034.mp4"
+      - text: "2026-06-11 15:12:48.842 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/36362323/15422440_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:49.897 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-3116a2026426b692fac2f2cf31711cdb.mp4"
+      - text: "2026-06-11 15:12:49.897 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/10643301/10643301-hd_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:51.371 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-d315a00315e8fed76b153c42f7e53265.mp4"
+      - text: "2026-06-11 15:12:51.372 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/33443963/14232006_1080_1920_30fps.mp4"
+      - text: "2026-06-11 15:12:53.634 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-b758ffa79a674381394fcc044b7e258c.mp4"
+      - text: "2026-06-11 15:12:53.634 | INFO | app.services.material:download_videos:354 - downloading video: https://videos.pexels.com/video-files/33766128/14334171_1080_1920_60fps.mp4"
+      - text: "2026-06-11 15:12:54.657 | INFO | app.services.material:download_videos:359 - video saved: .\\storage\\cache_videos/vid-ff194f0630f6a23eac657836f04b1426.mp4"
+      - text: "2026-06-11 15:12:54.657 | INFO | app.services.material:download_videos:364 - total duration of downloaded videos: 48.0 seconds, skip downloading more"
+      - text: 2026-06-11 15:12:54.658 | SUCCESS | app.services.material:download_videos:370 - downloaded 16 videos
+      - text: 2026-06-11 15:12:54.659 | INFO | app.services.task:generate_final_videos:215 -
+      - text: "## combining video: 1 => .\\storage\\tasks\\c35de15f-f73d-4441-9032-e27c9b952e43\\combined-1.mp4"
+      - text: "2026-06-11 15:12:54.955 | INFO | app.services.video:combine_videos:517 - audio duration: 44.28 seconds"
+      - text: "2026-06-11 15:12:54.956 | INFO | app.services.video:combine_videos:518 - maximum clip duration: 3 seconds"
+      - text: "2026-06-11 15:13:00.746 | INFO | app.services.video:_prioritize_unique_source_clips:117 - prioritized unique video materials, sources: 16, primary clips: 16, fallback clips: 72"
+      - text: "2026-06-11 15:13:00.748 | DEBUG | app.services.video:combine_videos:565 - total subclipped items: 88"
+      - text: "2026-06-11 15:13:00.749 | DEBUG | app.services.video:combine_videos:572 - processing clip 1: 1080x1920, source: vid-d315a00315e8fed76b153c42f7e53265.mp4, current duration: 0.00s, remaining: 44.28s"
+      - text: "2026-06-11 15:13:04.052 | DEBUG | app.services.video:combine_videos:572 - processing clip 2: 1080x1920, source: vid-e26011e489358bf64ba555487531d6b5.mp4, current duration: 3.00s, remaining: 41.28s"
+      - text: "2026-06-11 15:13:08.056 | DEBUG | app.services.video:combine_videos:572 - processing clip 3: 720x1280, source: vid-3e5fff40e40d0d8c050713c0f4797034.mp4, current duration: 6.00s, remaining: 38.28s"
+      - text: "2026-06-11 15:13:08.576 | DEBUG | app.services.video:combine_videos:589 - resizing clip, source: 720x1280, ratio: 0.56, target: 1080x1920, ratio: 0.56"
+      - text: "2026-06-11 15:13:17.498 | DEBUG | app.services.video:combine_videos:572 - processing clip 4: 1080x1920, source: vid-3116a2026426b692fac2f2cf31711cdb.mp4, current duration: 9.00s, remaining: 35.28s"
+      - text: "2026-06-11 15:13:23.428 | DEBUG | app.services.video:combine_videos:572 - processing clip 5: 1080x1920, source: vid-9eeeb48c6181e04d8fbd3177ff0f94b4.mp4, current duration: 12.00s, remaining: 32.28s"
+      - text: "2026-06-11 15:13:29.538 | DEBUG | app.services.video:combine_videos:572 - processing clip 6: 1080x1920, source: vid-5e1623fa4be484a0383f7723deace586.mp4, current duration: 15.00s, remaining: 29.28s"
+      - text: "2026-06-11 15:13:35.249 | DEBUG | app.services.video:combine_videos:572 - processing clip 7: 1080x1920, source: vid-397a40dfbcdc9a0ca3a319789526531f.mp4, current duration: 18.00s, remaining: 26.28s"
+      - text: "2026-06-11 15:13:41.038 | DEBUG | app.services.video:combine_videos:572 - processing clip 8: 1080x1920, source: vid-a26034e0805a6f4491327f5ab2b60517.mp4, current duration: 21.00s, remaining: 23.28s"
+      - text: "2026-06-11 15:13:47.434 | DEBUG | app.services.video:combine_videos:572 - processing clip 9: 1080x1920, source: vid-27d681bfea6639d42ed3e959459e91c7.mp4, current duration: 24.00s, remaining: 20.28s"
+      - text: "2026-06-11 15:13:54.259 | DEBUG | app.services.video:combine_videos:572 - processing clip 10: 1080x1920, source: vid-d8ccb9ad75b7fe79f75fb129ef345bdb.mp4, current duration: 27.00s, remaining: 17.28s"
+      - text: "2026-06-11 15:14:00.738 | DEBUG | app.services.video:combine_videos:572 - processing clip 11: 1080x1920, source: vid-00a41ab35b9d54a2befba38052275d90.mp4, current duration: 30.00s, remaining: 14.28s"
+      - text: "2026-06-11 15:14:07.347 | DEBUG | app.services.video:combine_videos:572 - processing clip 12: 1080x1920, source: vid-b758ffa79a674381394fcc044b7e258c.mp4, current duration: 33.00s, remaining: 11.28s"
+      - text: "2026-06-11 15:14:13.466 | DEBUG | app.services.video:combine_videos:572 - processing clip 13: 1080x1920, source: vid-0e3ed1bb1e4116528d5918741269dfdf.mp4, current duration: 36.00s, remaining: 8.28s"
+      - text: "2026-06-11 15:14:19.985 | DEBUG | app.services.video:combine_videos:572 - processing clip 14: 1080x1920, source: vid-a8f69ad46f1ae39a28fb68de7be823a1.mp4, current duration: 39.00s, remaining: 5.28s"
+      - text: "2026-06-11 15:14:25.099 | DEBUG | app.services.video:combine_videos:572 - processing clip 15: 1080x1920, source: vid-ad061b8e72067e2b633b22ce14ff5dd7.mp4, current duration: 42.00s, remaining: 2.28s"
+      - text: 2026-06-11 15:14:30.486 | INFO | app.services.video:combine_videos:670 - starting clip merging process
+      - text: 2026-06-11 15:14:30.487 | INFO | app.services.video:combine_videos:684 - concatenating 15 clips with ffmpeg
+      - text: 2026-06-11 15:15:52.616 | INFO | app.services.video:combine_videos:695 - video combining completed
+      - text: 2026-06-11 15:15:52.618 | INFO | app.services.task:generate_final_videos:232 -
+      - text: "## generating video: 1 => .\\storage\\tasks\\c35de15f-f73d-4441-9032-e27c9b952e43\\final-1.mp4"
+      - text: "2026-06-11 15:15:52.619 | INFO | app.services.video:generate_video:806 - generating video: 1080 x 1920"
+      - text: "2026-06-11 15:15:52.620 | INFO | app.services.video:generate_video:807 - ① video: .\\storage\\tasks\\c35de15f-f73d-4441-9032-e27c9b952e43\\combined-1.mp4"
+      - text: "2026-06-11 15:15:52.621 | INFO | app.services.video:generate_video:808 - ② audio: .\\storage\\tasks\\c35de15f-f73d-4441-9032-e27c9b952e43\\audio.mp3"
+      - text: "2026-06-11 15:15:52.625 | INFO | app.services.video:generate_video:809 - ③ subtitle: .\\storage\\tasks\\c35de15f-f73d-4441-9032-e27c9b952e43\\subtitle.srt"
+      - text: "2026-06-11 15:15:52.626 | INFO | app.services.video:generate_video:810 - ④ output: .\\storage\\tasks\\c35de15f-f73d-4441-9032-e27c9b952e43\\final-1.mp4"
+      - text: "2026-06-11 15:15:52.628 | INFO | app.services.video:generate_video:825 - ⑤ font: C:/Users/mauri/Projetos/MoneyPrinterTurbo/resource/fonts/MicrosoftYaHeiBold.ttc"
+      - text: 2026-06-11 15:19:37.968 | SUCCESS | app.services.task:start:354 - task c35de15f-f73d-4441-9032-e27c9b952e43 finished, generated 1 videos.
+      - text: 2026-06-11 15:19:38.210 | INFO | __main__:<module>:1509 - Geração do Vídeo Concluída
+    - generic:
+      - iframe
+    - status [ref=e559]:
+      - paragraph [ref=e563]: Geração do Vídeo Concluída
+    - generic:
+      - iframe

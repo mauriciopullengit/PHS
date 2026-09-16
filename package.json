@@ -3,15 +3,27 @@
     "@playwright/mcp": "^0.0.75"
   },
   "scripts": {
+    "browser:launch": "uv run browser-use/launch_chrome.py",
+    "browser:run": "uv --directory browser-use run agent.py",
+    "browser:run-sonnet": "uv --directory browser-use run agent.py --sonnet",
+    "browser:cdp": "uv --directory browser-use run agent.py --cdp http://localhost:9222",
+    "browser:script": "uv --directory browser-use run router.py --scripted",
+    "browser:auto": "uv --directory browser-use run router.py",
+    "browser:snapshot": "agent-browser snapshot",
     "playwright:install": "npx playwright install",
     "playwright:cli": "npx playwright",
     "playwright:mcp": "npx @playwright/mcp@latest --browser chrome --console-level warning",
     "playwright:test": "npx playwright test",
     "playwright:codegen": "npx playwright codegen",
     "playwright:open": "npx playwright open",
-    "playwright:screenshot": "npx playwright screenshot"
+    "playwright:screenshot": "npx playwright screenshot",
+    "powershell:cli": "pwsh -NoLogo -NoProfile -ExecutionPolicy Bypass",
+    "powershell:run": "pwsh -NoLogo -NoProfile -ExecutionPolicy Bypass -Command",
+    "powershell:script": "pwsh -NoLogo -NoProfile -ExecutionPolicy Bypass -File ./powershell/example.ps1",
+    "powershell:mcp": "npx mcp-powershell-exec"
   },
   "devDependencies": {
-    "@playwright/test": "^1.60.0"
+    "@playwright/test": "^1.60.0",
+    "mcp-powershell-exec": "^1.0.4"
   }
 }

@@ -1,7 +1,7 @@
 # Playright Skill Guide
 
 ## Objetivo
-Ter um atalho claro para o fluxo Playwright no workspace:
+Ter um atalho claro para o fluxo Playwright no workspace. Este guia é apenas para o projeto Playwright — o projeto PowerShell é separado.
 - MCP total via `@playwright/mcp`
 - CLI rápido via `npx playwright`
 
