@@ -289,7 +289,7 @@ async def ask(req: AskRequest):
     return StreamingResponse(generate(), media_type="text/event-stream")
 
 
-CLAUDE_CMD = r"C:\Users\mauri\AppData\Roaming\npm\claude.cmd"
+CLAUDE_CMD = r"C:\Users\mau\AppData\Roaming\npm\claude.cmd"
 
 @app.post("/ask-local")
 async def ask_local(req: AskRequest):

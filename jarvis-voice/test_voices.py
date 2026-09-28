@@ -7,7 +7,7 @@ VOICES = [
 ]
 
 TEXT = "Olá. Sou o Jarvis, seu assistente pessoal. Como posso ajudá-lo hoje?"
-OUT_DIR = r"C:\Users\mauri\Projetos\jarvis-voice"
+OUT_DIR = r"C:\Users\mau\Projetos\jarvis-voice"
 
 async def generate(voice, path):
     c = edge_tts.Communicate(TEXT, voice, rate="+5%")

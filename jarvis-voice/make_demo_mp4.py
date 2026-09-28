@@ -4,9 +4,9 @@ Usa ffprobe para medir duração do audio, grava video pelo mesmo tempo.
 """
 import asyncio, edge_tts, subprocess, os, sys
 
-AUDIO_OUT = r"C:\Users\mauri\Projetos\jarvis-voice\francisca-demo.mp3"
-VIDEO_TMP  = r"C:\Users\mauri\Projetos\jarvis-voice\video-tmp\reactor-speaking.webm"
-MP4_FINAL  = r"C:\Users\mauri\Projetos\jarvis-voice\jarvis-voice-demo.mp4"
+AUDIO_OUT = r"C:\Users\mau\Projetos\jarvis-voice\francisca-demo.mp3"
+VIDEO_TMP  = r"C:\Users\mau\Projetos\jarvis-voice\video-tmp\reactor-speaking.webm"
+MP4_FINAL  = r"C:\Users\mau\Projetos\jarvis-voice\jarvis-voice-demo.mp4"
 PAGE_URL   = "http://localhost:8765/arc-reactor-demo.html"
 
 # ── 1. Gerar audio mais longo ─────────────────────────────────
@@ -47,8 +47,8 @@ import {{ execSync }} from 'child_process';
 import path from 'path';
 import fs from 'fs';
 
-const OUT_DIR = 'C:/Users/mauri/Projetos/jarvis-voice/video-tmp';
-const WEBM    = 'C:/Users/mauri/Projetos/jarvis-voice/video-tmp/reactor-speaking.webm';
+const OUT_DIR = 'C:/Users/mau/Projetos/jarvis-voice/video-tmp';
+const WEBM    = 'C:/Users/mau/Projetos/jarvis-voice/video-tmp/reactor-speaking.webm';
 const DUR_MS  = {int(duration * 1000)};
 
 fs.mkdirSync(OUT_DIR, {{ recursive: true }});
@@ -80,7 +80,7 @@ if (files.length) {{
 }}
 """
 
-script_path = r"C:\Users\mauri\Projetos\jarvis-voice\_record_speaking.mjs"
+script_path = r"C:\Users\mau\Projetos\jarvis-voice\_record_speaking.mjs"
 with open(script_path, "w") as f:
     f.write(record_script)
 

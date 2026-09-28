@@ -77,7 +77,7 @@ def _launch_chrome() -> bool:
     chrome_paths = [
         r"C:\Program Files\Google\Chrome\Application\chrome.exe",
         r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
-        r"C:\Users\mauri\AppData\Local\Google\Chrome\Application\chrome.exe",
+        r"C:\Users\mau\AppData\Local\Google\Chrome\Application\chrome.exe",
     ]
     chrome = next((p for p in chrome_paths if os.path.exists(p)), None)
     if not chrome:

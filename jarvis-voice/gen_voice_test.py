@@ -310,7 +310,7 @@ draw();
 </body>
 </html>"""
 
-out = r"C:\Users\mauri\Projetos\jarvis-voice\voice-sync-test.html"
+out = r"C:\Users\mau\Projetos\jarvis-voice\voice-sync-test.html"
 with open(out, "w", encoding="utf-8") as f:
     f.write(html)
 print(f"[ok] HTML gerado: {out}")

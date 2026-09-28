@@ -6,7 +6,7 @@ VOICES = [
 ]
 
 TEXT = "Ola. Sou o Jarvis, seu assistente pessoal. Como posso ajuda-lo hoje?"
-OUT_DIR = r"C:\Users\mauri\Projetos\jarvis-voice"
+OUT_DIR = r"C:\Users\mau\Projetos\jarvis-voice"
 
 async def main():
     print("\n=== Vozes PT-PT (sotaque europeu) ===\n")

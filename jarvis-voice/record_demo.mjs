@@ -3,8 +3,8 @@ import { execSync } from 'child_process';
 import path from 'path';
 import fs from 'fs';
 
-const OUT_DIR  = 'C:/Users/mauri/Projetos/jarvis-voice/video-tmp';
-const MP4_OUT  = 'C:/Users/mauri/Projetos/jarvis-voice/jarvis-demo.mp4';
+const OUT_DIR  = 'C:/Users/mau/Projetos/jarvis-voice/video-tmp';
+const MP4_OUT  = 'C:/Users/mau/Projetos/jarvis-voice/jarvis-demo.mp4';
 const PAGE_URL = 'http://localhost:8765/arc-reactor-demo.html';
 
 fs.mkdirSync(OUT_DIR, { recursive: true });

@@ -4,8 +4,8 @@ import { execSync } from 'child_process';
 import path from 'path';
 import fs from 'fs';
 
-const OUT_DIR = 'C:/Users/mauri/Projetos/jarvis-voice/video-tmp';
-const WEBM    = 'C:/Users/mauri/Projetos/jarvis-voice/video-tmp/reactor-speaking.webm';
+const OUT_DIR = 'C:/Users/mau/Projetos/jarvis-voice/video-tmp';
+const WEBM    = 'C:/Users/mau/Projetos/jarvis-voice/video-tmp/reactor-speaking.webm';
 const DUR_MS  = 20952;
 
 fs.mkdirSync(OUT_DIR, { recursive: true });

@@ -12,7 +12,7 @@ import unicodedata
 from pathlib import Path
 from datetime import datetime
 
-MEMORY_ROOT = Path(r"C:\Users\mauri\OneDrive\Documents\Claude Memory")
+MEMORY_ROOT = Path(r"C:\Users\mau\OneDrive\Documents\Claude Memory")
 # Escrita permitida somente nesta subárvore (regra filePermissions do CLAUDE.md)
 WRITE_ROOT  = MEMORY_ROOT / "03- Claude"
 NOTES_DIR   = WRITE_ROOT / "memory" / "jarvis-notes"
