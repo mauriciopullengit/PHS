@@ -4,7 +4,7 @@ from caldav import DAVClient
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-env_file = r"C:\Users\mauri\.config\hook\gmail.env"
+env_file = r"C:\Users\mau\.config\hook\gmail.env"
 gmail_user, gmail_pass = None, None
 
 with open(env_file, encoding='utf-8') as f:

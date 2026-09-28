@@ -1,6 +1,6 @@
 import sys
 import time
-sys.path.insert(0, r"C:\Users\mauri\OneDrive\Documents\Claude Memory\03- Claude\projetos\Rose\_agenda")
+sys.path.insert(0, r"C:\Users\mau\OneDrive\Documents\Claude Memory\03- Claude\projetos\Rose\_agenda")
 
 from rose_ops import CalendarBackend
 import statistics

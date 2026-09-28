@@ -5,7 +5,7 @@ from caldav import DAVClient
 sys.stdout.reconfigure(encoding='utf-8')
 
 # Buscar em maurinata19@gmail.com (conta 2)
-env_file = r"C:\Users\mauri\.config\hook\gmail2.env"
+env_file = r"C:\Users\mau\.config\hook\gmail2.env"
 gmail_user, gmail_pass = None, None
 
 with open(env_file, encoding='utf-8') as f:
